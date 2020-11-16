@@ -5,7 +5,7 @@ using System.Text;
 namespace Persistence
 {
     
-    interface IDatabase
+    public interface IDatabase
     {
 
     }
