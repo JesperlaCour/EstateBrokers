@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Persistence
 {
-    class SqlDatabase : IDatabase
+    public class SqlDatabase : IDatabase
     {
     }
 }

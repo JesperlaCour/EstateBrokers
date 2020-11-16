@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Persistence
 {
-    class DatabaseProxy : IDatabase
+    public class DatabaseProxy : IDatabase
     {
     }
 }

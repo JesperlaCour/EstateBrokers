@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Persistence
 {
-    class EFDatabase : IDatabase
+    public class EFDatabase : IDatabase
     {
     }
 }
