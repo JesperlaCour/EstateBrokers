@@ -1,6 +1,9 @@
 ﻿using BusinessLogicLayer;
+using Model.Models;
+using Persistence;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Controller
@@ -8,11 +11,12 @@ namespace Controller
     public class ControllerSingleton
     {
         private static ControllerSingleton _instance;
-        CRUDLogic crud;
+
+      
 
         protected ControllerSingleton()
         {
-            crud = new CRUDLogic();
+            
         }
         public static ControllerSingleton Instance()
         {
@@ -21,6 +25,11 @@ namespace Controller
                 _instance = new ControllerSingleton();
             }
             return _instance;
+        }
+        public void CreateCustomer(Customer customer)
+        {
+            CustomerCRUD customer1 = new CustomerCRUD();
+            customer1.CreateCustomer(customer);
         }
     }
 }

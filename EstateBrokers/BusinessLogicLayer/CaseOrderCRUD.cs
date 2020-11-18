@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BusinessLogicLayer
 {
-    public class CRUDLogic
+    class CaseOrderCRUD
     {
     }
 }
