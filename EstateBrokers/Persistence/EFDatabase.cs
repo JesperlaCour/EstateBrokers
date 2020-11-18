@@ -6,5 +6,7 @@ namespace Persistence
 {
     public class EFDatabase : IDatabase
     {
+
+
     }
 }
