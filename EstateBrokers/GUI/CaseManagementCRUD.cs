@@ -8,12 +8,13 @@ using System.Windows.Forms;
 using Model;
 using Model.Models;
 using System.Linq;
+using Controller;
 
 namespace GUI
 {
     public partial class CaseManagementCRUD : UserControl
     {
-        EstateBrokersContext dbcontext = new EstateBrokersContext();
+        
         public CaseManagementCRUD()
         {
             InitializeComponent();
@@ -22,15 +23,17 @@ namespace GUI
         private void button4_Click(object sender, EventArgs e)
         {
             
-            var zipCodeList = dbcontext.ZipCodes.ToList();
-            listBox1.DataSource = zipCodeList ;
+            
+            //listBox1.DataSource = ControllerSingleton.Instance().();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
 
-            dbcontext.ZipCodes.Add(new ZipCode { ZipCode1 = Convert.ToInt32(textBox1.Text), City = textBox2.Text });
-            dbcontext.SaveChanges();
+            ControllerSingleton.Instance().CreateCustomer(new Customer
+            (textBox1.Text,textBox2.Text,Convert.ToInt32(textBox3.Text),Convert.ToInt32(textBox4.Text)
+            ));
+
         
         }
     }

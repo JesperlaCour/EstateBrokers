@@ -2,10 +2,11 @@
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Model.Models;
 
-#nullable disable
 
-namespace Model.Models
+
+namespace Persistence
 {
     public partial class EstateBrokersContext : DbContext
     {

@@ -12,11 +12,20 @@ namespace Model.Models
             CaseOrders = new HashSet<CaseOrder>();
         }
 
-        public int CustomerId { get; set; }
-        public string Name { get; set; }
-        public string Address { get; set; }
-        public int PhoneNr { get; set; }
-        public int ZipCode { get; set; }
+       
+        public Customer(string name, string address, int phoneNr, int zipCode)
+        {
+            Name = name;
+            Address = address;
+            PhoneNr = phoneNr;
+            ZipCode = zipCode;
+        }
+
+        public int CustomerId { get; private set; }
+        public string Name { get; private set; }
+        public string Address { get; private set; }
+        public int PhoneNr { get; private set; }
+        public int ZipCode { get; private set; }
 
         public virtual ZipCode ZipCodeNavigation { get; set; }
         public virtual ICollection<CaseOrder> CaseOrders { get; set; }
