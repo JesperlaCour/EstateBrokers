@@ -34,5 +34,15 @@ namespace GUI
         {
             administrereHus1.BringToFront();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            udbudsprisBeregner1.BringToFront();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            aabentHus1.BringToFront();
+        }
     }
 }
