@@ -21,6 +21,15 @@ namespace Model.Models
             ZipCode = zipCode;
         }
 
+        public Customer(int customerId, string name, string address, int phoneNr, int zipCode)
+        {
+            CustomerId = customerId;
+            Name = name;
+            Address = address;
+            PhoneNr = phoneNr;
+            ZipCode = zipCode;
+        }
+
         public int CustomerId { get; private set; }
         public string Name { get; private set; }
         public string Address { get; private set; }
