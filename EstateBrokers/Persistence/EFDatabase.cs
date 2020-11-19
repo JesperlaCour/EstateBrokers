@@ -71,7 +71,7 @@ namespace Persistence
         }
 
 
-        //GridView
+        //GridViewCustomer
         EstateBrokersContext context;
         public EstateBrokersContext GetGridCustomerData()
         {
@@ -80,6 +80,19 @@ namespace Persistence
             return context;
         }
         public void UpdateGridCustomerData()
+        {
+            context.SaveChanges();
+        }
+
+        //GridViewEstate
+        public EstateBrokersContext GetGridEstateData()
+        {
+            context = new EstateBrokersContext();
+            context.Estates.Load();
+            return context;
+        }
+
+        public void UpdateGridEstateData()
         {
             context.SaveChanges();
         }
