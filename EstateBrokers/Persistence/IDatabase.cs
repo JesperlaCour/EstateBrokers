@@ -29,5 +29,8 @@ namespace Persistence
         public EstateBrokersContext GetGridCustomerData();
         public void UpdateGridCustomerData();
 
+        public EstateBrokersContext GetGridEstateData();
+        public void UpdateGridEstateData();
+
     }
 }

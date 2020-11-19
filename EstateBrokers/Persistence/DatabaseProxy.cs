@@ -82,5 +82,23 @@ namespace Persistence
         {
             db.UpdateGridCustomerData();
         }
+
+        public EstateBrokersContext GetGridEstateData()
+        {
+            db = new EFDatabase();
+            try
+            {
+                return db.GetGridEstateData();
+            }
+            catch (Exception)
+            {
+                throw new Exception();
+            }
+        }
+
+        public void UpdateGridEstateData()
+        {
+            db.UpdateGridEstateData();
+        }
     }
 }

@@ -194,7 +194,22 @@ namespace Persistence
             return allCaseOrders;
         }
 
-        IQueryable<Customer> IDatabase.GetAllCustomer(string name)
+        public EstateBrokersContext GetGridCustomerData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateGridCustomerData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public EstateBrokersContext GetGridEstateData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateGridEstateData()
         {
             throw new NotImplementedException();
         }
