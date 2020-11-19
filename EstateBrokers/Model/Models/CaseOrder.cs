@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
@@ -12,7 +12,15 @@ namespace Model.Models
             OpenHouses = new HashSet<OpenHouse>();
         }
 
-        public int CaseId { get; set; }
+        public CaseOrder(int caseOrderId, string caseStatus, int customerId, int brokerId, int estateId)
+        {
+            CaseOrderID = caseOrderId;
+            CaseStatus = caseStatus;
+            CustomerId = customerId;
+            BrokerId = brokerId;
+            EstateId = estateId;
+        } 
+        public int CaseOrderID { get; set; }
         public string CaseStatus { get; set; }
         public int? CustomerId { get; set; }
         public int? BrokerId { get; set; }

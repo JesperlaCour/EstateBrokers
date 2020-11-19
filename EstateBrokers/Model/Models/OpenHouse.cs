@@ -10,7 +10,7 @@ namespace Model.Models
         public int OpenHouseId { get; set; }
         public DateTime? Date { get; set; }
         public int? BrokerId { get; set; }
-        public int? CaseId { get; set; }
+        public int? CaseOrderID { get; set; }
 
         public virtual Broker Broker { get; set; }
         public virtual CaseOrder Case { get; set; }
