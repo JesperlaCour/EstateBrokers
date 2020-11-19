@@ -70,17 +70,18 @@ namespace Persistence
             return dbcontext.Estates.Where(e => e.EstateId == EstateID).FirstOrDefault();
         }
 
-        EstateBrokersContext dbcontext;
 
+        //GridView
+        EstateBrokersContext context;
         public EstateBrokersContext GetGridCustomerData()
         {
-            dbcontext = new EstateBrokersContext();
-            dbcontext.Customers.Load();
-            return dbcontext;
+            context = new EstateBrokersContext();
+            context.Customers.Load();
+            return context;
         }
         public void UpdateGridCustomerData()
         {
-            dbcontext.SaveChanges();
+            context.SaveChanges();
         }
     }
 }
