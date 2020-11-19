@@ -67,5 +67,22 @@ namespace Persistence
             EstateBrokersContext dbcontext = new EstateBrokersContext();
             return dbcontext.Estates.Where(e => e.EstateId == EstateID).FirstOrDefault();
         }
+<<<<<<< Updated upstream
+=======
+
+        
+        //GridView
+        EstateBrokersContext context;
+        public EstateBrokersContext GetGridCustomerData()
+        {
+            context = new EstateBrokersContext();
+            context.Customers.Load();
+            return context;
+        }
+        public void UpdateGridCustomerData()
+        {
+            context.SaveChanges();
+        }
+>>>>>>> Stashed changes
     }
 }

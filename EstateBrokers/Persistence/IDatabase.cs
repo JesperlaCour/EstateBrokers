@@ -24,7 +24,10 @@ namespace Persistence
         public CaseOrder GetCaseOrder(int CaseOrderID);
         public List<CaseOrder> GetAllCaseOrders();
 
+        //DataGridView
 
+        public EstateBrokersContext GetGridCustomerData();
+        public void UpdateGridCustomerData();
 
     }
 }
