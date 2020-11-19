@@ -40,7 +40,7 @@ namespace GUI
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(202, 197);
+            this.dataGridView1.Location = new System.Drawing.Point(202, 141);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
@@ -49,7 +49,7 @@ namespace GUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(202, 148);
+            this.button1.Location = new System.Drawing.Point(202, 92);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 43);
             this.button1.TabIndex = 1;
@@ -58,7 +58,7 @@ namespace GUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(316, 148);
+            this.button2.Location = new System.Drawing.Point(316, 92);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 43);
             this.button2.TabIndex = 2;
