@@ -39,7 +39,7 @@ namespace Persistence
             throw new NotImplementedException();
         }
 
-        public IQueryable<Customer> GetAllCustomer(string name)
+        public List<Customer> GetAllCustomer(string name)
         {
             throw new NotImplementedException();
         }

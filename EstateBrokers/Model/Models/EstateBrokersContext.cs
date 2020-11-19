@@ -2,11 +2,11 @@
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Model.Models;
 
 
 
-namespace Persistence
+
+namespace Model.Models
 {
     public partial class EstateBrokersContext : DbContext
     {
@@ -33,8 +33,10 @@ namespace Persistence
             if (!optionsBuilder.IsConfigured)
             {
                 
-                //optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
-                optionsBuilder.UseSqlServer("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
+                
+                //Cant use configurationManager for UnitTest. Use the following sentence. 
+                //optionsBuilder.UseSqlServer("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
@@ -60,12 +62,12 @@ namespace Persistence
 
             modelBuilder.Entity<CaseOrder>(entity =>
             {
-                entity.HasKey(e => e.CaseOrderId)
+                entity.HasKey(e => e.CaseOrderID)
                     .HasName("PK__CaseOrde__6CAE526CCCAC15CD");
 
                 entity.ToTable("CaseOrder");
 
-                entity.Property(e => e.CaseOrderId).HasColumnName("CaseID");
+                entity.Property(e => e.CaseOrderID).HasColumnName("CaseID");
 
                 entity.Property(e => e.BrokerId).HasColumnName("BrokerID");
 
@@ -152,7 +154,7 @@ namespace Persistence
 
                 entity.Property(e => e.BrokerId).HasColumnName("BrokerID");
 
-                entity.Property(e => e.CaseId).HasColumnName("CaseID");
+                entity.Property(e => e.CaseOrderID).HasColumnName("CaseID");
 
                 entity.Property(e => e.Date).HasColumnType("datetime");
 
@@ -163,7 +165,7 @@ namespace Persistence
 
                 entity.HasOne(d => d.Case)
                     .WithMany(p => p.OpenHouses)
-                    .HasForeignKey(d => d.CaseId)
+                    .HasForeignKey(d => d.CaseOrderID)
                     .HasConstraintName("FK__OpenHouse__CaseI__01142BA1");
             });
 

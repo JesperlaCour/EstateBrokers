@@ -49,55 +49,69 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 1082);
+            this.panel1.Size = new System.Drawing.Size(161, 1080);
             this.panel1.TabIndex = 0;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(48, 535);
-            this.button3.Margin = new System.Windows.Forms.Padding(6);
+            this.button3.BackColor = System.Drawing.Color.Green;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Font = new System.Drawing.Font("Freestyle Script", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.Blue;
+            this.button3.Location = new System.Drawing.Point(30, 334);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(208, 85);
+            this.button3.Size = new System.Drawing.Size(128, 53);
             this.button3.TabIndex = 0;
             this.button3.Text = "Delete Case";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(48, 410);
-            this.button2.Margin = new System.Windows.Forms.Padding(6);
+            this.button2.BackColor = System.Drawing.Color.Yellow;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Font = new System.Drawing.Font("Freestyle Script", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.Blue;
+            this.button2.Location = new System.Drawing.Point(30, 256);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 90);
+            this.button2.Size = new System.Drawing.Size(128, 56);
             this.button2.TabIndex = 0;
             this.button2.Text = "Edit Case";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(48, 277);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Freestyle Script", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Blue;
+            this.button1.Location = new System.Drawing.Point(30, 173);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 90);
+            this.button1.Size = new System.Drawing.Size(128, 56);
             this.button1.TabIndex = 0;
             this.button1.Text = "Create Case";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 32;
-            this.listBox1.Location = new System.Drawing.Point(550, 277);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(338, 173);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(541, 580);
+            this.listBox1.Size = new System.Drawing.Size(334, 364);
             this.listBox1.TabIndex = 1;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(550, 192);
+            this.button4.Location = new System.Drawing.Point(338, 120);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 46);
+            this.button4.Size = new System.Drawing.Size(92, 29);
             this.button4.TabIndex = 2;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -105,23 +119,26 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1260, 157);
+            this.textBox1.Location = new System.Drawing.Point(775, 98);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 39);
+            this.textBox1.Size = new System.Drawing.Size(125, 27);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(1260, 227);
+            this.textBox2.Location = new System.Drawing.Point(775, 142);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 39);
+            this.textBox2.Size = new System.Drawing.Size(125, 27);
             this.textBox2.TabIndex = 4;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1260, 554);
+            this.button5.Location = new System.Drawing.Point(775, 346);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 46);
+            this.button5.Size = new System.Drawing.Size(92, 29);
             this.button5.TabIndex = 5;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
@@ -129,21 +146,23 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(1260, 303);
+            this.textBox3.Location = new System.Drawing.Point(775, 189);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 39);
+            this.textBox3.Size = new System.Drawing.Size(125, 27);
             this.textBox3.TabIndex = 6;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(1260, 397);
+            this.textBox4.Location = new System.Drawing.Point(775, 248);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 39);
+            this.textBox4.Size = new System.Drawing.Size(125, 27);
             this.textBox4.TabIndex = 7;
             // 
             // CaseManagementCRUD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -153,10 +172,10 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(6);
-            this.MinimumSize = new System.Drawing.Size(1735, 1082);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "CaseManagementCRUD";
-            this.Size = new System.Drawing.Size(1735, 1082);
+            this.Size = new System.Drawing.Size(1920, 1080);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
