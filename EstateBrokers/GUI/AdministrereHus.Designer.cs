@@ -51,7 +51,7 @@ namespace GUI
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1197, 734);
+            this.dataGridView1.Size = new System.Drawing.Size(1442, 718);
             this.dataGridView1.TabIndex = 1;
             // 
             // button1
