@@ -1,6 +1,7 @@
 ﻿using Model.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Persistence
@@ -15,7 +16,7 @@ namespace Persistence
 
         //Read
         public Customer GetCustomer(int customerID);
-        public List<Customer> GetAllCustomer(string name);
+        public IQueryable<Customer> GetAllCustomer(string name);
 
         public Estate GetEstate(int EstateID);
         public List<Estate> GetAllEstates(string address);

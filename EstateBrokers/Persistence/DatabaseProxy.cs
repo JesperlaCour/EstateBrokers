@@ -1,6 +1,7 @@
 ﻿using Model.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Persistence
@@ -38,7 +39,7 @@ namespace Persistence
             throw new NotImplementedException();
         }
 
-        public List<Customer> GetAllCustomer(string name)
+        public IQueryable<Customer> GetAllCustomer(string name)
         {
             throw new NotImplementedException();
         }

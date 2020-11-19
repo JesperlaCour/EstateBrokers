@@ -33,8 +33,8 @@ namespace Persistence
             if (!optionsBuilder.IsConfigured)
             {
                 
-                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
-                //optionsBuilder.UseSqlServer("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                //optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
+                optionsBuilder.UseSqlServer("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
@@ -60,12 +60,12 @@ namespace Persistence
 
             modelBuilder.Entity<CaseOrder>(entity =>
             {
-                entity.HasKey(e => e.CaseId)
+                entity.HasKey(e => e.CaseOrderId)
                     .HasName("PK__CaseOrde__6CAE526CCCAC15CD");
 
                 entity.ToTable("CaseOrder");
 
-                entity.Property(e => e.CaseId).HasColumnName("CaseID");
+                entity.Property(e => e.CaseOrderId).HasColumnName("CaseID");
 
                 entity.Property(e => e.BrokerId).HasColumnName("BrokerID");
 
