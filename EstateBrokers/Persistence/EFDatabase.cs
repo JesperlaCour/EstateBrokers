@@ -38,10 +38,12 @@ namespace Persistence
             return dbcontext.CaseOrders.ToList();
         }
 
-        public IQueryable<Customer> GetAllCustomer(string name)
+        
+
+        public List<Customer> GetAllCustomer(string name)
         {
             EstateBrokersContext dbcontext = new EstateBrokersContext();
-            return dbcontext.Customers.Where(c => EF.Functions.Like(c.Name, $"%{name}%"));
+            return dbcontext.Customers.Where(c => c.Name == $"%{name}%").ToList();
         }
 
         public List<Estate> GetAllEstates(string address)
@@ -53,7 +55,7 @@ namespace Persistence
         public CaseOrder GetCaseOrder(int caseOrderID)
         {
             EstateBrokersContext dbcontext = new EstateBrokersContext();
-            return dbcontext.CaseOrders.Where(co => co.CaseOrderId == caseOrderID).FirstOrDefault();
+            return dbcontext.CaseOrders.Where(co => co.CaseOrderID == caseOrderID).FirstOrDefault();
         }
 
         public Customer GetCustomer(int customerID)
@@ -66,6 +68,19 @@ namespace Persistence
         {
             EstateBrokersContext dbcontext = new EstateBrokersContext();
             return dbcontext.Estates.Where(e => e.EstateId == EstateID).FirstOrDefault();
+        }
+
+        EstateBrokersContext dbcontext;
+
+        public EstateBrokersContext GetGridCustomerData()
+        {
+            dbcontext = new EstateBrokersContext();
+            dbcontext.Customers.Load();
+            return dbcontext;
+        }
+        public void UpdateGridCustomerData()
+        {
+            dbcontext.SaveChanges();
         }
     }
 }

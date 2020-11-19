@@ -1,10 +1,11 @@
 ﻿using BusinessLogicLayer;
+using Microsoft.EntityFrameworkCore;
 using Model.Models;
-using Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Persistence;
 
 namespace Controller
 {
@@ -30,6 +31,18 @@ namespace Controller
         {
             CustomerCRUD customer1 = new CustomerCRUD();
             customer1.CreateCustomer(customer);
+        }
+
+        EFDatabase efDB;
+        public EstateBrokersContext GetGridCustomerData()
+        {
+            efDB = new EFDatabase();
+            return efDB.GetGridCustomerData();
+        }
+
+        public void UpdateGridCustomerData()
+        {
+            efDB.UpdateGridCustomerData();
         }
     }
 }

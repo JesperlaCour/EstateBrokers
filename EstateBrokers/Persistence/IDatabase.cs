@@ -16,7 +16,7 @@ namespace Persistence
 
         //Read
         public Customer GetCustomer(int customerID);
-        public IQueryable<Customer> GetAllCustomer(string name);
+        public List<Customer> GetAllCustomer(string name);
 
         public Estate GetEstate(int EstateID);
         public List<Estate> GetAllEstates(string address);

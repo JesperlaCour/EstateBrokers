@@ -30,11 +30,11 @@ namespace Model.Models
             ZipCode = zipCode;
         }
 
-        public int CustomerId { get; private set; }
-        public string Name { get; private set; }
-        public string Address { get; private set; }
-        public int PhoneNr { get; private set; }
-        public int ZipCode { get; private set; }
+        public int CustomerId { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public int PhoneNr { get; set; }
+        public int ZipCode { get; set; }
 
         public virtual ZipCode ZipCodeNavigation { get; set; }
         public virtual ICollection<CaseOrder> CaseOrders { get; set; }
