@@ -15,14 +15,19 @@ namespace GUI
         public Form1()
         {
             InitializeComponent();
-            
+            forside1.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            
+            caseManagementcrud1.BringToFront();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            administrereKunde1.BringToFront();
         }
     }
 }
