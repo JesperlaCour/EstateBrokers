@@ -198,5 +198,15 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public EstateBrokersContext GetGridCustomerData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateGridCustomerData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
