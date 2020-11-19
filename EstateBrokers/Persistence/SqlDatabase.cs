@@ -12,10 +12,11 @@ namespace Persistence
 {
     public class SqlDatabase : IDatabase
     {
+        private static SqlConnection conn;
         private static SqlConnection GetConnection()
         {
-            var connectionString = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
-            SqlConnection conn = new SqlConnection(connectionString);
+            //var connectionString = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
+            conn = new SqlConnection("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             return conn;
         }
 
@@ -55,21 +56,25 @@ namespace Persistence
         }
 
 
-        public Customer GetCustomer(int customerID)
+        public Customer GetCustomer(int customerId)
         {
             var conn = GetConnection();
             conn.Open();
-            SqlCommand com = new SqlCommand($"select * from Customer where CustomerID = {customerID}");
+            SqlCommand com = new SqlCommand($"select * from Customer where CustomerID = {customerId}");
             com.Connection = conn;
             SqlDataReader sqld = com.ExecuteReader();
-            conn.Close();
-            return new Customer(Convert.ToInt32(sqld["customerID"]),
-                sqld["name"].ToString(),
-                sqld["adress"].ToString(),
-                Convert.ToInt32(sqld["phoneNr"]),
-                Convert.ToInt32(sqld["zipCode"]));
+            if (sqld.Read())
+            {
+                return new Customer(Convert.ToInt32(sqld[0]),
+                    sqld[1].ToString(),
+                    sqld[2].ToString(),
+                    Convert.ToInt32(sqld[3]),
+                    Convert.ToInt32(sqld[4]));
+            }
 
+            return null;
         }
+
 
         public List<Customer> GetAllCustomer(string name)
         {
@@ -187,6 +192,11 @@ namespace Persistence
             }
             conn.Close();
             return allCaseOrders;
+        }
+
+        IQueryable<Customer> IDatabase.GetAllCustomer(string name)
+        {
+            throw new NotImplementedException();
         }
     }
 }
