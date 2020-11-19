@@ -2,16 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Collections.Generic;
 using System.Configuration;
 using Microsoft.Data.SqlClient;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace Persistence
 {
     public class SqlDatabase : IDatabase
     {
-
         private static SqlConnection GetConnection()
         {
             var connectionString = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
@@ -53,6 +53,7 @@ namespace Persistence
             com.ExecuteNonQuery();
             conn.Close();
         }
+
 
         public Customer GetCustomer(int customerID)
         {
@@ -118,6 +119,7 @@ namespace Persistence
 
         public List<Estate> GetAllEstates(string address)
         {
+
             var conn = GetConnection();
             conn.Open();
             SqlCommand com = new SqlCommand($"select * from estate where address = {address}");
