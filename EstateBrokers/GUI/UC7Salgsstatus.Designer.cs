@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class Salgsstatus
+    partial class UC7Salgsstatus
     {
         /// <summary> 
         /// Required designer variable.

@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class UdbudsprisBeregner : UserControl
+    public partial class UC8SalgsprisTilpasning : UserControl
     {
-        public UdbudsprisBeregner()
+        public UC8SalgsprisTilpasning()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

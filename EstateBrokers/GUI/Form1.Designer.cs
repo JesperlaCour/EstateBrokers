@@ -38,12 +38,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.caseManagementcrud1 = new GUI.CaseManagementCRUD();
+            this.caseManagementcrud1 = new GUI.UC3AdministrereSag();
             this.forside1 = new GUI.Forside();
-            this.administrereKunde1 = new GUI.AdministrereKunde();
-            this.administrereHus1 = new GUI.AdministrereHus();
-            this.udbudsprisBeregner1 = new GUI.UdbudsprisBeregner();
-            this.aabentHus1 = new GUI.AabentHus();
+            this.administrereKunde1 = new GUI.UC1AdministrereKunde();
+            this.administrereHus1 = new GUI.UC2AdministrereHus();
+            this.udbudsprisBeregner1 = new GUI.UC4UdbudsprisBeregner();
+            this.aabentHus1 = new GUI.UC5AabentHus();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -193,7 +193,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(233, 75);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Case management";
+            this.button1.Text = "Administrere Sag";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -280,12 +280,12 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private CaseManagementCRUD caseManagementcrud1;
+        private UC3AdministrereSag caseManagementcrud1;
         private Forside forside1;
-        private AdministrereKunde administrereKunde1;
-        private AdministrereHus administrereHus1;
-        private UdbudsprisBeregner udbudsprisBeregner1;
-        private AabentHus aabentHus1;
+        private UC1AdministrereKunde administrereKunde1;
+        private UC2AdministrereHus administrereHus1;
+        private UC4UdbudsprisBeregner udbudsprisBeregner1;
+        private UC5AabentHus aabentHus1;
     }
 }
 

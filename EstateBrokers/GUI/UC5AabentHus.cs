@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class SalgsprisTilpasning : UserControl
+    public partial class UC5AabentHus : UserControl
     {
-        public SalgsprisTilpasning()
+        public UC5AabentHus()
         {
             InitializeComponent();
         }

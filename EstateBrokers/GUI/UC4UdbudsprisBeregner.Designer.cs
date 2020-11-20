@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class UdbudsprisBeregner
+    partial class UC4UdbudsprisBeregner
     {
         /// <summary> 
         /// Required designer variable.

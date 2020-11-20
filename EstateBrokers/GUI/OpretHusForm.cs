@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Salgsstatus : UserControl
+    public partial class OpretHusForm : Form
     {
-        public Salgsstatus()
+        public OpretHusForm()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class AabentHus
+    partial class UC5AabentHus
     {
         /// <summary> 
         /// Required designer variable.
