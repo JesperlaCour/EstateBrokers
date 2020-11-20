@@ -19,13 +19,13 @@ namespace GUI
         private void bt_GetAllEstates_Click(object sender, EventArgs e)
         {
             
-            dataGridView_AllEstates.DataSource = DataGrid_EstateConSingleton.Instance().GetGridEstateData().Estates.Local.ToBindingList();
-            dataGridView_AllEstates.Columns[0].ReadOnly = true;
+            //dataGridView_AllEstates.DataSource = DataGrid_EstateConSingleton.Instance().GetGridEstateData().Estates.Local.ToBindingList();
+            //dataGridView_AllEstates.Columns[0].ReadOnly = true;
         }
 
         private void bt_SaveEstates_Click(object sender, EventArgs e)
         {
-            DataGrid_EstateConSingleton.Instance().UpdateGridEstateData();
+            //DataGrid_EstateConSingleton.Instance().UpdateGridEstateData();
         }
     }
 }

@@ -8,23 +8,22 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class OpretSagForm : Form
+    public partial class HusSoegningsForm : Form
     {
-        public OpretSagForm()
+        public HusSoegningsForm()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            KundeSøgningsForms opkf = new KundeSøgningsForms();
-            opkf.ShowDialog();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            HusSoegningsForm ophf = new HusSoegningsForm();
-            ophf.ShowDialog();
+            OpretNytHusForms opnhf = new OpretNytHusForms();
+            opnhf.ShowDialog();
         }
     }
 }

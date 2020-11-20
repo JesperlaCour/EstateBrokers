@@ -23,7 +23,7 @@ namespace GUI
         private void bt_GetAllCustAdmin_Click(object sender, EventArgs e)
         {
 
-            dataGridView_CustAdmin.DataSource = DataGrid_CustConSingleton.Instance().GetGridCustomerData().Customers.Local.ToBindingList();
+            //dataGridView_CustAdmin.DataSource = DataGrid_CustConSingleton.Instance().GetGridCustomerData().Customers.Local.ToBindingList();
 
             
         }
@@ -31,7 +31,7 @@ namespace GUI
         private void bt_saveCustAdmin_Click(object sender, EventArgs e)
         {
 
-            DataGrid_CustConSingleton.Instance().UpdateGridCustomerData();
+            //DataGrid_CustConSingleton.Instance().UpdateGridCustomerData();
 
         }
     }

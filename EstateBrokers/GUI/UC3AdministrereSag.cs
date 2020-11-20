@@ -45,14 +45,16 @@ namespace GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpretKundeForms okf = new OpretKundeForms();
-            okf.ShowDialog();
+            OpretNyKundeForms onkf = new OpretNyKundeForms();
+            onkf.ShowDialog();
+            
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpretHusForm ohf = new OpretHusForm();
-            ohf.ShowDialog();
+            OpretNytHusForms onhf = new OpretNytHusForms();
+            onhf.ShowDialog();
         }
 
         private void label7_Click(object sender, EventArgs e)
