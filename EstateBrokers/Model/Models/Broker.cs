@@ -13,7 +13,7 @@ namespace Model.Models
             OpenHouses = new HashSet<OpenHouse>();
         }
 
-        public int BrokerId { get; set; }
+        public int BrokerID { get; set; }
         public string Name { get; set; }
         public int? DepartmentId { get; set; }
 
