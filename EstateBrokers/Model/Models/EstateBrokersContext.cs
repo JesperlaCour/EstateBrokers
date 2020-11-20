@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Configuration;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-
-
+#nullable disable
 
 namespace Model.Models
 {
@@ -34,8 +33,7 @@ namespace Model.Models
             {
                 
                 optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
-                
-                //Cant use configurationManager for UnitTest. Use the following sentence. 
+
                 //optionsBuilder.UseSqlServer("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
@@ -46,7 +44,7 @@ namespace Model.Models
             {
                 entity.ToTable("Broker");
 
-                entity.Property(e => e.BrokerId).HasColumnName("BrokerID");
+                entity.Property(e => e.BrokerID).HasColumnName("BrokerID");
 
                 entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
 
@@ -62,37 +60,41 @@ namespace Model.Models
 
             modelBuilder.Entity<CaseOrder>(entity =>
             {
-                entity.HasKey(e => e.CaseOrderID)
-                    .HasName("PK__CaseOrde__6CAE526CCCAC15CD");
-
                 entity.ToTable("CaseOrder");
 
-                entity.Property(e => e.CaseOrderID).HasColumnName("CaseID");
+                entity.Property(e => e.CaseOrderId).HasColumnName("CaseOrderID");
 
                 entity.Property(e => e.BrokerId).HasColumnName("BrokerID");
+
+                entity.Property(e => e.BuyerId).HasColumnName("BuyerID");
 
                 entity.Property(e => e.CaseStatus)
                     .HasMaxLength(45)
                     .IsUnicode(false);
 
-                entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
-
                 entity.Property(e => e.EstateId).HasColumnName("EstateID");
+
+                entity.Property(e => e.SellerId).HasColumnName("SellerID");
 
                 entity.HasOne(d => d.Broker)
                     .WithMany(p => p.CaseOrders)
                     .HasForeignKey(d => d.BrokerId)
                     .HasConstraintName("FK__CaseOrder__Broke__7C4F7684");
 
-                entity.HasOne(d => d.Customer)
-                    .WithMany(p => p.CaseOrders)
-                    .HasForeignKey(d => d.CustomerId)
-                    .HasConstraintName("FK__CaseOrder__Custo__7B5B524B");
+                entity.HasOne(d => d.Buyer)
+                    .WithMany(p => p.CaseOrderBuyers)
+                    .HasForeignKey(d => d.BuyerId)
+                    .HasConstraintName("FK__CaseOrder__Buyer__09A971A2");
 
                 entity.HasOne(d => d.Estate)
                     .WithMany(p => p.CaseOrders)
                     .HasForeignKey(d => d.EstateId)
                     .HasConstraintName("FK__CaseOrder__Estat__7D439ABD");
+
+                entity.HasOne(d => d.Seller)
+                    .WithMany(p => p.CaseOrderSellers)
+                    .HasForeignKey(d => d.SellerId)
+                    .HasConstraintName("FK__CaseOrder__Custo__7B5B524B");
             });
 
             modelBuilder.Entity<Customer>(entity =>
@@ -154,7 +156,7 @@ namespace Model.Models
 
                 entity.Property(e => e.BrokerId).HasColumnName("BrokerID");
 
-                entity.Property(e => e.CaseOrderID).HasColumnName("CaseID");
+                entity.Property(e => e.CaseId).HasColumnName("CaseID");
 
                 entity.Property(e => e.Date).HasColumnType("datetime");
 
@@ -165,7 +167,7 @@ namespace Model.Models
 
                 entity.HasOne(d => d.Case)
                     .WithMany(p => p.OpenHouses)
-                    .HasForeignKey(d => d.CaseOrderID)
+                    .HasForeignKey(d => d.CaseId)
                     .HasConstraintName("FK__OpenHouse__CaseI__01142BA1");
             });
 

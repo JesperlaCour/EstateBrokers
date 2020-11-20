@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 #nullable disable
 
@@ -14,8 +13,7 @@ namespace Model.Models
             PriceHistories = new HashSet<PriceHistory>();
         }
 
-        public Estate(int estateId, string address, string type, int buildYear, int remodelYear, int condition,
-            int areal, int rooms, int floors, bool garden, int zipCode)
+        public Estate(int estateId, string address, string type, int? buildYear, int? remodelYear, int? condition, int? areal, int? rooms, int? floors, bool? garden, int? zipCode)
         {
             EstateId = estateId;
             Address = address;
