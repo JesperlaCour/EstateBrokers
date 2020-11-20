@@ -20,7 +20,6 @@ namespace GUI
             InitializeComponent();
         }
 
-
         private void bt_GetAllEstates_Click(object sender, EventArgs e)
         {
             dataGridView_AllEstates.DataSource = EstateControllerSingleton.Instance().GetGridEstateData().Estates.Local.ToBindingList();
@@ -29,6 +28,7 @@ namespace GUI
         private void bt_SaveEstates_Click(object sender, EventArgs e)
         {
             EstateControllerSingleton.Instance().UpdateGridEstateData();
+
         }
     }
 }

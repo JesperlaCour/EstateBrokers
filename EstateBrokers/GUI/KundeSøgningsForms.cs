@@ -8,16 +8,17 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class OpretHusForm : Form
+    public partial class KundeSøgningsForms : Form
     {
-        public OpretHusForm()
+        public KundeSøgningsForms()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            OpretNyKundeForms opnkf = new OpretNyKundeForms();
+            opnkf.ShowDialog();
         }
     }
 }

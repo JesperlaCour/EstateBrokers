@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class OpretKundeForms : Form
+    public partial class OpretNyKundeForms : Form
     {
-        public OpretKundeForms()
+        public OpretNyKundeForms()
         {
             InitializeComponent();
         }
