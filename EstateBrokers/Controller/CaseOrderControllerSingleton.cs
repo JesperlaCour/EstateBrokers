@@ -23,21 +23,14 @@ namespace Controller
             }
             return _instance;
         }
-        public void CreateEstate(Estate estate)
+        public void CreateCaseOrder(CaseOrder caseOrder, decimal price)
         {
-            
+            IDatabase db = new DatabaseProxy();
+            db.CreateCaseOrder(caseOrder);
+            db.InsertPrice(new PriceHistory(price,"ListingPrice",caseOrder.EstateId));
+
         }
 
-        IDatabase db;
-        public EstateBrokersContext GetGridEstateData()
-        {
-            db = new DatabaseProxy();
-            return db.GetGridEstateData();
-        }
-
-        public void UpdateGridEstateData()
-        {
-            db.UpdateGridEstateData();
-        }
+        
     }
 }

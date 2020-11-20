@@ -20,18 +20,14 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void bt_GetAllCustAdmin_Click(object sender, EventArgs e)
+        private void bt_GetAllEstates_Click(object sender, EventArgs e)
         {
-
-            dataGridView_CustAdmin.DataSource = DataGrid_CustConSingleton.Instance().GetGridCustomerData().Customers.Local.ToBindingList();
-
-            
+            dataGridView_AllEstates.DataSource = EstateControllerSingleton.Instance().GetGridEstateData().Estates.Local.ToBindingList();
         }
 
-        private void bt_saveCustAdmin_Click(object sender, EventArgs e)
+        private void bt_SaveEstates_Click(object sender, EventArgs e)
         {
-
-            DataGrid_CustConSingleton.Instance().UpdateGridCustomerData();
+            EstateControllerSingleton.Instance().UpdateGridEstateData();
 
         }
     }

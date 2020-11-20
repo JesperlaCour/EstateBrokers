@@ -96,5 +96,12 @@ namespace Persistence
         {
             context.SaveChanges();
         }
+
+        public void InsertPrice(PriceHistory priceHistory)
+        {
+            context = new EstateBrokersContext();
+            context.PriceHistories.Add(priceHistory);
+            context.SaveChanges();
+        }
     }
 }

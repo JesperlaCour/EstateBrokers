@@ -26,44 +26,119 @@ namespace Persistence
 
         public void CreateEstate(Estate estate)
         {
-            throw new NotImplementedException();
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                ef.CreateEstate(estate);
+            }
+            catch (Exception)
+            {
+                SqlDatabase sql = new SqlDatabase();
+                sql.CreateEstate(estate);
+            }
+           
         }
         public void CreateCaseOrder(CaseOrder caseOrder)
         {
-            throw new NotImplementedException();
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                ef.CreateCaseOrder(caseOrder);
+            }
+            catch (Exception)
+            {
+                SqlDatabase sql = new SqlDatabase();
+                sql.CreateCaseOrder(caseOrder);
+            }
         }
 
 
         public List<CaseOrder> GetAllCaseOrders()
         {
-            throw new NotImplementedException();
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                return ef.GetAllCaseOrders();
+            }
+            catch (Exception)
+            {
+                SqlDatabase sql = new SqlDatabase();
+                return sql.GetAllCaseOrders();
+            }
         }
 
         public List<Customer> GetAllCustomer(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                return ef.GetAllCustomer(name);
+            }
+            catch (Exception)
+            {
+                SqlDatabase sql = new SqlDatabase();
+                return sql.GetAllCustomer(name);
+            }
         }
 
         public List<Estate> GetAllEstates(string address)
         {
-            throw new NotImplementedException();
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                return ef.GetAllEstates(address);
+            }
+            catch (Exception)
+            {
+                SqlDatabase sql = new SqlDatabase();
+                return sql.GetAllEstates(address);
+            }
         }
 
         public CaseOrder GetCaseOrder(int CaseOrderID)
         {
-            throw new NotImplementedException();
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                return ef.GetCaseOrder(CaseOrderID);
+            }
+            catch (Exception)
+            {
+                SqlDatabase sql = new SqlDatabase();
+                return sql.GetCaseOrder(CaseOrderID);
+            }
         }
 
         public Customer GetCustomer(int customerID)
         {
-            throw new NotImplementedException();
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                return ef.GetCustomer(customerID);
+            }
+            catch (Exception)
+            {
+                SqlDatabase sql = new SqlDatabase();
+                return sql.GetCustomer(customerID);
+            }
         }
 
         public Estate GetEstate(int EstateID)
         {
-            throw new NotImplementedException();
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                return ef.GetEstate(EstateID);
+            }
+            catch (Exception)
+            {
+                SqlDatabase sql = new SqlDatabase();
+                return sql.GetEstate(EstateID);
+            }
         }
 
+
+        //Admin menu (edit/delete)
         EFDatabase db;
         public EstateBrokersContext GetGridCustomerData()
         {
@@ -99,6 +174,21 @@ namespace Persistence
         public void UpdateGridEstateData()
         {
             db.UpdateGridEstateData();
+        }
+
+        public void InsertPrice(PriceHistory priceHistory)
+        {
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                ef.InsertPrice(priceHistory);
+               
+            }
+            catch (Exception)
+            {
+
+                throw new NotImplementedException();
+            }
         }
     }
 }

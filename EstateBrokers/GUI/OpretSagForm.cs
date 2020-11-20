@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Controller;
+using Model.Models;
 
 namespace GUI
 {
@@ -17,14 +19,24 @@ namespace GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpretKundeForms opkf = new OpretKundeForms();
+            KundeSøgningsForms opkf = new KundeSøgningsForms();
             opkf.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpretHusForm ophf = new OpretHusForm();
+            HusSoegningsForm ophf = new HusSoegningsForm();
             ophf.ShowDialog();
+        }
+
+        private void bt_CreateNewCase_Click(object sender, EventArgs e)
+        {
+            CaseOrderControllerSingleton.Instance().CreateCaseOrder(new CaseOrder(
+                "Active",
+                Convert.ToInt32(tbt_sellerID.Text),
+                1,
+                Convert.ToInt32(tbt_estateID.Text)),
+                Convert.ToInt32(tbt_ListingPrice.Text));
         }
     }
 }

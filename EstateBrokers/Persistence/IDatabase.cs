@@ -23,12 +23,13 @@ namespace Persistence
 
         public CaseOrder GetCaseOrder(int CaseOrderID);
         public List<CaseOrder> GetAllCaseOrders();
+        void InsertPrice(PriceHistory priceHistory);
 
         //DataGridView
 
         public EstateBrokersContext GetGridCustomerData();
         public void UpdateGridCustomerData();
-
+        
         public EstateBrokersContext GetGridEstateData();
         public void UpdateGridEstateData();
 
