@@ -12,6 +12,16 @@ namespace Model.Models
             OpenHouses = new HashSet<OpenHouse>();
         }
 
+        public CaseOrder(int caseOrderId, string caseStatus, int? sellerId, int? brokerId, int? estateId, int? buyerId)
+        {
+            CaseOrderId = caseOrderId;
+            CaseStatus = caseStatus;
+            SellerId = sellerId;
+            BrokerId = brokerId;
+            EstateId = estateId;
+            BuyerId = buyerId;
+        }
+
         public int CaseOrderId { get; set; }
         public string CaseStatus { get; set; }
         public int? SellerId { get; set; }

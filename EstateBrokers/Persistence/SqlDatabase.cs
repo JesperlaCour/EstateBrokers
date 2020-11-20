@@ -49,7 +49,7 @@ namespace Persistence
             conn.Open();
             SqlCommand com =
                 new SqlCommand(
-                    $"Insert into caseorder (CaseStatus, EstateID, CustomerID, BrokerID) values ('{caseOrder.CaseStatus}','{caseOrder.EstateId}',{caseOrder.SellerID},{caseOrder.BrokerId})",
+                    $"Insert into caseorder (CaseStatus, EstateID, CustomerID, BrokerID) values ('{caseOrder.CaseStatus}','{caseOrder.EstateId}',{caseOrder.SellerId},{caseOrder.BrokerId})",
                     conn);
             com.ExecuteNonQuery();
             conn.Close();
@@ -164,7 +164,8 @@ namespace Persistence
             return new CaseOrder(Convert.ToInt32(sqld["caseID"]),
                 sqld["caseStatus"].ToString(),
                 Convert.ToInt32(sqld["customerId"]),
-                Convert.ToInt32(sqld["brokerId"]),
+                Convert.ToInt32(sqld["sellerId"]),
+                Convert.ToInt32(sqld["buyerId"]),
                 Convert.ToInt32(sqld["estateId"]));
         }
 
@@ -184,6 +185,7 @@ namespace Persistence
                         Convert.ToInt32(sqld["caseID"]),
                         sqld["caseStatus"].ToString(),
                         Convert.ToInt32(sqld["customerId"]),
+                        Convert.ToInt32(sqld["SellerId"]),
                         Convert.ToInt32(sqld["brokerId"]),
                         Convert.ToInt32(sqld["estateId"])));
                 }
