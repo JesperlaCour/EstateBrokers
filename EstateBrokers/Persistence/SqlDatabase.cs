@@ -71,7 +71,7 @@ namespace Persistence
                     Convert.ToInt32(sqld[3]),
                     Convert.ToInt32(sqld[4]));
             }
-
+            conn.Close();
             return null;
         }
 
@@ -80,7 +80,7 @@ namespace Persistence
         {
             var conn = GetConnection();
             conn.Open();
-            SqlCommand com = new SqlCommand($"select * from Customer where name = {name}");
+            SqlCommand com = new SqlCommand($"select * from Customer where name like '%{name}%'");
             List<Customer> allCustomers = new List<Customer>();
             com.Connection = conn;
             SqlDataReader sqld = com.ExecuteReader();
@@ -101,25 +101,29 @@ namespace Persistence
             return allCustomers;
         }
 
-        public Estate GetEstate(int EstateID)
+        public Estate GetEstate(int estateID)
         {
             var conn = GetConnection();
             conn.Open();
-            SqlCommand com = new SqlCommand($"select * from Estate where EstateID = {EstateID}");
+            SqlCommand com = new SqlCommand($"select * from Estate where EstateID = {estateID}");
             com.Connection = conn;
             SqlDataReader sqld = com.ExecuteReader();
+            if (sqld.Read())
+            {
+                return new Estate(Convert.ToInt32(sqld["estateId"]),
+                    sqld["address"].ToString(),
+                    sqld["type"].ToString(),
+                    Convert.ToInt32(sqld["buildYear"]),
+                    Convert.ToInt32(sqld["remodelYear"]),
+                    Convert.ToInt32(sqld["condition"]),
+                    Convert.ToInt32(sqld["areal"]),
+                    Convert.ToInt32(sqld["rooms"]),
+                    Convert.ToInt32(sqld["floors"]),
+                    Convert.ToBoolean(sqld["garden"]),
+                    Convert.ToInt32(sqld["zipCode"]));
+            }
             conn.Close();
-            return new Estate(Convert.ToInt32(sqld["estateId"]),
-                sqld["address"].ToString(),
-                sqld["type"].ToString(),
-                Convert.ToInt32(sqld["buildYear"]),
-                Convert.ToInt32(sqld["remodelYear"]),
-                Convert.ToInt32(sqld["condition"]),
-                Convert.ToInt32(sqld["areal"]),
-                Convert.ToInt32(sqld["rooms"]),
-                Convert.ToInt32(sqld["floors"]),
-                Convert.ToBoolean(sqld["garden"]),
-                Convert.ToInt32(sqld["zipCode"]));
+            return null;
         }
 
         public List<Estate> GetAllEstates(string address)
@@ -127,7 +131,7 @@ namespace Persistence
 
             var conn = GetConnection();
             conn.Open();
-            SqlCommand com = new SqlCommand($"select * from estate where address = {address}");
+            SqlCommand com = new SqlCommand($"select * from Estate where address like '%{address}%'");
             List<Estate> allEstates = new List<Estate>();
             com.Connection = conn;
             SqlDataReader sqld = com.ExecuteReader();
@@ -135,6 +139,7 @@ namespace Persistence
             {
                 while (sqld.Read())
                 {
+
                     allEstates.Add(new Estate(Convert.ToInt32(sqld["estateId"]),
                         sqld["address"].ToString(),
                         sqld["type"].ToString(),
@@ -148,25 +153,29 @@ namespace Persistence
                         Convert.ToInt32(sqld["zipCode"])));
                 }
             }
-
             conn.Close();
             return allEstates;
         }
 
-        public CaseOrder GetCaseOrder(int CaseOrderID)
+        public CaseOrder GetCaseOrder(int caseOrderID)
         {
             var conn = GetConnection();
             conn.Open();
-            SqlCommand com = new SqlCommand($"select * from caseorder where CaseOrderID = {CaseOrderID}");
+            SqlCommand com = new SqlCommand($"select * from caseorder where CaseOrderID = {caseOrderID}");
             com.Connection = conn;
             SqlDataReader sqld = com.ExecuteReader();
+
+            if (sqld.Read())
+            {
+                return new CaseOrder(Convert.ToInt32(sqld["caseID"]),
+                    sqld["caseStatus"].ToString(),
+                    Convert.ToInt32(sqld["customerId"]),
+                    Convert.ToInt32(sqld["sellerId"]),
+                    Convert.ToInt32(sqld["buyerId"]),
+                    Convert.ToInt32(sqld["estateId"]));
+            }
             conn.Close();
-            return new CaseOrder(Convert.ToInt32(sqld["caseID"]),
-                sqld["caseStatus"].ToString(),
-                Convert.ToInt32(sqld["customerId"]),
-                Convert.ToInt32(sqld["sellerId"]),
-                Convert.ToInt32(sqld["buyerId"]),
-                Convert.ToInt32(sqld["estateId"]));
+            return null;
         }
 
         public List<CaseOrder> GetAllCaseOrders()
@@ -190,11 +199,12 @@ namespace Persistence
                         Convert.ToInt32(sqld["estateId"])));
                 }
 
-                
+
             }
             conn.Close();
             return allCaseOrders;
         }
+
 
         public EstateBrokersContext GetGridCustomerData()
         {
