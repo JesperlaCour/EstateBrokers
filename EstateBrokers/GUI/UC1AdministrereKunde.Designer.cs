@@ -29,71 +29,77 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView_CustAdmin = new System.Windows.Forms.DataGridView();
+            this.bt_GetAllCustAdmin = new System.Windows.Forms.Button();
+            this.bt_saveCustAdmin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CustAdmin)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView_CustAdmin
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(202, 141);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1442, 718);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView_CustAdmin.AllowUserToOrderColumns = true;
+            this.dataGridView_CustAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_CustAdmin.Location = new System.Drawing.Point(328, 226);
+            this.dataGridView_CustAdmin.Margin = new System.Windows.Forms.Padding(5);
+            this.dataGridView_CustAdmin.Name = "dataGridView_CustAdmin";
+            this.dataGridView_CustAdmin.RowHeadersWidth = 51;
+            this.dataGridView_CustAdmin.Size = new System.Drawing.Size(2343, 1149);
+            this.dataGridView_CustAdmin.TabIndex = 0;
             // 
-            // button1
+            // bt_GetAllCustAdmin
             // 
-            this.button1.Location = new System.Drawing.Point(202, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 43);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_GetAllCustAdmin.Location = new System.Drawing.Point(328, 147);
+            this.bt_GetAllCustAdmin.Margin = new System.Windows.Forms.Padding(5);
+            this.bt_GetAllCustAdmin.Name = "bt_GetAllCustAdmin";
+            this.bt_GetAllCustAdmin.Size = new System.Drawing.Size(176, 69);
+            this.bt_GetAllCustAdmin.TabIndex = 1;
+            this.bt_GetAllCustAdmin.Text = "Hent alle";
+            this.bt_GetAllCustAdmin.UseVisualStyleBackColor = true;
+            this.bt_GetAllCustAdmin.Click += new System.EventHandler(this.bt_GetAllCustAdmin_Click);
             // 
-            // button2
+            // bt_saveCustAdmin
             // 
-            this.button2.Location = new System.Drawing.Point(316, 92);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 43);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_saveCustAdmin.Location = new System.Drawing.Point(514, 147);
+            this.bt_saveCustAdmin.Margin = new System.Windows.Forms.Padding(5);
+            this.bt_saveCustAdmin.Name = "bt_saveCustAdmin";
+            this.bt_saveCustAdmin.Size = new System.Drawing.Size(176, 69);
+            this.bt_saveCustAdmin.TabIndex = 2;
+            this.bt_saveCustAdmin.Text = "Gem";
+            this.bt_saveCustAdmin.UseVisualStyleBackColor = true;
+            this.bt_saveCustAdmin.Click += new System.EventHandler(this.bt_saveCustAdmin_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 1080);
+            this.panel1.Size = new System.Drawing.Size(318, 1728);
             this.panel1.TabIndex = 3;
             // 
             // AdministrereKunde
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.MinimumSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.bt_saveCustAdmin);
+            this.Controls.Add(this.bt_GetAllCustAdmin);
+            this.Controls.Add(this.dataGridView_CustAdmin);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(3120, 1728);
             this.Name = "AdministrereKunde";
-            this.Size = new System.Drawing.Size(1920, 1080);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Size = new System.Drawing.Size(3120, 1728);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CustAdmin)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView_CustAdmin;
+        private System.Windows.Forms.Button bt_GetAllCustAdmin;
+        private System.Windows.Forms.Button bt_saveCustAdmin;
         private System.Windows.Forms.Panel panel1;
     }
 }
