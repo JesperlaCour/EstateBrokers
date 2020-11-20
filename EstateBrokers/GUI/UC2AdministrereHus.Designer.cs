@@ -40,7 +40,7 @@ namespace GUI
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 1728);
             this.panel1.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace GUI
             // 
             this.dataGridView_AllEstates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_AllEstates.Location = new System.Drawing.Point(328, 195);
-            this.dataGridView_AllEstates.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridView_AllEstates.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView_AllEstates.Name = "dataGridView_AllEstates";
             this.dataGridView_AllEstates.RowHeadersWidth = 51;
             this.dataGridView_AllEstates.Size = new System.Drawing.Size(2343, 1149);
@@ -58,7 +58,7 @@ namespace GUI
             // bt_GetAllEstates
             // 
             this.bt_GetAllEstates.Location = new System.Drawing.Point(328, 117);
-            this.bt_GetAllEstates.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bt_GetAllEstates.Margin = new System.Windows.Forms.Padding(5);
             this.bt_GetAllEstates.Name = "bt_GetAllEstates";
             this.bt_GetAllEstates.Size = new System.Drawing.Size(172, 69);
             this.bt_GetAllEstates.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace GUI
             // bt_SaveEstates
             // 
             this.bt_SaveEstates.Location = new System.Drawing.Point(510, 117);
-            this.bt_SaveEstates.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bt_SaveEstates.Margin = new System.Windows.Forms.Padding(5);
             this.bt_SaveEstates.Name = "bt_SaveEstates";
             this.bt_SaveEstates.Size = new System.Drawing.Size(169, 69);
             this.bt_SaveEstates.TabIndex = 3;
@@ -77,7 +77,7 @@ namespace GUI
             this.bt_SaveEstates.UseVisualStyleBackColor = true;
             this.bt_SaveEstates.Click += new System.EventHandler(this.bt_SaveEstates_Click);
             // 
-            // AdministrereHus
+            // UC2AdministrereHus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,9 +85,9 @@ namespace GUI
             this.Controls.Add(this.bt_GetAllEstates);
             this.Controls.Add(this.dataGridView_AllEstates);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(3120, 1728);
-            this.Name = "AdministrereHus";
+            this.Name = "UC2AdministrereHus";
             this.Size = new System.Drawing.Size(3120, 1728);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AllEstates)).EndInit();
             this.ResumeLayout(false);

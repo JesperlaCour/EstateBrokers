@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Controller;
+using Model.Models;
 
 namespace GUI
 {
@@ -25,6 +27,16 @@ namespace GUI
         {
             OpretHusForm ophf = new OpretHusForm();
             ophf.ShowDialog();
+        }
+
+        private void bt_CreateNewCase_Click(object sender, EventArgs e)
+        {
+            CaseOrderControllerSingleton.Instance().CreateCaseOrder(new CaseOrder(
+                "Active",
+                Convert.ToInt32(tbt_sellerID.Text),
+                1,
+                Convert.ToInt32(tbt_estateID.Text)),
+                Convert.ToInt32(tbt_ListingPrice.Text));
         }
     }
 }

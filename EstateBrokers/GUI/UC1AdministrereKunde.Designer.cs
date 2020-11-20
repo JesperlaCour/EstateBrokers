@@ -56,7 +56,6 @@ namespace GUI
             this.bt_GetAllCustAdmin.TabIndex = 1;
             this.bt_GetAllCustAdmin.Text = "Hent alle";
             this.bt_GetAllCustAdmin.UseVisualStyleBackColor = true;
-            this.bt_GetAllCustAdmin.Click += new System.EventHandler(this.bt_GetAllCustAdmin_Click);
             // 
             // bt_saveCustAdmin
             // 
@@ -67,7 +66,6 @@ namespace GUI
             this.bt_saveCustAdmin.TabIndex = 2;
             this.bt_saveCustAdmin.Text = "Gem";
             this.bt_saveCustAdmin.UseVisualStyleBackColor = true;
-            this.bt_saveCustAdmin.Click += new System.EventHandler(this.bt_saveCustAdmin_Click);
             // 
             // panel1
             // 

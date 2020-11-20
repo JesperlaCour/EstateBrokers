@@ -225,5 +225,10 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public void InsertPrice(PriceHistory priceHistory)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
