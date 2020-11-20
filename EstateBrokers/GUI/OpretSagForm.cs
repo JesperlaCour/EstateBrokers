@@ -14,5 +14,17 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpretKundeForms opkf = new OpretKundeForms();
+            opkf.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpretHusForm ophf = new OpretHusForm();
+            ophf.ShowDialog();
+        }
     }
 }
