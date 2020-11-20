@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class AabentHus
+    partial class UC7Salgsstatus
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,12 +31,12 @@ namespace GUI
         {
             this.SuspendLayout();
             // 
-            // AabentHus
+            // Salgsstatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.MinimumSize = new System.Drawing.Size(1920, 1080);
-            this.Name = "AabentHus";
+            this.Name = "Salgsstatus";
             this.Size = new System.Drawing.Size(1920, 1080);
             this.ResumeLayout(false);
 

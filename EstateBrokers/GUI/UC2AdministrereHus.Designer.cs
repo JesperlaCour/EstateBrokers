@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class AdministrereHus
+    partial class UC2AdministrereHus
     {
         /// <summary> 
         /// Required designer variable.

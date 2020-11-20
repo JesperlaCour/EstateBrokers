@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class Salgsstatistik
+    partial class UC8SalgsprisTilpasning
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,12 +31,12 @@ namespace GUI
         {
             this.SuspendLayout();
             // 
-            // Salgsstatistik
+            // SalgsprisTilpasning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.MinimumSize = new System.Drawing.Size(1920, 1080);
-            this.Name = "Salgsstatistik";
+            this.Name = "SalgsprisTilpasning";
             this.Size = new System.Drawing.Size(1920, 1080);
             this.ResumeLayout(false);
 

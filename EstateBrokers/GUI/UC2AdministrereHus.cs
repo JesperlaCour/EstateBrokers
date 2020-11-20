@@ -13,9 +13,9 @@ using Controller;
 
 namespace GUI
 {
-    public partial class AdministrereKunde : UserControl
+    public partial class UC2AdministrereHus : UserControl
     {
-        public AdministrereKunde()
+        public UC2AdministrereHus()
         {
             InitializeComponent();
         }

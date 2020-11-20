@@ -38,10 +38,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.caseManagementcrud1 = new GUI.CaseManagementCRUD();
+            this.caseManagementcrud1 = new GUI.UC3AdministrereSag();
             this.forside1 = new GUI.Forside();
-            this.administrereKunde1 = new GUI.AdministrereKunde();
-            this.administrereHus1 = new GUI.AdministrereHus();
+            this.administrereKunde1 = new GUI.UC1AdministrereKunde();
+            this.administrereHus1 = new GUI.UC2AdministrereHus();
+            this.udbudsprisBeregner1 = new GUI.UC4UdbudsprisBeregner();
+            this.aabentHus1 = new GUI.UC5AabentHus();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +128,7 @@
             this.button5.Text = "Åbent Hus";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -176,6 +179,7 @@
             this.button2.Text = "Udbudspris Beregner";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -189,7 +193,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(233, 75);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Case management";
+            this.button1.Text = "Administrere Sag";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -227,6 +231,22 @@
             this.administrereHus1.Size = new System.Drawing.Size(2400, 1350);
             this.administrereHus1.TabIndex = 4;
             // 
+            // udbudsprisBeregner1
+            // 
+            this.udbudsprisBeregner1.Location = new System.Drawing.Point(0, 75);
+            this.udbudsprisBeregner1.MinimumSize = new System.Drawing.Size(1920, 1080);
+            this.udbudsprisBeregner1.Name = "udbudsprisBeregner1";
+            this.udbudsprisBeregner1.Size = new System.Drawing.Size(2400, 1350);
+            this.udbudsprisBeregner1.TabIndex = 5;
+            // 
+            // aabentHus1
+            // 
+            this.aabentHus1.Location = new System.Drawing.Point(0, 75);
+            this.aabentHus1.MinimumSize = new System.Drawing.Size(1920, 1080);
+            this.aabentHus1.Name = "aabentHus1";
+            this.aabentHus1.Size = new System.Drawing.Size(2400, 1350);
+            this.aabentHus1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -237,6 +257,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.administrereKunde1);
             this.Controls.Add(this.administrereHus1);
+            this.Controls.Add(this.udbudsprisBeregner1);
+            this.Controls.Add(this.aabentHus1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1918, 1028);
             this.Name = "Form1";
@@ -258,10 +280,12 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private CaseManagementCRUD caseManagementcrud1;
+        private UC3AdministrereSag caseManagementcrud1;
         private Forside forside1;
-        private AdministrereKunde administrereKunde1;
-        private AdministrereHus administrereHus1;
+        private UC1AdministrereKunde administrereKunde1;
+        private UC2AdministrereHus administrereHus1;
+        private UC4UdbudsprisBeregner udbudsprisBeregner1;
+        private UC5AabentHus aabentHus1;
     }
 }
 

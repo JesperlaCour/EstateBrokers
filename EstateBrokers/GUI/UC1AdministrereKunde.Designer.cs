@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class AdministrereKunde
+    partial class UC1AdministrereKunde
     {
         /// <summary> 
         /// Required designer variable.

@@ -9,9 +9,9 @@ using Controller;
 
 namespace GUI
 {
-    public partial class AdministrereHus : UserControl
+    public partial class UC6Salgsstatistik : UserControl
     {
-        public AdministrereHus()
+        public UC6Salgsstatistik()
         {
             InitializeComponent();
         }
