@@ -25,5 +25,10 @@ namespace GUI
             OpretNytHusForms opnhf = new OpretNytHusForms();
             opnhf.ShowDialog();
         }
+
+        private void btn_soeg_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

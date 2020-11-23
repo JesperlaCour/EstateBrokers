@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Controller;
 
 namespace GUI
 {
@@ -19,6 +20,15 @@ namespace GUI
         {
             OpretNyKundeForms opnkf = new OpretNyKundeForms();
             opnkf.ShowDialog();
+        }
+
+        private void btn_soeg_Click(object sender, EventArgs e)
+        {
+
+            
+
+
+
         }
     }
 }

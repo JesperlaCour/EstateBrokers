@@ -46,7 +46,7 @@ namespace GUI
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1019, 444);
+            this.dataGridView1.Size = new System.Drawing.Size(1019, 475);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox1
@@ -84,6 +84,7 @@ namespace GUI
             this.btn_soeg.TabIndex = 6;
             this.btn_soeg.Text = "Søg";
             this.btn_soeg.UseVisualStyleBackColor = true;
+            this.btn_soeg.Click += new System.EventHandler(this.btn_soeg_Click);
             // 
             // btn_Choose
             // 

@@ -62,7 +62,7 @@ namespace GUI
             // 
             // btn_Gem
             // 
-            this.btn_Gem.Location = new System.Drawing.Point(326, 92);
+            this.btn_Gem.Location = new System.Drawing.Point(316, 92);
             this.btn_Gem.Name = "btn_Gem";
             this.btn_Gem.Size = new System.Drawing.Size(108, 43);
             this.btn_Gem.TabIndex = 2;
