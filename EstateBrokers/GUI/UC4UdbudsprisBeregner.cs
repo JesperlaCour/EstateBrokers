@@ -19,5 +19,28 @@ namespace GUI
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+
+            dataGridView1.Columns[""].HeaderText = "";
+            dataGridView1.Columns[""].HeaderText = "";
+            dataGridView1.Columns[""].HeaderText = "";
+            dataGridView1.Columns[""].HeaderText = "";
+            dataGridView1.Columns[""].HeaderText = "";
+            dataGridView1.Columns[""].HeaderText = "";
+            dataGridView1.Columns[""].HeaderText = "";
+            dataGridView1.Columns[""].HeaderText = "";
+
+
+
+        }
     }
 }

@@ -19,7 +19,21 @@ namespace GUI
         private void bt_GetAllCustAdmin_Click(object sender, EventArgs e)
         {
             dataGridView_CustAdmin.DataSource = CustomerControllerSingleton.Instance().GetGridCustomerData("").Customers.Local.ToBindingList();
+
+
+            dataGridView_CustAdmin.Columns["CustomerId"].HeaderText = "Kundenummer";
+            dataGridView_CustAdmin.Columns["Name"].HeaderText = "Navn";
+            dataGridView_CustAdmin.Columns["Address"].HeaderText = "Adresse";
+            dataGridView_CustAdmin.Columns["PhoneNr"].HeaderText = "Telefonnummer";
+            dataGridView_CustAdmin.Columns["ZipCode"].HeaderText = "Postnummer";
+            dataGridView_CustAdmin.Columns["ZipCodeNavigation"].HeaderText = "PostnummerNavigation";
+            dataGridView_CustAdmin.Columns["CaseOrderBuyers"].HeaderText = "SagsOrdreKøbere";
+            dataGridView_CustAdmin.Columns["CaseOrderSellers"].HeaderText = "SagsOrdreSælgere";
+
+
+
         }
+
 
         private void bt_saveCustAdmin_Click(object sender, EventArgs e)
         {

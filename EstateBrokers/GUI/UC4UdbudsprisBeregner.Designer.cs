@@ -78,6 +78,7 @@ namespace GUI
             this.button1.TabIndex = 2;
             this.button1.Text = "Søg";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -244,7 +245,7 @@ namespace GUI
             this.label10.TabIndex = 21;
             this.label10.Text = "Kr.";
             // 
-            // UdbudsprisBeregner
+            // UC4UdbudsprisBeregner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -271,7 +272,7 @@ namespace GUI
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1920, 1080);
-            this.Name = "UdbudsprisBeregner";
+            this.Name = "UC4UdbudsprisBeregner";
             this.Size = new System.Drawing.Size(1920, 1080);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
