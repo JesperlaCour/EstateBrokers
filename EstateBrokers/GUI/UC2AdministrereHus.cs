@@ -30,5 +30,12 @@ namespace GUI
             EstateControllerSingleton.Instance().UpdateGridEstateData();
 
         }
+
+        private void bt_GetAllEstates_Click_1(object sender, EventArgs e)
+        {
+            dataGridView_AllEstates.DataSource = EstateControllerSingleton.Instance().GetGridEstateData().Estates.Local.ToBindingList();
+
+
+        }
     }
 }

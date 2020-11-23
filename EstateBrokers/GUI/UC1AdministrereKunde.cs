@@ -14,5 +14,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void bt_GetAllCustAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
