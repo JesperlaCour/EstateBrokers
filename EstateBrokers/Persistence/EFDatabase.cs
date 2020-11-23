@@ -103,5 +103,24 @@ namespace Persistence
             context.PriceHistories.Add(priceHistory);
             context.SaveChanges();
         }
+
+        //Broker
+        public DbSet<Broker> GetBrokers()
+        {
+            context = new EstateBrokersContext();
+            context.Brokers.Load();
+            return context.Brokers;
+        }
+        public DbSet<Model.Models.Type> GetTypes()
+        {
+            context = new EstateBrokersContext();
+            context.Types.Load();
+            return context.Types;
+        }
+        public void SaveDBContext()
+        {
+            context.SaveChanges();
+        }
+
     }
 }

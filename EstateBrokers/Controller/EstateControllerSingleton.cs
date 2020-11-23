@@ -36,9 +36,9 @@ namespace Controller
             return db.GetGridEstateData();
         }
 
-        public void UpdateGridEstateData()
+        public void SaveDBContext()
         {
-            db.UpdateGridEstateData();
+            db.SaveDBContext();
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Controller
             }
             return _instance;
         }
+
         public void CreateCaseOrder(CaseOrder caseOrder, decimal price)
         {
             IDatabase db = new DatabaseProxy();

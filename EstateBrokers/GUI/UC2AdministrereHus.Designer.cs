@@ -64,7 +64,7 @@ namespace GUI
             this.bt_GetAllEstates.TabIndex = 2;
             this.bt_GetAllEstates.Text = "Hent Alle";
             this.bt_GetAllEstates.UseVisualStyleBackColor = true;
-            //this.bt_GetAllEstates.Click += new System.EventHandler(this.bt_GetAllEstates_Click);
+            this.bt_GetAllEstates.Click += new System.EventHandler(this.bt_GetAllEstates_Click);
             // 
             // bt_SaveEstates
             // 
@@ -75,7 +75,7 @@ namespace GUI
             this.bt_SaveEstates.TabIndex = 3;
             this.bt_SaveEstates.Text = "Gem";
             this.bt_SaveEstates.UseVisualStyleBackColor = true;
-            //this.bt_SaveEstates.Click += new System.EventHandler(this.bt_SaveEstates_Click);
+            this.bt_SaveEstates.Click += new System.EventHandler(this.bt_SaveEstates_Click);
             // 
             // UC2AdministrereHus
             // 

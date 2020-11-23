@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using Controller;
 using Model.Models;
@@ -15,6 +16,15 @@ namespace GUI
         public OpretSagForm()
         {
             InitializeComponent();
+            Update_ChooseBrokerDropdown();
+            //Thread BrokerDropdown = new Thread(new ThreadStart(Update_ChooseBrokerDropdown));
+            //BrokerDropdown.IsBackground = true;
+            //BrokerDropdown.Start();
+        }
+        private void Update_ChooseBrokerDropdown()
+        {
+
+            cbo_ChooseBroker.DataSource = Broker_TypeControllerSingleton.Instance().GetListBrokers();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -38,5 +48,6 @@ namespace GUI
                 Convert.ToInt32(tbt_estateID.Text)),
                 Convert.ToInt32(tbt_ListingPrice.Text));
         }
+       
     }
 }

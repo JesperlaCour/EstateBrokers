@@ -49,8 +49,9 @@ namespace GUI
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Font = new System.Drawing.Font("Courier New", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 27);
+            this.label1.Size = new System.Drawing.Size(304, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Opret ny sag:";
             // 
@@ -58,9 +59,10 @@ namespace GUI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(13, 114);
+            this.label2.Location = new System.Drawing.Point(21, 182);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 20);
+            this.label2.Size = new System.Drawing.Size(218, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Kundenummer:";
             // 
@@ -68,9 +70,10 @@ namespace GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(13, 179);
+            this.label3.Location = new System.Drawing.Point(21, 286);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 20);
+            this.label3.Size = new System.Drawing.Size(269, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ejendomsnummer:";
             // 
@@ -78,38 +81,43 @@ namespace GUI
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(13, 245);
+            this.label4.Location = new System.Drawing.Point(21, 392);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 20);
+            this.label4.Size = new System.Drawing.Size(320, 31);
             this.label4.TabIndex = 3;
             this.label4.Text = "Aftalt Udbudspris:";
             // 
             // tbt_sellerID
             // 
-            this.tbt_sellerID.Location = new System.Drawing.Point(13, 137);
+            this.tbt_sellerID.Location = new System.Drawing.Point(21, 219);
+            this.tbt_sellerID.Margin = new System.Windows.Forms.Padding(5);
             this.tbt_sellerID.Name = "tbt_sellerID";
-            this.tbt_sellerID.Size = new System.Drawing.Size(125, 27);
+            this.tbt_sellerID.Size = new System.Drawing.Size(201, 39);
             this.tbt_sellerID.TabIndex = 4;
             // 
             // tbt_estateID
             // 
-            this.tbt_estateID.Location = new System.Drawing.Point(13, 202);
+            this.tbt_estateID.Location = new System.Drawing.Point(21, 323);
+            this.tbt_estateID.Margin = new System.Windows.Forms.Padding(5);
             this.tbt_estateID.Name = "tbt_estateID";
-            this.tbt_estateID.Size = new System.Drawing.Size(155, 27);
+            this.tbt_estateID.Size = new System.Drawing.Size(249, 39);
             this.tbt_estateID.TabIndex = 5;
             // 
             // tbt_ListingPrice
             // 
-            this.tbt_ListingPrice.Location = new System.Drawing.Point(13, 268);
+            this.tbt_ListingPrice.Location = new System.Drawing.Point(21, 429);
+            this.tbt_ListingPrice.Margin = new System.Windows.Forms.Padding(5);
             this.tbt_ListingPrice.Name = "tbt_ListingPrice";
-            this.tbt_ListingPrice.Size = new System.Drawing.Size(182, 27);
+            this.tbt_ListingPrice.Size = new System.Drawing.Size(293, 39);
             this.tbt_ListingPrice.TabIndex = 6;
             // 
             // bt_CreateNewCase
             // 
-            this.bt_CreateNewCase.Location = new System.Drawing.Point(13, 301);
+            this.bt_CreateNewCase.Location = new System.Drawing.Point(21, 482);
+            this.bt_CreateNewCase.Margin = new System.Windows.Forms.Padding(5);
             this.bt_CreateNewCase.Name = "bt_CreateNewCase";
-            this.bt_CreateNewCase.Size = new System.Drawing.Size(94, 29);
+            this.bt_CreateNewCase.Size = new System.Drawing.Size(153, 46);
             this.bt_CreateNewCase.TabIndex = 7;
             this.bt_CreateNewCase.Text = "Opret sag";
             this.bt_CreateNewCase.UseVisualStyleBackColor = true;
@@ -117,9 +125,10 @@ namespace GUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(144, 137);
+            this.button2.Location = new System.Drawing.Point(234, 219);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.Size = new System.Drawing.Size(153, 46);
             this.button2.TabIndex = 8;
             this.button2.Text = "Find kunde";
             this.button2.UseVisualStyleBackColor = true;
@@ -127,9 +136,10 @@ namespace GUI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(174, 202);
+            this.button3.Location = new System.Drawing.Point(283, 323);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
+            this.button3.Size = new System.Drawing.Size(153, 46);
             this.button3.TabIndex = 9;
             this.button3.Text = "Find Hus";
             this.button3.UseVisualStyleBackColor = true;
@@ -138,26 +148,28 @@ namespace GUI
             // cbo_ChooseBroker
             // 
             this.cbo_ChooseBroker.FormattingEnabled = true;
-            this.cbo_ChooseBroker.Location = new System.Drawing.Point(13, 74);
+            this.cbo_ChooseBroker.Location = new System.Drawing.Point(21, 118);
+            this.cbo_ChooseBroker.Margin = new System.Windows.Forms.Padding(5);
             this.cbo_ChooseBroker.Name = "cbo_ChooseBroker";
-            this.cbo_ChooseBroker.Size = new System.Drawing.Size(151, 28);
+            this.cbo_ChooseBroker.Size = new System.Drawing.Size(243, 40);
             this.cbo_ChooseBroker.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(13, 51);
+            this.label5.Location = new System.Drawing.Point(21, 82);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 20);
+            this.label5.Size = new System.Drawing.Size(235, 31);
             this.label5.TabIndex = 11;
             this.label5.Text = "Vælge Mægler:";
             // 
             // OpretSagForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 341);
+            this.ClientSize = new System.Drawing.Size(453, 546);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbo_ChooseBroker);
             this.Controls.Add(this.button3);
@@ -170,6 +182,7 @@ namespace GUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "OpretSagForm";
             this.Text = "OpretSagForm";
             this.ResumeLayout(false);
