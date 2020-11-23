@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Controller;
+using Microsoft.EntityFrameworkCore;
 
 namespace GUI
 {
@@ -24,10 +25,8 @@ namespace GUI
 
         private void btn_soeg_Click(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = CustomerControllerSingleton.Instance().GetGridCustomerData(tbt_address.Text).Customers.Local.ToBindingList();
             
-
-
 
         }
     }

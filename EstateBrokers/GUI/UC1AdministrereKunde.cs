@@ -18,7 +18,7 @@ namespace GUI
 
         private void bt_GetAllCustAdmin_Click(object sender, EventArgs e)
         {
-            dataGridView_CustAdmin.DataSource = CustomerControllerSingleton.Instance().GetGridCustomerData().Customers.Local.ToBindingList();
+            dataGridView_CustAdmin.DataSource = CustomerControllerSingleton.Instance().GetGridCustomerData("").Customers.Local.ToBindingList();
         }
 
         private void bt_saveCustAdmin_Click(object sender, EventArgs e)

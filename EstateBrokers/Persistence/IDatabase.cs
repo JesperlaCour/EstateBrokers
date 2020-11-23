@@ -28,10 +28,10 @@ namespace Persistence
 
         //DataGridView
 
-        public EstateBrokersContext GetGridCustomerData();
+        public EstateBrokersContext GetGridCustomerData(string name);
       
         
-        public EstateBrokersContext GetGridEstateData();
+        public EstateBrokersContext GetGridEstateData(string address);
      
         public void SaveDBContext();
 

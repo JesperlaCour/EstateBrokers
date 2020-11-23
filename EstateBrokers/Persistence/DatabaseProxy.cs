@@ -140,12 +140,12 @@ namespace Persistence
 
         //Admin menu (edit/delete)
         EFDatabase db;
-        public EstateBrokersContext GetGridCustomerData()
+        public EstateBrokersContext GetGridCustomerData(string name)
         {
             db = new EFDatabase();
             try
             {
-                return db.GetGridCustomerData();
+                return db.GetGridCustomerData(name);
             }
             catch (Exception)
             {
@@ -155,12 +155,12 @@ namespace Persistence
 
         
 
-        public EstateBrokersContext GetGridEstateData()
+        public EstateBrokersContext GetGridEstateData(string address)
         {
             db = new EFDatabase();
             try
             {
-                return db.GetGridEstateData();
+                return db.GetGridEstateData(address);
             }
             catch (Exception)
             {

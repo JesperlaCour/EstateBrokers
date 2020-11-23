@@ -32,10 +32,10 @@ namespace Controller
 
         //Grid CustomerAdmin methods
         IDatabase db;
-        public EstateBrokersContext GetGridCustomerData()
+        public EstateBrokersContext GetGridCustomerData(string name)
         {
             db = new DatabaseProxy();
-            return db.GetGridCustomerData();
+            return db.GetGridCustomerData(name);
         }
 
         public void SaveDBContext()
