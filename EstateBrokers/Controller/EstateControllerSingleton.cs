@@ -30,10 +30,10 @@ namespace Controller
         }
 
         IDatabase db;
-        public EstateBrokersContext GetGridEstateData()
+        public EstateBrokersContext GetGridEstateData(string name)
         {
             db = new DatabaseProxy();
-            return db.GetGridEstateData();
+            return db.GetGridEstateData(name);
         }
 
         public void SaveDBContext()

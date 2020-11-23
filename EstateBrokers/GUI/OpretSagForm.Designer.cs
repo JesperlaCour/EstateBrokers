@@ -197,12 +197,12 @@ namespace GUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbt_sellerID;
-        private System.Windows.Forms.TextBox tbt_estateID;
         private System.Windows.Forms.TextBox tbt_ListingPrice;
         private System.Windows.Forms.Button bt_CreateNewCase;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox cbo_ChooseBroker;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox tbt_estateID;
     }
 }

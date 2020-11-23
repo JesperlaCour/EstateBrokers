@@ -73,22 +73,19 @@ namespace Persistence
 
         //GridViewCustomer
         EstateBrokersContext context;
-        public EstateBrokersContext GetGridCustomerData()
+        public EstateBrokersContext GetGridCustomerData(string name)
         {
             context = new EstateBrokersContext();
-            context.Customers.Load();
+            context.Customers.Where(c => c.Name.Contains(name)).Load();
             return context;
         }
-        public void UpdateGridCustomerData()
-        {
-            context.SaveChanges();
-        }
+        
 
         //GridViewEstate
-        public EstateBrokersContext GetGridEstateData()
+        public EstateBrokersContext GetGridEstateData(string address)
         {
             context = new EstateBrokersContext();
-            context.Estates.Load();
+            context.Estates.Where(e => e.Address.Contains(address)).Load();
             return context;
         }
 
