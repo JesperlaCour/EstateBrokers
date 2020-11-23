@@ -44,5 +44,10 @@ namespace GUI
         {
             aabentHus1.BringToFront();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            uC0AdministrereMægler1.BringToFront();
+        }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -44,12 +45,14 @@
             this.administrereHus1 = new GUI.UC2AdministrereHus();
             this.udbudsprisBeregner1 = new GUI.UC4UdbudsprisBeregner();
             this.aabentHus1 = new GUI.UC5AabentHus();
+            this.uC0AdministrereMægler1 = new GUI.UC0AdministrereMægler();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Snow;
+            this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
@@ -65,6 +68,19 @@
             this.panel1.Size = new System.Drawing.Size(1902, 75);
             this.panel1.TabIndex = 0;
             // 
+            // button9
+            // 
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.button9.Location = new System.Drawing.Point(1055, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(205, 75);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "Administrere Mægler";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -75,7 +91,7 @@
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(227, 75);
+            this.button8.Size = new System.Drawing.Size(205, 75);
             this.button8.TabIndex = 5;
             this.button8.Text = "Salgspris Tilpasning";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -88,10 +104,10 @@
             this.button7.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(233, 0);
+            this.button7.Location = new System.Drawing.Point(211, 0);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(233, 75);
+            this.button7.Size = new System.Drawing.Size(205, 75);
             this.button7.TabIndex = 4;
             this.button7.Text = "Salgsstatus";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -104,10 +120,10 @@
             this.button6.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(472, 0);
+            this.button6.Location = new System.Drawing.Point(422, 0);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(233, 75);
+            this.button6.Size = new System.Drawing.Size(205, 77);
             this.button6.TabIndex = 3;
             this.button6.Text = "Salgsstatistik";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -120,10 +136,10 @@
             this.button5.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(711, 0);
+            this.button5.Location = new System.Drawing.Point(633, 0);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(233, 75);
+            this.button5.Size = new System.Drawing.Size(205, 75);
             this.button5.TabIndex = 2;
             this.button5.Text = "Åbent Hus";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -137,10 +153,10 @@
             this.button4.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1428, 0);
+            this.button4.Location = new System.Drawing.Point(1477, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(233, 75);
+            this.button4.Size = new System.Drawing.Size(205, 77);
             this.button4.TabIndex = 1;
             this.button4.Text = "Administrere Kunde";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -154,10 +170,10 @@
             this.button3.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1189, 0);
+            this.button3.Location = new System.Drawing.Point(1266, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(233, 75);
+            this.button3.Size = new System.Drawing.Size(205, 75);
             this.button3.TabIndex = 1;
             this.button3.Text = "Administrere Hus";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -171,10 +187,10 @@
             this.button2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(950, 0);
+            this.button2.Location = new System.Drawing.Point(844, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(233, 75);
+            this.button2.Size = new System.Drawing.Size(205, 77);
             this.button2.TabIndex = 1;
             this.button2.Text = "Udbudspris Beregner";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -188,10 +204,10 @@
             this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1667, 0);
+            this.button1.Location = new System.Drawing.Point(1688, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 75);
+            this.button1.Size = new System.Drawing.Size(214, 75);
             this.button1.TabIndex = 1;
             this.button1.Text = "Administrere Sag";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -247,6 +263,14 @@
             this.aabentHus1.Size = new System.Drawing.Size(2400, 1350);
             this.aabentHus1.TabIndex = 6;
             // 
+            // uC0AdministrereMægler1
+            // 
+            this.uC0AdministrereMægler1.Location = new System.Drawing.Point(0, 75);
+            this.uC0AdministrereMægler1.MinimumSize = new System.Drawing.Size(1920, 1080);
+            this.uC0AdministrereMægler1.Name = "uC0AdministrereMægler1";
+            this.uC0AdministrereMægler1.Size = new System.Drawing.Size(2400, 1350);
+            this.uC0AdministrereMægler1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -259,6 +283,7 @@
             this.Controls.Add(this.administrereHus1);
             this.Controls.Add(this.udbudsprisBeregner1);
             this.Controls.Add(this.aabentHus1);
+            this.Controls.Add(this.uC0AdministrereMægler1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1918, 1028);
             this.Name = "Form1";
@@ -286,6 +311,8 @@
         private UC2AdministrereHus administrereHus1;
         private UC4UdbudsprisBeregner udbudsprisBeregner1;
         private UC5AabentHus aabentHus1;
+        private System.Windows.Forms.Button button9;
+        private UC0AdministrereMægler uC0AdministrereMægler1;
     }
 }
 
