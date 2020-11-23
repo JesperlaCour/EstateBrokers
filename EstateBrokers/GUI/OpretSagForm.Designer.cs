@@ -39,7 +39,7 @@ namespace GUI
             this.bt_CreateNewCase = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbo_ChooseBroker = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -135,13 +135,13 @@ namespace GUI
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox1
+            // cbo_ChooseBroker
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 10;
+            this.cbo_ChooseBroker.FormattingEnabled = true;
+            this.cbo_ChooseBroker.Location = new System.Drawing.Point(13, 74);
+            this.cbo_ChooseBroker.Name = "cbo_ChooseBroker";
+            this.cbo_ChooseBroker.Size = new System.Drawing.Size(151, 28);
+            this.cbo_ChooseBroker.TabIndex = 10;
             // 
             // label5
             // 
@@ -159,7 +159,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 341);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbo_ChooseBroker);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bt_CreateNewCase);
@@ -189,7 +189,7 @@ namespace GUI
         private System.Windows.Forms.Button bt_CreateNewCase;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbo_ChooseBroker;
         private System.Windows.Forms.Label label5;
     }
 }

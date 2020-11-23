@@ -30,12 +30,12 @@ namespace GUI
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_soeg = new System.Windows.Forms.Button();
+            this.btn_ChooseKunde = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_opretKunde = new System.Windows.Forms.Button();
+            this.btn_OpretNyKunde = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,23 +49,23 @@ namespace GUI
             this.dataGridView1.Size = new System.Drawing.Size(1005, 475);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // btn_soeg
             // 
-            this.button1.Location = new System.Drawing.Point(144, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Søg";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_soeg.Location = new System.Drawing.Point(144, 72);
+            this.btn_soeg.Name = "btn_soeg";
+            this.btn_soeg.Size = new System.Drawing.Size(94, 29);
+            this.btn_soeg.TabIndex = 1;
+            this.btn_soeg.Text = "Søg";
+            this.btn_soeg.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_ChooseKunde
             // 
-            this.button2.Location = new System.Drawing.Point(923, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Vælg kunde";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_ChooseKunde.Location = new System.Drawing.Point(923, 74);
+            this.btn_ChooseKunde.Name = "btn_ChooseKunde";
+            this.btn_ChooseKunde.Size = new System.Drawing.Size(94, 29);
+            this.btn_ChooseKunde.TabIndex = 2;
+            this.btn_ChooseKunde.Text = "Vælg kunde";
+            this.btn_ChooseKunde.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -93,27 +93,27 @@ namespace GUI
             this.label3.TabIndex = 7;
             this.label3.Text = "Kundesøgning";
             // 
-            // btn_opretKunde
+            // btn_OpretNyKunde
             // 
-            this.btn_opretKunde.Location = new System.Drawing.Point(257, 72);
-            this.btn_opretKunde.Name = "btn_opretKunde";
-            this.btn_opretKunde.Size = new System.Drawing.Size(127, 29);
-            this.btn_opretKunde.TabIndex = 8;
-            this.btn_opretKunde.Text = "Opret ny kunde";
-            this.btn_opretKunde.UseVisualStyleBackColor = true;
-            this.btn_opretKunde.Click += new System.EventHandler(this.button3_Click);
+            this.btn_OpretNyKunde.Location = new System.Drawing.Point(257, 72);
+            this.btn_OpretNyKunde.Name = "btn_OpretNyKunde";
+            this.btn_OpretNyKunde.Size = new System.Drawing.Size(127, 29);
+            this.btn_OpretNyKunde.TabIndex = 8;
+            this.btn_OpretNyKunde.Text = "Opret ny kunde";
+            this.btn_OpretNyKunde.UseVisualStyleBackColor = true;
+            this.btn_OpretNyKunde.Click += new System.EventHandler(this.button3_Click);
             // 
             // KundeSøgningsForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 597);
-            this.Controls.Add(this.btn_opretKunde);
+            this.Controls.Add(this.btn_OpretNyKunde);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_ChooseKunde);
+            this.Controls.Add(this.btn_soeg);
             this.Controls.Add(this.dataGridView1);
             this.Name = "KundeSøgningsForms";
             this.Text = "OpretKundeForms";
@@ -126,11 +126,11 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_soeg;
+        private System.Windows.Forms.Button btn_ChooseKunde;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_opretKunde;
+        private System.Windows.Forms.Button btn_OpretNyKunde;
     }
 }
