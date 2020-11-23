@@ -21,6 +21,8 @@ namespace GUI
         private void UpdateDropdown_HouseTypes()
         {
             cbo_HouseType.DataSource = EstateControllerSingleton.Instance().GetHouseTypes();
+            cbo_HouseType.DisplayMember = "Type";
+            cbo_HouseType.ValueMember = "TypeId";
         }
 
         private void btn_CreateNewHouse_Click(object sender, EventArgs e)
@@ -37,8 +39,8 @@ namespace GUI
                     Convert.ToInt32(txt_floors.Text),
                     Convert.ToBoolean(cbo_Have.Text),
                     Convert.ToInt32(txt_zipCode.Text),
-                    //Convert.ToInt32(cbo_HouseType.SelectedItem.)
-                    1
+                    Convert.ToInt32(cbo_HouseType.SelectedValue)
+                    //1
                     ));
                 MessageBox.Show("Hus er nu oprettet i systemet");
             }

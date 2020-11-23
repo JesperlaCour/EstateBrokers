@@ -17,10 +17,10 @@ namespace Model.Models
 
         public virtual ICollection<Estate> Estates { get; set; }
 
-        public override string ToString()
-        {
-            return Type;
-        }
+        //public override string ToString()
+        //{
+        //    return Type;
+        //}
         
     }
 }
