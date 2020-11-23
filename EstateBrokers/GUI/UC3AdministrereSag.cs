@@ -9,6 +9,7 @@ using Model;
 using Model.Models;
 using System.Linq;
 using Controller;
+using Microsoft.EntityFrameworkCore;
 
 namespace GUI
 {
@@ -18,23 +19,6 @@ namespace GUI
         public UC3AdministrereSag()
         {
             InitializeComponent();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-            
-            //listBox1.DataSource = ControllerSingleton.Instance().();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-            //ControllerSingleton.Instance().CreateCustomer(new Customer
-            //(textBox1.Text,textBox2.Text,Convert.ToInt32(textBox3.Text),Convert.ToInt32(textBox4.Text)
-            //));
-
-        
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +32,6 @@ namespace GUI
             OpretNyKundeForms onkf = new OpretNyKundeForms();
             onkf.ShowDialog();
             
-            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -57,18 +40,43 @@ namespace GUI
             onhf.ShowDialog();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
+        
 
+        private void btn_showCaseOrder_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateAdminCase();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Sag ikke fundet");
+            }
         }
-
-        private void label11_Click(object sender, EventArgs e)
+        private void UpdateAdminCase()
         {
+            CaseOrder co = CaseOrderControllerSingleton.Instance().GetCaseOrder(Convert.ToInt32(tbt_caseOrderID.Text));
+            Customer seller = CustomerControllerSingleton.Instance().GetCustomer(co.SellerId);
+            if (co.CaseStatus == "Sold")
+            {
+                Customer buyer = CustomerControllerSingleton.Instance().GetCustomer(co.BuyerId);
+                lbl_KoeberNavn.Text = buyer.Name;
+                lbl_KoeberKundenummer.Text = buyer.CustomerId.ToString();
+                lbl_KoeberAdresse.Text = buyer.Address;
+                lbl_KoeberTlfNr.Text = buyer.PhoneNr.ToString();
+                lbl_KoeberPostnummer.Text = buyer.ZipCode.ToString();
+                lbl_KoeberBy.Text = CustomerControllerSingleton.Instance().GetCityFromZipCode(buyer.ZipCode).ToString();
+            }
+            lbl_SælgerKundenummer.Text = seller.CustomerId.ToString();
+            lbl_SælgerNavn.Text = seller.Name;
+            lbl_SælgerAdresse.Text = seller.Address;
+            lbl_SælgerPostnummer.Text = seller.ZipCode.ToString();
+            lbl_SælgerTlfNr.Text = seller.PhoneNr.ToString();
+            lbl_SælgerBy.Text = CustomerControllerSingleton.Instance().GetCityFromZipCode(seller.ZipCode).ToString();
 
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
+            dataGridView_HouseInformation.DataSource = EstateControllerSingleton.Instance().GetEstate(co.EstateId);
+            dataGridView_PriceHistory.DataSource = CaseOrderControllerSingleton.Instance().GetPriceHistory(co.EstateId);
 
         }
     }
