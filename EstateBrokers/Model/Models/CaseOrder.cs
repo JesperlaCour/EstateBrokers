@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
-
 #nullable disable
 
 namespace Model.Models
@@ -12,24 +10,6 @@ namespace Model.Models
         public CaseOrder()
         {
             OpenHouses = new HashSet<OpenHouse>();
-        }
-
-        public CaseOrder(string caseStatus, int? sellerId, int? brokerId, int? estateId)
-        {
-            CaseStatus = caseStatus;
-            SellerId = sellerId;
-            BrokerId = brokerId;
-            EstateId = estateId;
-        }
-
-        public CaseOrder(int caseOrderId, string caseStatus, int? sellerId, int? brokerId, int? estateId, int? buyerId)
-        {
-            CaseOrderId = caseOrderId;
-            CaseStatus = caseStatus;
-            SellerId = sellerId;
-            BrokerId = brokerId;
-            EstateId = estateId;
-            BuyerId = buyerId;
         }
 
         public int CaseOrderId { get; set; }

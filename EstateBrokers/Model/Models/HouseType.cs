@@ -5,15 +5,15 @@ using System.Collections.Generic;
 
 namespace Model.Models
 {
-    public partial class Type
+    public partial class HouseType
     {
-        public Type()
+        public HouseType()
         {
             Estates = new HashSet<Estate>();
         }
 
-        public int TypeID { get; set; }
-        public string Type1 { get; set; }
+        public int TypeId { get; set; }
+        public string Type { get; set; }
 
         public virtual ICollection<Estate> Estates { get; set; }
     }
