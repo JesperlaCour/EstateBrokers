@@ -32,6 +32,16 @@ namespace Controller
 
         }
 
-        
+        public CaseOrder GetCaseOrder(int caseOrderID)
+        {
+            IDatabase db = new DatabaseProxy();
+            return db.GetCaseOrder(caseOrderID);
+        }
+
+        public object GetPriceHistory(int? estateId)
+        {
+            IDatabase db = new DatabaseProxy();
+            return db.GetPriceHistory(estateId);
+        }
     }
 }
