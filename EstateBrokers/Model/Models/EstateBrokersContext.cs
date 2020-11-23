@@ -1,6 +1,6 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore;
 using System.Configuration;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
@@ -23,6 +23,7 @@ namespace Model.Models
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Estate> Estates { get; set; }
+        public virtual DbSet<HouseType> HouseTypes { get; set; }
         public virtual DbSet<OpenHouse> OpenHouses { get; set; }
         public virtual DbSet<PriceHistory> PriceHistories { get; set; }
         public virtual DbSet<ZipCode> ZipCodes { get; set; }
@@ -31,7 +32,6 @@ namespace Model.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                
                 optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
 
                 //optionsBuilder.UseSqlServer("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
@@ -44,7 +44,7 @@ namespace Model.Models
             {
                 entity.ToTable("Broker");
 
-                entity.Property(e => e.BrokerID).HasColumnName("BrokerID");
+                entity.Property(e => e.BrokerId).HasColumnName("BrokerID");
 
                 entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
 
@@ -138,14 +138,31 @@ namespace Model.Models
                     .HasMaxLength(55)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Type)
-                    .HasMaxLength(55)
-                    .IsUnicode(false);
+                entity.Property(e => e.TypeId).HasColumnName("TypeID");
+
+                entity.HasOne(d => d.Type)
+                    .WithMany(p => p.Estates)
+                    .HasForeignKey(d => d.TypeId)
+                    .HasConstraintName("FK__Estate__TypeID__2180FB33");
 
                 entity.HasOne(d => d.ZipCodeNavigation)
                     .WithMany(p => p.Estates)
                     .HasForeignKey(d => d.ZipCode)
                     .HasConstraintName("FK__Estate__ZipCode__72C60C4A");
+            });
+
+            modelBuilder.Entity<HouseType>(entity =>
+            {
+                entity.HasKey(e => e.TypeId)
+                    .HasName("PK__Type__516F03954A7FDCD8");
+
+                entity.ToTable("HouseType");
+
+                entity.Property(e => e.TypeId).HasColumnName("TypeID");
+
+                entity.Property(e => e.Type)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<OpenHouse>(entity =>

@@ -13,17 +13,12 @@ namespace Model.Models
             OpenHouses = new HashSet<OpenHouse>();
         }
 
-        public int BrokerID { get; set; }
+        public int BrokerId { get; set; }
         public string Name { get; set; }
         public int? DepartmentId { get; set; }
 
         public virtual Department Department { get; set; }
         public virtual ICollection<CaseOrder> CaseOrders { get; set; }
         public virtual ICollection<OpenHouse> OpenHouses { get; set; }
-
-        public override string ToString()
-        {
-            return Name;
-        }
     }
 }

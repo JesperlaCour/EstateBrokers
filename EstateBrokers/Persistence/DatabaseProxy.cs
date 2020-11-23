@@ -153,10 +153,7 @@ namespace Persistence
             }
         }
 
-        public void UpdateGridCustomerData()
-        {
-            db.UpdateGridCustomerData();
-        }
+        
 
         public EstateBrokersContext GetGridEstateData()
         {
@@ -171,10 +168,7 @@ namespace Persistence
             }
         }
 
-        public void UpdateGridEstateData()
-        {
-            db.UpdateGridEstateData();
-        }
+        
 
         public void InsertPrice(PriceHistory priceHistory)
         {
@@ -189,6 +183,11 @@ namespace Persistence
 
                 throw new NotImplementedException();
             }
+        }
+
+        public void SaveDBContext()
+        {
+            db.SaveDBContext();
         }
     }
 }

@@ -32,12 +32,22 @@ namespace Controller
         public DbSet<Broker> GetGridBrokers()
         {
             db = new EFDatabase();
-            return db.GetListBrokers
+            return db.GetBrokers();
         }
 
         public void UpdateBrokers()
         {
-            db.UpdateBrokers();
+            db.SaveDBContext();
+        }
+        public DbSet<HouseType> GetGridType()
+        {
+            db = new EFDatabase();
+            return db.GetTypes();
+        }
+
+        public void UpdateType()
+        {
+            db.SaveDBContext();
         }
     }
 }

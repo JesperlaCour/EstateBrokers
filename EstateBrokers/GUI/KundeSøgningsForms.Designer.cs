@@ -57,6 +57,7 @@ namespace GUI
             this.btn_soeg.TabIndex = 1;
             this.btn_soeg.Text = "Søg";
             this.btn_soeg.UseVisualStyleBackColor = true;
+            this.btn_soeg.Click += new System.EventHandler(this.btn_soeg_Click);
             // 
             // btn_ChooseKunde
             // 

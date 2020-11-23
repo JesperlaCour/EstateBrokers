@@ -67,6 +67,7 @@ namespace GUI
             this.bt_saveCustAdmin.TabIndex = 2;
             this.bt_saveCustAdmin.Text = "Gem";
             this.bt_saveCustAdmin.UseVisualStyleBackColor = true;
+            this.bt_saveCustAdmin.Click += new System.EventHandler(this.bt_saveCustAdmin_Click);
             // 
             // panel1
             // 

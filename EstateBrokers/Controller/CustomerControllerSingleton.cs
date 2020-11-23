@@ -38,9 +38,9 @@ namespace Controller
             return db.GetGridCustomerData();
         }
 
-        public void UpdateGridCustomerData()
+        public void SaveDBContext()
         {
-            db.UpdateGridCustomerData();
+            db.SaveDBContext();
         }
     }
 }
