@@ -230,5 +230,10 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public void SaveDBContext()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
