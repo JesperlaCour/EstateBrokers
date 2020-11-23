@@ -41,12 +41,22 @@ namespace GUI
 
         private void bt_CreateNewCase_Click(object sender, EventArgs e)
         {
-            CaseOrderControllerSingleton.Instance().CreateCaseOrder(new CaseOrder(
+            try
+            {
+                CaseOrderControllerSingleton.Instance().CreateCaseOrder(new CaseOrder(
                 "Active",
                 Convert.ToInt32(tbt_sellerID.Text),
-                1,
+                Convert.ToInt32(cbo_ChooseBroker.SelectedItem.ToString()[0] - 48),
                 Convert.ToInt32(tbt_estateID.Text)),
                 Convert.ToInt32(tbt_ListingPrice.Text));
+                MessageBox.Show("Ny sag oprettet");
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Fejl i oprettelse");
+            }
+            
         }
        
     }

@@ -49,7 +49,7 @@ namespace Persistence
             conn.Open();
             SqlCommand com =
                 new SqlCommand(
-                    $"Insert into caseorder (CaseStatus, EstateID, CustomerID, BrokerID) values ('{caseOrder.CaseStatus}','{caseOrder.EstateId}',{caseOrder.SellerId},{caseOrder.BrokerId})",
+                    $"Insert into caseorder (CaseStatus, EstateID, SellerID, BrokerID) values ('{caseOrder.CaseStatus}',{caseOrder.EstateId},{caseOrder.SellerId},{caseOrder.BrokerId})",
                     conn);
             com.ExecuteNonQuery();
             conn.Close();
@@ -207,25 +207,16 @@ namespace Persistence
         }
 
 
-        public EstateBrokersContext GetGridCustomerData()
+        public EstateBrokersContext GetGridCustomerData(string name)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateGridCustomerData()
+        public EstateBrokersContext GetGridEstateData(string address)
         {
             throw new NotImplementedException();
         }
 
-        public EstateBrokersContext GetGridEstateData()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateGridEstateData()
-        {
-            throw new NotImplementedException();
-        }
 
         public void InsertPrice(PriceHistory priceHistory)
         {
