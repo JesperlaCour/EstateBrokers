@@ -56,6 +56,7 @@ namespace GUI
             this.bt_GetAllCustAdmin.TabIndex = 1;
             this.bt_GetAllCustAdmin.Text = "Hent alle";
             this.bt_GetAllCustAdmin.UseVisualStyleBackColor = true;
+            this.bt_GetAllCustAdmin.Click += new System.EventHandler(this.bt_GetAllCustAdmin_Click);
             // 
             // bt_saveCustAdmin
             // 
@@ -76,7 +77,7 @@ namespace GUI
             this.panel1.Size = new System.Drawing.Size(318, 1728);
             this.panel1.TabIndex = 3;
             // 
-            // AdministrereKunde
+            // UC1AdministrereKunde
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -86,7 +87,7 @@ namespace GUI
             this.Controls.Add(this.dataGridView_CustAdmin);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(3120, 1728);
-            this.Name = "AdministrereKunde";
+            this.Name = "UC1AdministrereKunde";
             this.Size = new System.Drawing.Size(3120, 1728);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CustAdmin)).EndInit();
             this.ResumeLayout(false);

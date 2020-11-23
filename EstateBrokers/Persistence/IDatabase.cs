@@ -24,6 +24,7 @@ namespace Persistence
         public CaseOrder GetCaseOrder(int CaseOrderID);
         public List<CaseOrder> GetAllCaseOrders();
         void InsertPrice(PriceHistory priceHistory);
+        
 
         //DataGridView
 
