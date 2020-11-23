@@ -39,15 +39,16 @@ namespace GUI
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_Adresse = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_Byggelseaar = new System.Windows.Forms.TextBox();
+            this.txt_renoveringsaar = new System.Windows.Forms.TextBox();
+            this.txt_Areal = new System.Windows.Forms.TextBox();
+            this.txt_AntalRooms = new System.Windows.Forms.TextBox();
+            this.txt_Etage = new System.Windows.Forms.TextBox();
+            this.cbo_Type = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbo_Have = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,48 +143,48 @@ namespace GUI
             this.txt_Adresse.Size = new System.Drawing.Size(125, 27);
             this.txt_Adresse.TabIndex = 9;
             // 
-            // textBox1
+            // txt_Byggelseaar
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 209);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 10;
+            this.txt_Byggelseaar.Location = new System.Drawing.Point(13, 209);
+            this.txt_Byggelseaar.Name = "txt_Byggelseaar";
+            this.txt_Byggelseaar.Size = new System.Drawing.Size(125, 27);
+            this.txt_Byggelseaar.TabIndex = 10;
             // 
-            // textBox2
+            // txt_renoveringsaar
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 262);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 11;
+            this.txt_renoveringsaar.Location = new System.Drawing.Point(13, 262);
+            this.txt_renoveringsaar.Name = "txt_renoveringsaar";
+            this.txt_renoveringsaar.Size = new System.Drawing.Size(125, 27);
+            this.txt_renoveringsaar.TabIndex = 11;
             // 
-            // textBox3
+            // txt_Areal
             // 
-            this.textBox3.Location = new System.Drawing.Point(243, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 12;
+            this.txt_Areal.Location = new System.Drawing.Point(243, 84);
+            this.txt_Areal.Name = "txt_Areal";
+            this.txt_Areal.Size = new System.Drawing.Size(125, 27);
+            this.txt_Areal.TabIndex = 12;
             // 
-            // textBox4
+            // txt_AntalRooms
             // 
-            this.textBox4.Location = new System.Drawing.Point(244, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 27);
-            this.textBox4.TabIndex = 13;
+            this.txt_AntalRooms.Location = new System.Drawing.Point(244, 153);
+            this.txt_AntalRooms.Name = "txt_AntalRooms";
+            this.txt_AntalRooms.Size = new System.Drawing.Size(125, 27);
+            this.txt_AntalRooms.TabIndex = 13;
             // 
-            // textBox5
+            // txt_Etage
             // 
-            this.textBox5.Location = new System.Drawing.Point(248, 216);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 27);
-            this.textBox5.TabIndex = 14;
+            this.txt_Etage.Location = new System.Drawing.Point(248, 216);
+            this.txt_Etage.Name = "txt_Etage";
+            this.txt_Etage.Size = new System.Drawing.Size(125, 27);
+            this.txt_Etage.TabIndex = 14;
             // 
-            // comboBox1
+            // cbo_Type
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 139);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 18;
+            this.cbo_Type.FormattingEnabled = true;
+            this.cbo_Type.Location = new System.Drawing.Point(13, 139);
+            this.cbo_Type.Name = "cbo_Type";
+            this.cbo_Type.Size = new System.Drawing.Size(151, 28);
+            this.cbo_Type.TabIndex = 18;
             // 
             // label10
             // 
@@ -202,28 +203,38 @@ namespace GUI
             this.trackBar1.Size = new System.Drawing.Size(130, 56);
             this.trackBar1.TabIndex = 20;
             // 
-            // comboBox2
+            // cbo_Have
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(248, 281);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(151, 28);
-            this.comboBox2.TabIndex = 21;
+            this.cbo_Have.FormattingEnabled = true;
+            this.cbo_Have.Location = new System.Drawing.Point(248, 281);
+            this.cbo_Have.Name = "cbo_Have";
+            this.cbo_Have.Size = new System.Drawing.Size(151, 28);
+            this.cbo_Have.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(248, 342);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Opret hus";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // OpretNytHusForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 415);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cbo_Have);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbo_Type);
+            this.Controls.Add(this.txt_Etage);
+            this.Controls.Add(this.txt_AntalRooms);
+            this.Controls.Add(this.txt_Areal);
+            this.Controls.Add(this.txt_renoveringsaar);
+            this.Controls.Add(this.txt_Byggelseaar);
             this.Controls.Add(this.txt_Adresse);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -254,14 +265,15 @@ namespace GUI
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_Adresse;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txt_Byggelseaar;
+        private System.Windows.Forms.TextBox txt_renoveringsaar;
+        private System.Windows.Forms.TextBox txt_Areal;
+        private System.Windows.Forms.TextBox txt_AntalRooms;
+        private System.Windows.Forms.TextBox txt_Etage;
+        private System.Windows.Forms.ComboBox cbo_Type;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbo_Have;
+        private System.Windows.Forms.Button button1;
     }
 }
