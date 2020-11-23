@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Controller;
+using Model.Models;
 
 namespace GUI
 {
@@ -13,20 +15,38 @@ namespace GUI
         public OpretNytHusForms()
         {
             InitializeComponent();
+            UpdateDropdown_HouseTypes();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void UpdateDropdown_HouseTypes()
         {
-
+            cbo_HouseType.DataSource = EstateControllerSingleton.Instance().GetHouseTypes();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btn_CreateNewHouse_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
+            try
+            {
+                EstateControllerSingleton.Instance().CreateEstate(new Estate(
+                    txt_Adresse.Text,
+                    Convert.ToInt32(txt_Byggelseaar.Text),
+                    Convert.ToInt32(txt_renoveringsaar.Text),
+                    trackBar1.Value,
+                    Convert.ToInt32(txt_Areal.Text),
+                    Convert.ToInt32(txt_AntalRooms.Text),
+                    Convert.ToInt32(txt_floors.Text),
+                    Convert.ToBoolean(cbo_Have.Text),
+                    Convert.ToInt32(txt_zipCode.Text),
+                    //Convert.ToInt32(cbo_HouseType.SelectedItem.)
+                    1
+                    ));
+                MessageBox.Show("Hus er nu oprettet i systemet");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Fejl i oprettelse af hus. Prøv igen");
+            }
+            
 
         }
     }

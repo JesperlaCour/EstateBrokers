@@ -124,5 +124,11 @@ namespace Persistence
             context = new EstateBrokersContext();
             return context.ZipCodes.Where(z => z.ZipCode1 == zipCode).FirstOrDefault();
         }
+
+        public List<HouseType> GetHouseTypes()
+        {
+            context = new EstateBrokersContext();
+            return context.HouseTypes.ToList();
+        }
     }
 }

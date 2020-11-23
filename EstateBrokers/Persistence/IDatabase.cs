@@ -40,5 +40,7 @@ namespace Persistence
 
         public List<PriceHistory> GetPriceHistory(int? estateId);
         ZipCode GetCityFromZipCode(int? zipCode);
+
+        List<HouseType> GetHouseTypes();
     }
 }

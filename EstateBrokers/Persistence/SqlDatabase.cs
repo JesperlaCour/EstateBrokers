@@ -238,5 +238,10 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public List<HouseType> GetHouseTypes()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

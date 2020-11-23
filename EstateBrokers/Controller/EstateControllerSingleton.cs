@@ -48,5 +48,11 @@ namespace Controller
             list.Add(db.GetEstate(estateId));
             return list;
         }
+
+        public List<HouseType> GetHouseTypes()
+        {
+            db = new DatabaseProxy();
+            return db.GetHouseTypes();
+        }
     }
 }

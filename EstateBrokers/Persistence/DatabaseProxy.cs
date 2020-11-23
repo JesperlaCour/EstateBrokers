@@ -231,5 +231,19 @@ namespace Persistence
                 throw;
             }
         }
+
+        public List<HouseType> GetHouseTypes()
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetHouseTypes();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

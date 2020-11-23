@@ -21,6 +21,13 @@ namespace Model.Models
             PhoneNr = phoneNr;
             ZipCode = zipCode;
         }
+        public Customer(string name, string address, int? phoneNr, int? zipCode)
+        {
+            Name = name;
+            Address = address;
+            PhoneNr = phoneNr;
+            ZipCode = zipCode;
+        }
 
         public int CustomerId { get; set; }
         public string Name { get; set; }
