@@ -109,7 +109,7 @@ namespace Persistence
             }
         }
 
-        public Customer GetCustomer(int customerID)
+        public Customer GetCustomer(int? customerID)
         {
             try
             {
@@ -188,6 +188,48 @@ namespace Persistence
         public void SaveDBContext()
         {
             db.SaveDBContext();
+        }
+
+        public Estate GetEstate(int? EstateID)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetEstate(EstateID);
+            }
+            catch (Exception)
+            {
+
+                throw new NotImplementedException();
+            }
+        }
+
+        public List<PriceHistory> GetPriceHistory(int? estateId)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetPriceHistory(estateId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public ZipCode GetCityFromZipCode(int? zipCode)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetCityFromZipCode(zipCode);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

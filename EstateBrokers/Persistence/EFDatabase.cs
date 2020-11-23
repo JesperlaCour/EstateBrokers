@@ -58,13 +58,13 @@ namespace Persistence
             return dbcontext.CaseOrders.Where(co => co.CaseOrderId == caseOrderID).FirstOrDefault();
         }
 
-        public Customer GetCustomer(int customerID)
+        public Customer GetCustomer(int? customerID)
         {
             EstateBrokersContext dbcontext = new EstateBrokersContext();
             return dbcontext.Customers.Where(c => c.CustomerId == customerID).FirstOrDefault();
         }
 
-        public Estate GetEstate(int EstateID)
+        public Estate GetEstate(int? EstateID)
         {
             EstateBrokersContext dbcontext = new EstateBrokersContext();
             return dbcontext.Estates.Where(e => e.EstateId == EstateID).FirstOrDefault();
@@ -88,19 +88,13 @@ namespace Persistence
             context.Estates.Where(e => e.Address.Contains(address)).Load();
             return context;
         }
-
-        public void UpdateGridEstateData()
-        {
-            context.SaveChanges();
-        }
-
+        
         public void InsertPrice(PriceHistory priceHistory)
         {
             context = new EstateBrokersContext();
             context.PriceHistories.Add(priceHistory);
             context.SaveChanges();
         }
-
         //Broker
         public DbSet<Broker> GetBrokers()
         {
@@ -119,5 +113,16 @@ namespace Persistence
             context.SaveChanges();
         }
 
+        public List<PriceHistory> GetPriceHistory(int? estateId)
+        {
+            context = new EstateBrokersContext();
+            return context.PriceHistories.Where(e => e.EstateId == estateId).ToList();
+        }
+
+        public ZipCode GetCityFromZipCode(int? zipCode)
+        {
+            context = new EstateBrokersContext();
+            return context.ZipCodes.Where(z => z.ZipCode1 == zipCode).FirstOrDefault();
+        }
     }
 }

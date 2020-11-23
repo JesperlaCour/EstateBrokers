@@ -42,5 +42,17 @@ namespace Controller
         {
             db.SaveDBContext();
         }
+
+        public Customer GetCustomer(int? sellerId)
+        {
+            db = new DatabaseProxy();
+            return db.GetCustomer(sellerId);
+        }
+
+        public ZipCode GetCityFromZipCode(int? zipCode)
+        {
+            db = new DatabaseProxy();
+            return db.GetCityFromZipCode(zipCode);
+        }
     }
 }

@@ -56,7 +56,7 @@ namespace Persistence
         }
 
 
-        public Customer GetCustomer(int customerId)
+        public Customer GetCustomer(int? customerId)
         {
             var conn = GetConnection();
             conn.Open();
@@ -101,7 +101,7 @@ namespace Persistence
             return allCustomers;
         }
 
-        public Estate GetEstate(int estateID)
+        public Estate GetEstate(int? estateID)
         {
             var conn = GetConnection();
             conn.Open();
@@ -224,6 +224,17 @@ namespace Persistence
         }
 
         public void SaveDBContext()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public List<PriceHistory> GetPriceHistory(int? estateId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ZipCode GetCityFromZipCode(int? zipCode)
         {
             throw new NotImplementedException();
         }

@@ -26,7 +26,16 @@ namespace GUI
         private void btn_soeg_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = CustomerControllerSingleton.Instance().GetGridCustomerData(tbt_address.Text).Customers.Local.ToBindingList();
-            
+
+            dataGridView1.Columns["CustomerId"].HeaderText = "Kundenummer";
+            dataGridView1.Columns["Name"].HeaderText = "Navn";
+            dataGridView1.Columns["Address"].HeaderText = "Adresse";
+            dataGridView1.Columns["PhoneNr"].HeaderText = "Tlf. Nr.";
+            dataGridView1.Columns["Zipcode"].HeaderText = "Postnummer";
+            dataGridView1.Columns["ZipCodeNavigation"].HeaderText = "PostnummerNavigation";
+            dataGridView1.Columns["CaseOrderBuyers"].HeaderText = "SagsOrdreKøbere";
+            dataGridView1.Columns["CaseOrderSellers"].HeaderText = "SagsOrdreSælgere";
+
 
         }
     }

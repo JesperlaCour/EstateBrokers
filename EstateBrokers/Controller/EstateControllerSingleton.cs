@@ -40,5 +40,13 @@ namespace Controller
         {
             db.SaveDBContext();
         }
+
+        public List<Estate> GetEstate(int? estateId)
+        {
+            db = new DatabaseProxy();
+            List<Estate> list = new List<Estate>();
+            list.Add(db.GetEstate(estateId));
+            return list;
+        }
     }
 }
