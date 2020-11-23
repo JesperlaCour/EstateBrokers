@@ -13,6 +13,15 @@ namespace Model.Models
             CaseOrderSellers = new HashSet<CaseOrder>();
         }
 
+        public Customer(int customerId, string name, string address, int? phoneNr, int? zipCode)
+        {
+            CustomerId = customerId;
+            Name = name;
+            Address = address;
+            PhoneNr = phoneNr;
+            ZipCode = zipCode;
+        }
+
         public int CustomerId { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }

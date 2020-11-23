@@ -39,7 +39,7 @@ namespace Controller
         {
             db.SaveDBContext();
         }
-        public DbSet<Model.Models.Type> GetGridType()
+        public DbSet<HouseType> GetGridType()
         {
             db = new EFDatabase();
             return db.GetTypes();

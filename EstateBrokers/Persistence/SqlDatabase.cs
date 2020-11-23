@@ -112,7 +112,6 @@ namespace Persistence
             {
                 return new Estate(Convert.ToInt32(sqld["estateId"]),
                     sqld["address"].ToString(),
-                    sqld["type"].ToString(),
                     Convert.ToInt32(sqld["buildYear"]),
                     Convert.ToInt32(sqld["remodelYear"]),
                     Convert.ToInt32(sqld["condition"]),
@@ -120,7 +119,9 @@ namespace Persistence
                     Convert.ToInt32(sqld["rooms"]),
                     Convert.ToInt32(sqld["floors"]),
                     Convert.ToBoolean(sqld["garden"]),
-                    Convert.ToInt32(sqld["zipCode"]));
+                    Convert.ToInt32(sqld["zipCode"]),
+                    Convert.ToInt32(sqld["Housetype"]));
+
             }
             conn.Close();
             return null;
@@ -142,7 +143,6 @@ namespace Persistence
 
                     allEstates.Add(new Estate(Convert.ToInt32(sqld["estateId"]),
                         sqld["address"].ToString(),
-                        sqld["type"].ToString(),
                         Convert.ToInt32(sqld["buildYear"]),
                         Convert.ToInt32(sqld["remodelYear"]),
                         Convert.ToInt32(sqld["condition"]),
@@ -150,7 +150,8 @@ namespace Persistence
                         Convert.ToInt32(sqld["rooms"]),
                         Convert.ToInt32(sqld["floors"]),
                         Convert.ToBoolean(sqld["garden"]),
-                        Convert.ToInt32(sqld["zipCode"])));
+                        Convert.ToInt32(sqld["zipCode"]),
+                        Convert.ToInt32(sqld["HouseType"])));
                 }
             }
             conn.Close();

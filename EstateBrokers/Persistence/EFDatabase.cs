@@ -111,11 +111,11 @@ namespace Persistence
             context.Brokers.Load();
             return context.Brokers;
         }
-        public DbSet<Model.Models.Type> GetTypes()
+        public DbSet<HouseType> GetTypes()
         {
             context = new EstateBrokersContext();
-            context.Types.Load();
-            return context.Types;
+            context.HouseTypes.Load();
+            return context.HouseTypes;
         }
         public void SaveDBContext()
         {
