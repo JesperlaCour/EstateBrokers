@@ -14,5 +14,34 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void btn_HentAlle_Click(object sender, EventArgs e)
+        {
+
+            
+
+
+        }
+
+        private void btn_Gem_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void btn_TypeHentAlle_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void btn_TypeGem_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
     }
 }

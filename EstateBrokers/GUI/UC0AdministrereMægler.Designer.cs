@@ -58,6 +58,7 @@ namespace GUI
             this.btn_HentAlle.TabIndex = 1;
             this.btn_HentAlle.Text = "Hent alle";
             this.btn_HentAlle.UseVisualStyleBackColor = true;
+            this.btn_HentAlle.Click += new System.EventHandler(this.btn_HentAlle_Click);
             // 
             // btn_Gem
             // 
@@ -67,6 +68,7 @@ namespace GUI
             this.btn_Gem.TabIndex = 2;
             this.btn_Gem.Text = "Gem";
             this.btn_Gem.UseVisualStyleBackColor = true;
+            this.btn_Gem.Click += new System.EventHandler(this.btn_Gem_Click);
             // 
             // dataGridView1
             // 
@@ -116,6 +118,7 @@ namespace GUI
             this.btn_TypeHentAlle.TabIndex = 7;
             this.btn_TypeHentAlle.Text = "Hent alle";
             this.btn_TypeHentAlle.UseVisualStyleBackColor = true;
+            this.btn_TypeHentAlle.Click += new System.EventHandler(this.btn_TypeHentAlle_Click);
             // 
             // btn_TypeGem
             // 
@@ -125,6 +128,7 @@ namespace GUI
             this.btn_TypeGem.TabIndex = 8;
             this.btn_TypeGem.Text = "Gem";
             this.btn_TypeGem.UseVisualStyleBackColor = true;
+            this.btn_TypeGem.Click += new System.EventHandler(this.btn_TypeGem_Click);
             // 
             // UC0AdministrereMægler
             // 
