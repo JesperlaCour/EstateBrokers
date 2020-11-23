@@ -79,5 +79,14 @@ namespace GUI
             dataGridView_PriceHistory.DataSource = CaseOrderControllerSingleton.Instance().GetPriceHistory(co.EstateId);
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            SagsSøgningsForm ssf = new SagsSøgningsForm();
+            ssf.ShowDialog();
+
+
+        }
     }
 }

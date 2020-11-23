@@ -49,7 +49,7 @@ namespace GUI
             dataGridView_AllEstates.Columns["PriceHistories"].HeaderText = "PrisHistorik";
 
 
-
+            
 
 
         }
