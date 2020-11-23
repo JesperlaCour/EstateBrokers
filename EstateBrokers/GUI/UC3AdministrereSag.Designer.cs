@@ -38,18 +38,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,6 +54,18 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.lbl_SælgerKundenummer = new System.Windows.Forms.Label();
+            this.lbl_SælgerNavn = new System.Windows.Forms.Label();
+            this.lbl_SælgerAdresse = new System.Windows.Forms.Label();
+            this.lbl_SælgerTlfNr = new System.Windows.Forms.Label();
+            this.lbl_SælgerPostnummer = new System.Windows.Forms.Label();
+            this.lbl_SælgerBy = new System.Windows.Forms.Label();
+            this.lbl_KoeberKundenummer = new System.Windows.Forms.Label();
+            this.lbl_KoeberNavn = new System.Windows.Forms.Label();
+            this.lbl_KoeberAdresse = new System.Windows.Forms.Label();
+            this.lbl_KoeberTlfNr = new System.Windows.Forms.Label();
+            this.lbl_KoeberPostnummer = new System.Windows.Forms.Label();
+            this.lbl_KoeberBy = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -182,90 +182,6 @@
             this.label3.Size = new System.Drawing.Size(189, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Køber information:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(302, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(302, 187);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(302, 220);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 27);
-            this.textBox4.TabIndex = 9;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(302, 253);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 27);
-            this.textBox5.TabIndex = 10;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(302, 286);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(125, 27);
-            this.textBox6.TabIndex = 11;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(302, 319);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(125, 27);
-            this.textBox7.TabIndex = 12;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(602, 154);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(125, 27);
-            this.textBox8.TabIndex = 13;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(602, 191);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(125, 27);
-            this.textBox9.TabIndex = 14;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(602, 230);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(125, 27);
-            this.textBox10.TabIndex = 15;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(602, 263);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(125, 27);
-            this.textBox11.TabIndex = 16;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(602, 296);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(125, 27);
-            this.textBox12.TabIndex = 17;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(602, 329);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(125, 27);
-            this.textBox13.TabIndex = 18;
             // 
             // label4
             // 
@@ -430,10 +346,130 @@
             this.dataGridView2.Size = new System.Drawing.Size(1032, 185);
             this.dataGridView2.TabIndex = 34;
             // 
+            // lbl_SælgerKundenummer
+            // 
+            this.lbl_SælgerKundenummer.AutoSize = true;
+            this.lbl_SælgerKundenummer.Location = new System.Drawing.Point(302, 158);
+            this.lbl_SælgerKundenummer.Name = "lbl_SælgerKundenummer";
+            this.lbl_SælgerKundenummer.Size = new System.Drawing.Size(58, 20);
+            this.lbl_SælgerKundenummer.TabIndex = 35;
+            this.lbl_SælgerKundenummer.Text = "label18";
+            // 
+            // lbl_SælgerNavn
+            // 
+            this.lbl_SælgerNavn.AutoSize = true;
+            this.lbl_SælgerNavn.Location = new System.Drawing.Point(302, 191);
+            this.lbl_SælgerNavn.Name = "lbl_SælgerNavn";
+            this.lbl_SælgerNavn.Size = new System.Drawing.Size(58, 20);
+            this.lbl_SælgerNavn.TabIndex = 36;
+            this.lbl_SælgerNavn.Text = "label19";
+            // 
+            // lbl_SælgerAdresse
+            // 
+            this.lbl_SælgerAdresse.AutoSize = true;
+            this.lbl_SælgerAdresse.Location = new System.Drawing.Point(302, 224);
+            this.lbl_SælgerAdresse.Name = "lbl_SælgerAdresse";
+            this.lbl_SælgerAdresse.Size = new System.Drawing.Size(58, 20);
+            this.lbl_SælgerAdresse.TabIndex = 37;
+            this.lbl_SælgerAdresse.Text = "label20";
+            // 
+            // lbl_SælgerTlfNr
+            // 
+            this.lbl_SælgerTlfNr.AutoSize = true;
+            this.lbl_SælgerTlfNr.Location = new System.Drawing.Point(302, 256);
+            this.lbl_SælgerTlfNr.Name = "lbl_SælgerTlfNr";
+            this.lbl_SælgerTlfNr.Size = new System.Drawing.Size(58, 20);
+            this.lbl_SælgerTlfNr.TabIndex = 38;
+            this.lbl_SælgerTlfNr.Text = "label21";
+            // 
+            // lbl_SælgerPostnummer
+            // 
+            this.lbl_SælgerPostnummer.AutoSize = true;
+            this.lbl_SælgerPostnummer.Location = new System.Drawing.Point(302, 289);
+            this.lbl_SælgerPostnummer.Name = "lbl_SælgerPostnummer";
+            this.lbl_SælgerPostnummer.Size = new System.Drawing.Size(58, 20);
+            this.lbl_SælgerPostnummer.TabIndex = 39;
+            this.lbl_SælgerPostnummer.Text = "label22";
+            // 
+            // lbl_SælgerBy
+            // 
+            this.lbl_SælgerBy.AutoSize = true;
+            this.lbl_SælgerBy.Location = new System.Drawing.Point(302, 326);
+            this.lbl_SælgerBy.Name = "lbl_SælgerBy";
+            this.lbl_SælgerBy.Size = new System.Drawing.Size(58, 20);
+            this.lbl_SælgerBy.TabIndex = 40;
+            this.lbl_SælgerBy.Text = "label23";
+            // 
+            // lbl_KoeberKundenummer
+            // 
+            this.lbl_KoeberKundenummer.AutoSize = true;
+            this.lbl_KoeberKundenummer.Location = new System.Drawing.Point(602, 158);
+            this.lbl_KoeberKundenummer.Name = "lbl_KoeberKundenummer";
+            this.lbl_KoeberKundenummer.Size = new System.Drawing.Size(58, 20);
+            this.lbl_KoeberKundenummer.TabIndex = 41;
+            this.lbl_KoeberKundenummer.Text = "label24";
+            // 
+            // lbl_KoeberNavn
+            // 
+            this.lbl_KoeberNavn.AutoSize = true;
+            this.lbl_KoeberNavn.Location = new System.Drawing.Point(602, 198);
+            this.lbl_KoeberNavn.Name = "lbl_KoeberNavn";
+            this.lbl_KoeberNavn.Size = new System.Drawing.Size(58, 20);
+            this.lbl_KoeberNavn.TabIndex = 42;
+            this.lbl_KoeberNavn.Text = "label25";
+            // 
+            // lbl_KoeberAdresse
+            // 
+            this.lbl_KoeberAdresse.AutoSize = true;
+            this.lbl_KoeberAdresse.Location = new System.Drawing.Point(602, 233);
+            this.lbl_KoeberAdresse.Name = "lbl_KoeberAdresse";
+            this.lbl_KoeberAdresse.Size = new System.Drawing.Size(58, 20);
+            this.lbl_KoeberAdresse.TabIndex = 43;
+            this.lbl_KoeberAdresse.Text = "label26";
+            // 
+            // lbl_KoeberTlfNr
+            // 
+            this.lbl_KoeberTlfNr.AutoSize = true;
+            this.lbl_KoeberTlfNr.Location = new System.Drawing.Point(602, 267);
+            this.lbl_KoeberTlfNr.Name = "lbl_KoeberTlfNr";
+            this.lbl_KoeberTlfNr.Size = new System.Drawing.Size(58, 20);
+            this.lbl_KoeberTlfNr.TabIndex = 44;
+            this.lbl_KoeberTlfNr.Text = "label27";
+            // 
+            // lbl_KoeberPostnummer
+            // 
+            this.lbl_KoeberPostnummer.AutoSize = true;
+            this.lbl_KoeberPostnummer.Location = new System.Drawing.Point(602, 300);
+            this.lbl_KoeberPostnummer.Name = "lbl_KoeberPostnummer";
+            this.lbl_KoeberPostnummer.Size = new System.Drawing.Size(58, 20);
+            this.lbl_KoeberPostnummer.TabIndex = 45;
+            this.lbl_KoeberPostnummer.Text = "label28";
+            // 
+            // lbl_KoeberBy
+            // 
+            this.lbl_KoeberBy.AutoSize = true;
+            this.lbl_KoeberBy.Location = new System.Drawing.Point(602, 335);
+            this.lbl_KoeberBy.Name = "lbl_KoeberBy";
+            this.lbl_KoeberBy.Size = new System.Drawing.Size(58, 20);
+            this.lbl_KoeberBy.TabIndex = 46;
+            this.lbl_KoeberBy.Text = "label29";
+            // 
             // UC3AdministrereSag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_KoeberBy);
+            this.Controls.Add(this.lbl_KoeberPostnummer);
+            this.Controls.Add(this.lbl_KoeberTlfNr);
+            this.Controls.Add(this.lbl_KoeberAdresse);
+            this.Controls.Add(this.lbl_KoeberNavn);
+            this.Controls.Add(this.lbl_KoeberKundenummer);
+            this.Controls.Add(this.lbl_SælgerBy);
+            this.Controls.Add(this.lbl_SælgerPostnummer);
+            this.Controls.Add(this.lbl_SælgerTlfNr);
+            this.Controls.Add(this.lbl_SælgerAdresse);
+            this.Controls.Add(this.lbl_SælgerNavn);
+            this.Controls.Add(this.lbl_SælgerKundenummer);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.dataGridView1);
@@ -450,18 +486,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button5);
@@ -493,18 +517,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -521,5 +533,17 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label lbl_SælgerKundenummer;
+        private System.Windows.Forms.Label lbl_SælgerNavn;
+        private System.Windows.Forms.Label lbl_SælgerAdresse;
+        private System.Windows.Forms.Label lbl_SælgerTlfNr;
+        private System.Windows.Forms.Label lbl_SælgerPostnummer;
+        private System.Windows.Forms.Label lbl_SælgerBy;
+        private System.Windows.Forms.Label lbl_KoeberKundenummer;
+        private System.Windows.Forms.Label lbl_KoeberNavn;
+        private System.Windows.Forms.Label lbl_KoeberAdresse;
+        private System.Windows.Forms.Label lbl_KoeberTlfNr;
+        private System.Windows.Forms.Label lbl_KoeberPostnummer;
+        private System.Windows.Forms.Label lbl_KoeberBy;
     }
 }
