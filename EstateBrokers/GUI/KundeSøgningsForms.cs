@@ -26,7 +26,7 @@ namespace GUI
         private void btn_soeg_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = CustomerControllerSingleton.Instance().GetGridCustomerData(tbt_address.Text).Customers.Local.ToBindingList();
-
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Columns["CustomerId"].HeaderText = "Kundenummer";
             dataGridView1.Columns["Name"].HeaderText = "Navn";
             dataGridView1.Columns["Address"].HeaderText = "Adresse";
@@ -37,6 +37,12 @@ namespace GUI
             dataGridView1.Columns["CaseOrderSellers"].HeaderText = "SagsOrdreSælgere";
 
 
+        }
+
+        private void btn_ChooseKunde_Click(object sender, EventArgs e)
+        {
+            string custID = dataGridView1.SelectedCells[0].Value.ToString();
+            MessageBox.Show(custID);
         }
     }
 }
