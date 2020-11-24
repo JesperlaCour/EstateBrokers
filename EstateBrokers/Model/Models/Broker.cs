@@ -21,9 +21,9 @@ namespace Model.Models
         public virtual ICollection<CaseOrder> CaseOrders { get; set; }
         public virtual ICollection<OpenHouse> OpenHouses { get; set; }
 
-        public override string ToString()
-        {
-            return BrokerId + " " + Name;    
-        }
+        //public override string ToString()
+        //{
+        //    return BrokerId + " " + Name;    
+        //}
     }
 }

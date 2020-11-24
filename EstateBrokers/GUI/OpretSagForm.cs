@@ -23,8 +23,9 @@ namespace GUI
         }
         private void Update_ChooseBrokerDropdown()
         {
-
             cbo_ChooseBroker.DataSource = Broker_TypeControllerSingleton.Instance().GetListBrokers();
+            cbo_ChooseBroker.DisplayMember = "Name";
+            cbo_ChooseBroker.ValueMember = "BrokerId";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,7 +47,7 @@ namespace GUI
                 CaseOrderControllerSingleton.Instance().CreateCaseOrder(new CaseOrder(
                 "Active",
                 Convert.ToInt32(tbt_sellerID.Text),
-                Convert.ToInt32(cbo_ChooseBroker.SelectedItem.ToString()[0] - 48),
+                Convert.ToInt32(cbo_ChooseBroker.SelectedValue),
                 Convert.ToInt32(tbt_estateID.Text)),
                 Convert.ToInt32(tbt_ListingPrice.Text));
                 MessageBox.Show("Ny sag oprettet");

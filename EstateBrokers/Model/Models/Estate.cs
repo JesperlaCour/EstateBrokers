@@ -13,6 +13,20 @@ namespace Model.Models
             PriceHistories = new HashSet<PriceHistory>();
         }
 
+        public Estate(string address, int? buildYear, int? remodelYear, int? condition, int? areal, int? rooms, int? floors, bool? garden, int? zipCode, int? typeId)
+        {
+            Address = address;
+            BuildYear = buildYear;
+            RemodelYear = remodelYear;
+            Condition = condition;
+            Areal = areal;
+            Rooms = rooms;
+            Floors = floors;
+            Garden = garden;
+            ZipCode = zipCode;
+            TypeId = typeId;
+        }
+
         public Estate(int estateId, string address, int? buildYear, int? remodelYear, int? condition, int? areal, int? rooms, int? floors, bool? garden, int? zipCode, int? typeId)
         {
             EstateId = estateId;
