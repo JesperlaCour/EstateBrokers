@@ -13,6 +13,9 @@ namespace GUI
 {
     public partial class OpretSagForm : Form
     {
+        public static string sellerID { get; set; }
+        public static string estateID { get; set; }
+
         public OpretSagForm()
         {
             InitializeComponent();
@@ -40,13 +43,20 @@ namespace GUI
         private void button2_Click(object sender, EventArgs e)
         {
             KundeSøgningsForms opkf = new KundeSøgningsForms();
-            opkf.ShowDialog();
+            if (opkf.ShowDialog() == DialogResult.OK)
+            {
+                tbt_sellerID.Text = sellerID;
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             HusSoegningsForm ophf = new HusSoegningsForm();
-            ophf.ShowDialog();
+            if (ophf.ShowDialog() == DialogResult.OK)
+            {
+                tbt_estateID.Text = estateID;
+            }
         }
 
         private void bt_CreateNewCase_Click(object sender, EventArgs e)

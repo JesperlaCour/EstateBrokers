@@ -30,7 +30,7 @@ namespace GUI
         private void btn_soeg_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = EstateControllerSingleton.Instance().GetGridEstateData(tbt_address.Text).Estates.Local.ToBindingList();
-
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Columns["EstateId"].HeaderText = "EjendomsId";
             dataGridView1.Columns["Address"].HeaderText = "Adresse";
             dataGridView1.Columns["BuildYear"].HeaderText = "HusetsByggelsesår";
@@ -52,8 +52,10 @@ namespace GUI
 
         }
 
-        private void btn_Close_Click(object sender, EventArgs e)
+        private void btn_chooseHouse_Click(object sender, EventArgs e)
         {
+            OpretSagForm.estateID = dataGridView1.SelectedCells[0].Value.ToString();
+            DialogResult = DialogResult.OK;
             this.Close();
         }
     }
