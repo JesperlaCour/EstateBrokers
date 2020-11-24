@@ -12,10 +12,14 @@ namespace GUI
 {
     public partial class KundeSøgningsForms : Form
     {
+        
+
         public KundeSøgningsForms()
         {
             InitializeComponent();
         }
+
+      
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -32,25 +36,20 @@ namespace GUI
             dataGridView1.Columns["Address"].HeaderText = "Adresse";
             dataGridView1.Columns["PhoneNr"].HeaderText = "Tlf. Nr.";
             dataGridView1.Columns["Zipcode"].HeaderText = "Postnummer";
-            dataGridView1.Columns["ZipCodeNavigation"].HeaderText = "PostnummerNavigation";
-            dataGridView1.Columns["CaseOrderBuyers"].HeaderText = "SagsOrdreKøbere";
-            dataGridView1.Columns["CaseOrderSellers"].HeaderText = "SagsOrdreSælgere";
+            dataGridView1.Columns["ZipCodeNavigation"].Visible = false;
+            dataGridView1.Columns["CaseOrderBuyers"].Visible = false;
+            dataGridView1.Columns["CaseOrderSellers"].Visible = false;
 
             this.dataGridView1.Columns["ZipCodeNavigation"].Visible = false;
-
-
-
         }
 
         private void btn_ChooseKunde_Click(object sender, EventArgs e)
         {
-            string custID = dataGridView1.SelectedCells[0].Value.ToString();
-            MessageBox.Show(custID);
+          
+            OpretSagForm.sellerID = dataGridView1.SelectedCells[0].Value.ToString();
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
 
-        private void btn_ChooseKunde_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

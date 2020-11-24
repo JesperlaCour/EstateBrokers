@@ -69,7 +69,7 @@ namespace GUI
             this.btn_ChooseKunde.TabIndex = 2;
             this.btn_ChooseKunde.Text = "Vælg kunde";
             this.btn_ChooseKunde.UseVisualStyleBackColor = true;
-            this.btn_ChooseKunde.Click += new System.EventHandler(this.btn_ChooseKunde_Click_1);
+            this.btn_ChooseKunde.Click += new System.EventHandler(this.btn_ChooseKunde_Click);
             // 
             // tbt_name
             // 

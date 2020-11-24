@@ -34,7 +34,7 @@ namespace GUI
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_soeg = new System.Windows.Forms.Button();
-            this.btn_Close = new System.Windows.Forms.Button();
+            this.btn_ChooseHouse = new System.Windows.Forms.Button();
             this.btn_OpretNytHUs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -90,16 +90,16 @@ namespace GUI
             this.btn_soeg.UseVisualStyleBackColor = true;
             this.btn_soeg.Click += new System.EventHandler(this.btn_soeg_Click);
             // 
-            // btn_Close
+            // btn_ChooseHouse
             // 
-            this.btn_Close.Location = new System.Drawing.Point(1523, 114);
-            this.btn_Close.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(153, 46);
-            this.btn_Close.TabIndex = 7;
-            this.btn_Close.Text = "Luk";
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            this.btn_ChooseHouse.Location = new System.Drawing.Point(1523, 114);
+            this.btn_ChooseHouse.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_ChooseHouse.Name = "btn_ChooseHouse";
+            this.btn_ChooseHouse.Size = new System.Drawing.Size(153, 46);
+            this.btn_ChooseHouse.TabIndex = 7;
+            this.btn_ChooseHouse.Text = "Vælg";
+            this.btn_ChooseHouse.UseVisualStyleBackColor = true;
+            this.btn_ChooseHouse.Click += new System.EventHandler(this.btn_chooseHouse_Click);
             // 
             // btn_OpretNytHUs
             // 
@@ -118,7 +118,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1710, 955);
             this.Controls.Add(this.btn_OpretNytHUs);
-            this.Controls.Add(this.btn_Close);
+            this.Controls.Add(this.btn_ChooseHouse);
             this.Controls.Add(this.btn_soeg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -140,7 +140,7 @@ namespace GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_soeg;
-        private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.Button btn_ChooseHouse;
         private System.Windows.Forms.Button btn_OpretNytHUs;
     }
 }
