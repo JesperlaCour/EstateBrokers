@@ -245,5 +245,19 @@ namespace Persistence
                 throw;
             }
         }
+
+        public List<Estate> GetEstatesBasedOn_ZipCodeAndHousetype(int zipCode, int houseType, int remodelYear)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetEstatesBasedOn_ZipCodeAndHousetype(zipCode, houseType, remodelYear);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

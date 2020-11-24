@@ -33,6 +33,20 @@ namespace UnitTest
 
             //Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetEstatesToListingCalculation()
+        {
+            //arrange
+            IDatabase testDB = new EFDatabase();
+
+            //Act
+            int actual = testDB.GetEstatesBasedOn_ZipCodeAndHousetype(7100, new HouseType(1), 2000).Count();
+            int expected = 1;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
 
         }
     }

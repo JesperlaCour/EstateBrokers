@@ -25,8 +25,8 @@ namespace UnitTest
         {
             IDatabase testDb = new SqlDatabase();
 
-            string actual = testDb.GetEstate(1).Type;
-            string expected = "Villa";
+            int? actual = testDb.GetEstate(1).TypeId;
+            int expected = 1;
 
             Assert.AreEqual(expected, actual);
         }

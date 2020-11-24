@@ -243,5 +243,10 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public List<Estate> GetEstatesBasedOn_ZipCodeAndHousetype(int zipCode, int houseType, int remodelYear)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

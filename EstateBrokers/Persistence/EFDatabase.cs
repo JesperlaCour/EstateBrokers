@@ -130,5 +130,14 @@ namespace Persistence
             context = new EstateBrokersContext();
             return context.HouseTypes.ToList();
         }
+
+        public List<Estate> GetEstatesBasedOn_ZipCodeAndHousetype(int zipCode, int houseType, int remodelYear)
+        {
+            context = new EstateBrokersContext();
+            return context.Estates.Where(
+                z => z.ZipCode == zipCode
+                && z.TypeId == houseType
+                && (z.RemodelYear > remodelYear - 6 && z.RemodelYear < remodelYear + 6)).ToList();
+        }
     }
 }

@@ -43,7 +43,7 @@ namespace GUI
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 176);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1633, 760);
@@ -52,7 +52,7 @@ namespace GUI
             // btn_soeg
             // 
             this.btn_soeg.Location = new System.Drawing.Point(234, 115);
-            this.btn_soeg.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_soeg.Margin = new System.Windows.Forms.Padding(5);
             this.btn_soeg.Name = "btn_soeg";
             this.btn_soeg.Size = new System.Drawing.Size(153, 46);
             this.btn_soeg.TabIndex = 1;
@@ -63,17 +63,18 @@ namespace GUI
             // btn_ChooseKunde
             // 
             this.btn_ChooseKunde.Location = new System.Drawing.Point(1500, 118);
-            this.btn_ChooseKunde.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_ChooseKunde.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ChooseKunde.Name = "btn_ChooseKunde";
             this.btn_ChooseKunde.Size = new System.Drawing.Size(153, 46);
             this.btn_ChooseKunde.TabIndex = 2;
             this.btn_ChooseKunde.Text = "Vælg kunde";
             this.btn_ChooseKunde.UseVisualStyleBackColor = true;
+            this.btn_ChooseKunde.Click += new System.EventHandler(this.btn_ChooseKunde_Click_1);
             // 
             // tbt_address
             // 
             this.tbt_address.Location = new System.Drawing.Point(21, 118);
-            this.tbt_address.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbt_address.Margin = new System.Windows.Forms.Padding(5);
             this.tbt_address.Name = "tbt_address";
             this.tbt_address.Size = new System.Drawing.Size(201, 39);
             this.tbt_address.TabIndex = 3;
@@ -102,7 +103,7 @@ namespace GUI
             // btn_OpretNyKunde
             // 
             this.btn_OpretNyKunde.Location = new System.Drawing.Point(418, 115);
-            this.btn_OpretNyKunde.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_OpretNyKunde.Margin = new System.Windows.Forms.Padding(5);
             this.btn_OpretNyKunde.Name = "btn_OpretNyKunde";
             this.btn_OpretNyKunde.Size = new System.Drawing.Size(206, 46);
             this.btn_OpretNyKunde.TabIndex = 8;
@@ -122,7 +123,7 @@ namespace GUI
             this.Controls.Add(this.btn_ChooseKunde);
             this.Controls.Add(this.btn_soeg);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "KundeSøgningsForms";
             this.Text = "OpretKundeForms";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -12,6 +12,11 @@ namespace Model.Models
             Estates = new HashSet<Estate>();
         }
 
+        public HouseType(int typeId)
+        {
+            TypeId = typeId;
+        }
+
         public int TypeId { get; set; }
         public string Type { get; set; }
 
