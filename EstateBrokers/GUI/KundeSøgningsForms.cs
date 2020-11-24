@@ -36,6 +36,9 @@ namespace GUI
             dataGridView1.Columns["CaseOrderBuyers"].HeaderText = "SagsOrdreKøbere";
             dataGridView1.Columns["CaseOrderSellers"].HeaderText = "SagsOrdreSælgere";
 
+            this.dataGridView1.Columns["ZipCodeNavigation"].Visible = false;
+
+
 
         }
 
