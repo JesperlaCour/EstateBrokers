@@ -25,7 +25,7 @@ namespace GUI
 
         private void btn_soeg_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = CustomerControllerSingleton.Instance().GetGridCustomerData(tbt_address.Text).Customers.Local.ToBindingList();
+            dataGridView1.DataSource = CustomerControllerSingleton.Instance().GetGridCustomerData(tbt_name.Text).Customers.Local.ToBindingList();
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Columns["CustomerId"].HeaderText = "Kundenummer";
             dataGridView1.Columns["Name"].HeaderText = "Navn";

@@ -32,7 +32,7 @@ namespace GUI
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_soeg = new System.Windows.Forms.Button();
             this.btn_ChooseKunde = new System.Windows.Forms.Button();
-            this.tbt_address = new System.Windows.Forms.TextBox();
+            this.tbt_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_OpretNyKunde = new System.Windows.Forms.Button();
@@ -71,13 +71,13 @@ namespace GUI
             this.btn_ChooseKunde.UseVisualStyleBackColor = true;
             this.btn_ChooseKunde.Click += new System.EventHandler(this.btn_ChooseKunde_Click_1);
             // 
-            // tbt_address
+            // tbt_name
             // 
-            this.tbt_address.Location = new System.Drawing.Point(21, 118);
-            this.tbt_address.Margin = new System.Windows.Forms.Padding(5);
-            this.tbt_address.Name = "tbt_address";
-            this.tbt_address.Size = new System.Drawing.Size(201, 39);
-            this.tbt_address.TabIndex = 3;
+            this.tbt_name.Location = new System.Drawing.Point(21, 118);
+            this.tbt_name.Margin = new System.Windows.Forms.Padding(5);
+            this.tbt_name.Name = "tbt_name";
+            this.tbt_name.Size = new System.Drawing.Size(201, 39);
+            this.tbt_name.TabIndex = 3;
             // 
             // label1
             // 
@@ -85,9 +85,9 @@ namespace GUI
             this.label1.Location = new System.Drawing.Point(21, 82);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 32);
+            this.label1.Size = new System.Drawing.Size(75, 32);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Adresse:";
+            this.label1.Text = "Navn:";
             // 
             // label3
             // 
@@ -119,7 +119,7 @@ namespace GUI
             this.Controls.Add(this.btn_OpretNyKunde);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbt_address);
+            this.Controls.Add(this.tbt_name);
             this.Controls.Add(this.btn_ChooseKunde);
             this.Controls.Add(this.btn_soeg);
             this.Controls.Add(this.dataGridView1);
@@ -137,7 +137,7 @@ namespace GUI
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_soeg;
         private System.Windows.Forms.Button btn_ChooseKunde;
-        private System.Windows.Forms.TextBox tbt_address;
+        private System.Windows.Forms.TextBox tbt_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_OpretNyKunde;
