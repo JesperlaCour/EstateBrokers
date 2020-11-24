@@ -31,6 +31,8 @@ namespace GUI
             dataGridView_CustAdmin.Columns["CaseOrderSellers"].HeaderText = "SagsOrdreSælgere";
 
             this.dataGridView_CustAdmin.Columns["ZipCodeNavigation"].Visible = false;
+            this.dataGridView_CustAdmin.Columns["CaseOrderBuyers"].Visible = false;
+            this.dataGridView_CustAdmin.Columns["CaseOrderSellers"].Visible = false;
 
         }
 

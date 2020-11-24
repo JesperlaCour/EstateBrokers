@@ -331,6 +331,8 @@
             // 
             // dataGridView_HouseInformation
             // 
+            this.dataGridView_HouseInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_HouseInformation.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView_HouseInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_HouseInformation.Location = new System.Drawing.Point(177, 415);
             this.dataGridView_HouseInformation.Name = "dataGridView_HouseInformation";
@@ -350,6 +352,8 @@
             // 
             // dataGridView_PriceHistory
             // 
+            this.dataGridView_PriceHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_PriceHistory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView_PriceHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_PriceHistory.Location = new System.Drawing.Point(180, 660);
             this.dataGridView_PriceHistory.Name = "dataGridView_PriceHistory";

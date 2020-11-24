@@ -39,20 +39,20 @@ namespace GUI
             // dataGridView_CustAdmin
             // 
             this.dataGridView_CustAdmin.AllowUserToOrderColumns = true;
+            this.dataGridView_CustAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_CustAdmin.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView_CustAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_CustAdmin.Location = new System.Drawing.Point(328, 226);
-            this.dataGridView_CustAdmin.Margin = new System.Windows.Forms.Padding(5);
+            this.dataGridView_CustAdmin.Location = new System.Drawing.Point(202, 141);
             this.dataGridView_CustAdmin.Name = "dataGridView_CustAdmin";
             this.dataGridView_CustAdmin.RowHeadersWidth = 51;
-            this.dataGridView_CustAdmin.Size = new System.Drawing.Size(2343, 1149);
+            this.dataGridView_CustAdmin.Size = new System.Drawing.Size(1442, 718);
             this.dataGridView_CustAdmin.TabIndex = 0;
             // 
             // bt_GetAllCustAdmin
             // 
-            this.bt_GetAllCustAdmin.Location = new System.Drawing.Point(328, 147);
-            this.bt_GetAllCustAdmin.Margin = new System.Windows.Forms.Padding(5);
+            this.bt_GetAllCustAdmin.Location = new System.Drawing.Point(202, 92);
             this.bt_GetAllCustAdmin.Name = "bt_GetAllCustAdmin";
-            this.bt_GetAllCustAdmin.Size = new System.Drawing.Size(176, 69);
+            this.bt_GetAllCustAdmin.Size = new System.Drawing.Size(108, 43);
             this.bt_GetAllCustAdmin.TabIndex = 1;
             this.bt_GetAllCustAdmin.Text = "Hent alle";
             this.bt_GetAllCustAdmin.UseVisualStyleBackColor = true;
@@ -60,10 +60,9 @@ namespace GUI
             // 
             // bt_saveCustAdmin
             // 
-            this.bt_saveCustAdmin.Location = new System.Drawing.Point(514, 147);
-            this.bt_saveCustAdmin.Margin = new System.Windows.Forms.Padding(5);
+            this.bt_saveCustAdmin.Location = new System.Drawing.Point(316, 92);
             this.bt_saveCustAdmin.Name = "bt_saveCustAdmin";
-            this.bt_saveCustAdmin.Size = new System.Drawing.Size(176, 69);
+            this.bt_saveCustAdmin.Size = new System.Drawing.Size(108, 43);
             this.bt_saveCustAdmin.TabIndex = 2;
             this.bt_saveCustAdmin.Text = "Gem";
             this.bt_saveCustAdmin.UseVisualStyleBackColor = true;
@@ -73,23 +72,21 @@ namespace GUI
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 1728);
+            this.panel1.Size = new System.Drawing.Size(196, 1080);
             this.panel1.TabIndex = 3;
             // 
             // UC1AdministrereKunde
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_saveCustAdmin);
             this.Controls.Add(this.bt_GetAllCustAdmin);
             this.Controls.Add(this.dataGridView_CustAdmin);
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.MinimumSize = new System.Drawing.Size(3120, 1728);
+            this.MinimumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "UC1AdministrereKunde";
-            this.Size = new System.Drawing.Size(3120, 1728);
+            this.Size = new System.Drawing.Size(1920, 1080);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CustAdmin)).EndInit();
             this.ResumeLayout(false);
 

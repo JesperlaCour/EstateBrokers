@@ -28,7 +28,8 @@ namespace GUI
             dataGridView1.Columns["CaseOrders"].HeaderText = "SagsOrdre";
             dataGridView1.Columns["OpenHouses"].HeaderText = "ÅbenthusDage";
 
-
+            this.dataGridView1.Columns["CaseOrders"].Visible = false;
+            this.dataGridView1.Columns["OpenHouses"].Visible = false;
 
         }
 
@@ -48,6 +49,7 @@ namespace GUI
             dataGridView2.Columns["Type"].HeaderText = "Type";
             dataGridView2.Columns["Estates"].HeaderText = "Ejendom";
 
+            this.dataGridView2.Columns["Estates"].Visible = false;
 
         }
 

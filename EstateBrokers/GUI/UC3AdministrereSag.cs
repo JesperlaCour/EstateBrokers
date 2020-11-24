@@ -97,7 +97,9 @@ namespace GUI
 
 
             this.dataGridView_HouseInformation.Columns["ZipCodeNavigation"].Visible = false;
-
+            this.dataGridView_HouseInformation.Columns["Type"].Visible = false;
+            this.dataGridView_HouseInformation.Columns["CaseOrders"].Visible = false;
+            this.dataGridView_HouseInformation.Columns["PriceHistories"].Visible = false;
 
 
             dataGridView_PriceHistory.Columns["PriceHistoryId"].HeaderText = "PrisHistorik";
@@ -107,7 +109,7 @@ namespace GUI
             dataGridView_PriceHistory.Columns["EstateId"].HeaderText = "EjendomsId";
             dataGridView_PriceHistory.Columns["Estate"].HeaderText = "Ejendom";
 
-
+            this.dataGridView_PriceHistory.Columns["Estate"].Visible = false;
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -275,9 +275,11 @@ namespace GUI
             // 
             // dataGridView_priceHistory
             // 
+            this.dataGridView_priceHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_priceHistory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView_priceHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_priceHistory.Location = new System.Drawing.Point(1076, 565);
-            this.dataGridView_priceHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_priceHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_priceHistory.Name = "dataGridView_priceHistory";
             this.dataGridView_priceHistory.RowHeadersWidth = 82;
             this.dataGridView_priceHistory.Size = new System.Drawing.Size(775, 309);
