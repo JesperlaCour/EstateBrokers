@@ -49,6 +49,7 @@ namespace GUI
             dataGridView_AllEstates.Columns["PriceHistories"].HeaderText = "PrisHistorik";
 
 
+            this.dataGridView_AllEstates.Columns["ZipCodeNavigation"].Visible = false;
             
 
 

@@ -30,7 +30,7 @@ namespace GUI
             dataGridView_CustAdmin.Columns["CaseOrderBuyers"].HeaderText = "SagsOrdreKøbere";
             dataGridView_CustAdmin.Columns["CaseOrderSellers"].HeaderText = "SagsOrdreSælgere";
 
-
+            this.dataGridView_CustAdmin.Columns["ZipCodeNavigation"].Visible = false;
 
         }
 

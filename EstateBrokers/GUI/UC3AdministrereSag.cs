@@ -78,6 +78,36 @@ namespace GUI
             dataGridView_HouseInformation.DataSource = EstateControllerSingleton.Instance().GetEstate(co.EstateId);
             dataGridView_PriceHistory.DataSource = CaseOrderControllerSingleton.Instance().GetPriceHistory(co.EstateId);
 
+
+            dataGridView_HouseInformation.Columns["EstateId"].HeaderText = "EjendomsId";
+            dataGridView_HouseInformation.Columns["Address"].HeaderText = "Adresse";
+            dataGridView_HouseInformation.Columns["BuildYear"].HeaderText = "HusetsByggelsesår";
+            dataGridView_HouseInformation.Columns["RemodelYear"].HeaderText = "RenoveringsÅr";
+            dataGridView_HouseInformation.Columns["Condition"].HeaderText = "Stand";
+            dataGridView_HouseInformation.Columns["Areal"].HeaderText = "Areal";
+            dataGridView_HouseInformation.Columns["Rooms"].HeaderText = "Rum";
+            dataGridView_HouseInformation.Columns["Floors"].HeaderText = "Etager";
+            dataGridView_HouseInformation.Columns["Garden"].HeaderText = "Have";
+            dataGridView_HouseInformation.Columns["ZipCode"].HeaderText = "Postnummer";
+            dataGridView_HouseInformation.Columns["TypeId"].HeaderText = "TypeId";
+            dataGridView_HouseInformation.Columns["Type"].HeaderText = "Type";
+            dataGridView_HouseInformation.Columns["ZipCodeNavigation"].HeaderText = "PostnummerNavigation";
+            dataGridView_HouseInformation.Columns["CaseOrders"].HeaderText = "SagsOrdre";
+            dataGridView_HouseInformation.Columns["PriceHistories"].HeaderText = "PrisHistorik";
+
+
+            this.dataGridView_HouseInformation.Columns["ZipCodeNavigation"].Visible = false;
+
+
+
+            dataGridView_PriceHistory.Columns["PriceHistoryId"].HeaderText = "PrisHistorik";
+            dataGridView_PriceHistory.Columns["Price"].HeaderText = "Pris";
+            dataGridView_PriceHistory.Columns["Date"].HeaderText = "Dato";
+            dataGridView_PriceHistory.Columns["PriceType"].HeaderText = "PrisType";
+            dataGridView_PriceHistory.Columns["EstateId"].HeaderText = "EjendomsId";
+            dataGridView_PriceHistory.Columns["Estate"].HeaderText = "Ejendom";
+
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -86,6 +116,11 @@ namespace GUI
             SagsSøgningsForm ssf = new SagsSøgningsForm();
             ssf.ShowDialog();
 
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
 
         }
     }
