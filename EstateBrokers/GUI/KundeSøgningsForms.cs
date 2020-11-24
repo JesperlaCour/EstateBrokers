@@ -47,5 +47,10 @@ namespace GUI
             string custID = dataGridView1.SelectedCells[0].Value.ToString();
             MessageBox.Show(custID);
         }
+
+        private void btn_ChooseKunde_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

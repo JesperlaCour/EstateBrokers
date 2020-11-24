@@ -18,7 +18,7 @@ namespace Persistence
         //Read
         public Customer GetCustomer(int? customerID);
         public List<Customer> GetAllCustomer(string name);
-
+        List<Estate> GetEstatesBasedOn_ZipCodeAndHousetype(int zipCode, int houseType, int remodelYear);
         public Estate GetEstate(int? EstateID);
         public List<Estate> GetAllEstates(string address);
 
