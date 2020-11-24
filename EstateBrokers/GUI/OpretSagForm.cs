@@ -21,6 +21,15 @@ namespace GUI
             //BrokerDropdown.IsBackground = true;
             //BrokerDropdown.Start();
         }
+
+        public OpretSagForm(decimal v)
+        {
+            InitializeComponent();
+            Update_ChooseBrokerDropdown();
+            tbt_ListingPrice.Text = v.ToString();
+
+        }
+
         private void Update_ChooseBrokerDropdown()
         {
             cbo_ChooseBroker.DataSource = Broker_TypeControllerSingleton.Instance().GetListBrokers();

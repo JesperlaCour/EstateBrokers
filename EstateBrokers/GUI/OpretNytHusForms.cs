@@ -18,6 +18,7 @@ namespace GUI
             UpdateDropdown_HouseTypes();
         }
 
+       
         private void UpdateDropdown_HouseTypes()
         {
             cbo_HouseType.DataSource = EstateControllerSingleton.Instance().GetHouseTypes();
