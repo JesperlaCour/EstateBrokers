@@ -40,7 +40,6 @@ namespace GUI
                     Convert.ToBoolean(cbo_Have.Text),
                     Convert.ToInt32(txt_zipCode.Text),
                     Convert.ToInt32(cbo_HouseType.SelectedValue)
-                    //1
                     ));
                 MessageBox.Show("Hus er nu oprettet i systemet");
             }
