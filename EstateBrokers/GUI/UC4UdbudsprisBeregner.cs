@@ -70,5 +70,14 @@ namespace GUI
         {
             dataGridView_priceHistory.DataSource = CaseOrderControllerSingleton.Instance().GetPriceHistory(Convert.ToInt32(dataGridView1.SelectedCells[0].Value));
         }
+
+        private void Btn_CreateNewCase_Click(object sender, EventArgs e)
+        {
+
+            OpretSagForm osf = new OpretSagForm(Convert.ToDecimal(lbl_listingPrice.Text));
+            osf.ShowDialog();
+
+         
+        }
     }
 }
