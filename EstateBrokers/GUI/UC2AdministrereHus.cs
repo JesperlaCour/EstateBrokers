@@ -50,7 +50,11 @@ namespace GUI
 
 
             this.dataGridView_AllEstates.Columns["ZipCodeNavigation"].Visible = false;
-            
+            this.dataGridView_AllEstates.Columns["Type"].Visible = false;
+            this.dataGridView_AllEstates.Columns["CaseOrders"].Visible = false;
+            this.dataGridView_AllEstates.Columns["PriceHistories"].Visible = false;
+
+
 
 
         }
