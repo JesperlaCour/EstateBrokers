@@ -139,5 +139,13 @@ namespace Persistence
                 && z.TypeId == houseType
                 && (z.RemodelYear > remodelYear - 6 && z.RemodelYear < remodelYear + 6)).ToList();
         }
+
+        public List<CaseOrder> GetAllCaseOrdrsForSearchByAddress(string address)
+        {
+            context = new EstateBrokersContext();
+            
+            return context.CaseOrders.Include(s => s.Estate).Where(s => s.Estate.Address.Contains(address)).ToList();
+            
+        }
     }
 }

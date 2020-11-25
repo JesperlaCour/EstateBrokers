@@ -259,5 +259,19 @@ namespace Persistence
                 throw;
             }
         }
+
+        public List<CaseOrder> GetAllCaseOrdrsForSearchByAddress(string address)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetAllCaseOrdrsForSearchByAddress(address);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

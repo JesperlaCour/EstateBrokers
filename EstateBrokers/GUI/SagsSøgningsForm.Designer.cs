@@ -29,97 +29,108 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_Søg = new System.Windows.Forms.Button();
-            this.btn_OpretNySag = new System.Windows.Forms.Button();
-            this.btn_Luk = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView_caseOrder = new System.Windows.Forms.DataGridView();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.btn_CreateNewCase = new System.Windows.Forms.Button();
+            this.btn_choose = new System.Windows.Forms.Button();
+            this.txt_address = new System.Windows.Forms.TextBox();
+            this.lbl_address = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_caseOrder)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView_caseOrder
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1005, 475);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView_caseOrder.AllowUserToAddRows = false;
+            this.dataGridView_caseOrder.AllowUserToDeleteRows = false;
+            this.dataGridView_caseOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_caseOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_caseOrder.Location = new System.Drawing.Point(20, 176);
+            this.dataGridView_caseOrder.Margin = new System.Windows.Forms.Padding(5);
+            this.dataGridView_caseOrder.Name = "dataGridView_caseOrder";
+            this.dataGridView_caseOrder.ReadOnly = true;
+            this.dataGridView_caseOrder.RowHeadersWidth = 51;
+            this.dataGridView_caseOrder.Size = new System.Drawing.Size(1633, 760);
+            this.dataGridView_caseOrder.TabIndex = 0;
             // 
-            // btn_Søg
+            // btn_Search
             // 
-            this.btn_Søg.Location = new System.Drawing.Point(144, 72);
-            this.btn_Søg.Name = "btn_Søg";
-            this.btn_Søg.Size = new System.Drawing.Size(94, 29);
-            this.btn_Søg.TabIndex = 1;
-            this.btn_Søg.Text = "Søg";
-            this.btn_Søg.UseVisualStyleBackColor = true;
+            this.btn_Search.Location = new System.Drawing.Point(234, 115);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(153, 46);
+            this.btn_Search.TabIndex = 1;
+            this.btn_Search.Text = "Søg";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
-            // btn_OpretNySag
+            // btn_CreateNewCase
             // 
-            this.btn_OpretNySag.Location = new System.Drawing.Point(257, 72);
-            this.btn_OpretNySag.Name = "btn_OpretNySag";
-            this.btn_OpretNySag.Size = new System.Drawing.Size(94, 29);
-            this.btn_OpretNySag.TabIndex = 2;
-            this.btn_OpretNySag.Text = "Opret ny sag";
-            this.btn_OpretNySag.UseVisualStyleBackColor = true;
+            this.btn_CreateNewCase.Location = new System.Drawing.Point(418, 115);
+            this.btn_CreateNewCase.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_CreateNewCase.Name = "btn_CreateNewCase";
+            this.btn_CreateNewCase.Size = new System.Drawing.Size(153, 46);
+            this.btn_CreateNewCase.TabIndex = 2;
+            this.btn_CreateNewCase.Text = "Opret ny sag";
+            this.btn_CreateNewCase.UseVisualStyleBackColor = true;
+            this.btn_CreateNewCase.Click += new System.EventHandler(this.btn_CreateNewCase_Click);
             // 
-            // btn_Luk
+            // btn_choose
             // 
-            this.btn_Luk.Location = new System.Drawing.Point(923, 74);
-            this.btn_Luk.Name = "btn_Luk";
-            this.btn_Luk.Size = new System.Drawing.Size(94, 29);
-            this.btn_Luk.TabIndex = 3;
-            this.btn_Luk.Text = "Luk";
-            this.btn_Luk.UseVisualStyleBackColor = true;
+            this.btn_choose.Location = new System.Drawing.Point(1500, 118);
+            this.btn_choose.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_choose.Name = "btn_choose";
+            this.btn_choose.Size = new System.Drawing.Size(153, 46);
+            this.btn_choose.TabIndex = 3;
+            this.btn_choose.Text = "Vælg";
+            this.btn_choose.UseVisualStyleBackColor = true;
+            this.btn_choose.Click += new System.EventHandler(this.btn_choose_Click);
             // 
-            // textBox1
+            // txt_address
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 4;
+            this.txt_address.Location = new System.Drawing.Point(21, 118);
+            this.txt_address.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(201, 39);
+            this.txt_address.TabIndex = 4;
             // 
-            // label1
+            // lbl_address
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.lbl_address.AutoSize = true;
+            this.lbl_address.Location = new System.Drawing.Point(21, 82);
+            this.lbl_address.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbl_address.Name = "lbl_address";
+            this.lbl_address.Size = new System.Drawing.Size(97, 32);
+            this.lbl_address.TabIndex = 5;
+            this.lbl_address.Text = "Adresse";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Courier New", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(428, 9);
+            this.label2.Location = new System.Drawing.Point(696, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 31);
+            this.label2.Size = new System.Drawing.Size(334, 51);
             this.label2.TabIndex = 6;
             this.label2.Text = "Sags søgning";
             // 
             // SagsSøgningsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 597);
+            this.ClientSize = new System.Drawing.Size(1710, 955);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btn_Luk);
-            this.Controls.Add(this.btn_OpretNySag);
-            this.Controls.Add(this.btn_Søg);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lbl_address);
+            this.Controls.Add(this.txt_address);
+            this.Controls.Add(this.btn_choose);
+            this.Controls.Add(this.btn_CreateNewCase);
+            this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.dataGridView_caseOrder);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SagsSøgningsForm";
             this.Text = "SagsSøgningsForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_caseOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,12 +138,12 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_Søg;
-        private System.Windows.Forms.Button btn_OpretNySag;
-        private System.Windows.Forms.Button btn_Luk;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView_caseOrder;
+        private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.Button btn_CreateNewCase;
+        private System.Windows.Forms.Button btn_choose;
+        private System.Windows.Forms.TextBox txt_address;
+        private System.Windows.Forms.Label lbl_address;
         private System.Windows.Forms.Label label2;
     }
 }

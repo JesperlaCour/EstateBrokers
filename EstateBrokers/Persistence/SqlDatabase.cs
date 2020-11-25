@@ -248,5 +248,10 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public List<CaseOrder> GetAllCaseOrdrsForSearchByAddress(string address)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

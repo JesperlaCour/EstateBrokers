@@ -38,6 +38,12 @@ namespace Controller
             return db.GetCaseOrder(caseOrderID);
         }
 
+        public List<CaseOrder> GetAllCaseOrdrsForSearchByAddress(string address)
+        {
+            IDatabase db = new DatabaseProxy();
+            return db.GetAllCaseOrdrsForSearchByAddress(address);
+        }
+
         public object GetPriceHistory(int? estateId)
         {
             IDatabase db = new DatabaseProxy();

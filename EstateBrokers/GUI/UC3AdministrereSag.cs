@@ -15,7 +15,7 @@ namespace GUI
 {
     public partial class UC3AdministrereSag : UserControl
     {
-        
+        public static string caseId;
         public UC3AdministrereSag()
         {
             InitializeComponent();
@@ -116,7 +116,11 @@ namespace GUI
         {
 
             SagsSøgningsForm ssf = new SagsSøgningsForm();
-            ssf.ShowDialog();
+            if (ssf.ShowDialog() == DialogResult.OK)
+            {
+                tbt_caseOrderID.Text = caseId;
+            }
+            
 
 
         }
