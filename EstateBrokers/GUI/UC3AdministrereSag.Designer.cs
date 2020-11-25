@@ -100,12 +100,12 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Green;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Blue;
-            this.button3.Location = new System.Drawing.Point(33, 211);
+            this.button3.Location = new System.Drawing.Point(0, 210);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 53);
+            this.button3.Size = new System.Drawing.Size(161, 53);
             this.button3.TabIndex = 0;
             this.button3.Text = "Opret hus";
             this.button3.UseVisualStyleBackColor = false;
@@ -115,12 +115,12 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Yellow;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(33, 146);
+            this.button2.Location = new System.Drawing.Point(0, 146);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 56);
+            this.button2.Size = new System.Drawing.Size(161, 56);
             this.button2.TabIndex = 0;
             this.button2.Text = "Opret kunde";
             this.button2.UseVisualStyleBackColor = false;
@@ -130,12 +130,12 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(33, 75);
+            this.button1.Location = new System.Drawing.Point(0, 84);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 56);
+            this.button1.Size = new System.Drawing.Size(161, 56);
             this.button1.TabIndex = 0;
             this.button1.Text = "Opret sag";
             this.button1.UseVisualStyleBackColor = false;
