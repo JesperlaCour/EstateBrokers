@@ -43,9 +43,9 @@
             this.forside1 = new GUI.Forside();
             this.administrereKunde1 = new GUI.UC1AdministrereKunde();
             this.administrereHus1 = new GUI.UC2AdministrereHus();
-            this.udbudsprisBeregner1 = new GUI.UC4UdbudsprisBeregner();
             this.aabentHus1 = new GUI.UC5AabentHus();
             this.uC0AdministrereMægler1 = new GUI.UC0AdministrereMægler();
+            this.uC7Salgsstatus1 = new GUI.UC7Salgsstatus();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +114,7 @@
             this.button7.Text = "Salgsstatus";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -249,14 +250,6 @@
             this.administrereHus1.Size = new System.Drawing.Size(2400, 1350);
             this.administrereHus1.TabIndex = 4;
             // 
-            // udbudsprisBeregner1
-            // 
-            this.udbudsprisBeregner1.Location = new System.Drawing.Point(0, 75);
-            this.udbudsprisBeregner1.MinimumSize = new System.Drawing.Size(1920, 1080);
-            this.udbudsprisBeregner1.Name = "udbudsprisBeregner1";
-            this.udbudsprisBeregner1.Size = new System.Drawing.Size(2400, 1350);
-            this.udbudsprisBeregner1.TabIndex = 5;
-            // 
             // aabentHus1
             // 
             this.aabentHus1.Location = new System.Drawing.Point(0, 75);
@@ -273,6 +266,14 @@
             this.uC0AdministrereMægler1.Size = new System.Drawing.Size(2400, 1350);
             this.uC0AdministrereMægler1.TabIndex = 7;
             // 
+            // uC7Salgsstatus1
+            // 
+            this.uC7Salgsstatus1.Location = new System.Drawing.Point(0, 75);
+            this.uC7Salgsstatus1.MinimumSize = new System.Drawing.Size(1920, 1080);
+            this.uC7Salgsstatus1.Name = "uC7Salgsstatus1";
+            this.uC7Salgsstatus1.Size = new System.Drawing.Size(2400, 1350);
+            this.uC7Salgsstatus1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -283,9 +284,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.administrereKunde1);
             this.Controls.Add(this.administrereHus1);
-            this.Controls.Add(this.udbudsprisBeregner1);
             this.Controls.Add(this.aabentHus1);
             this.Controls.Add(this.uC0AdministrereMægler1);
+            this.Controls.Add(this.uC7Salgsstatus1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1918, 1028);
             this.Name = "Form1";
@@ -315,6 +316,7 @@
         private UC5AabentHus aabentHus1;
         private System.Windows.Forms.Button button9;
         private UC0AdministrereMægler uC0AdministrereMægler1;
+        private UC7Salgsstatus uC7Salgsstatus1;
     }
 }
 

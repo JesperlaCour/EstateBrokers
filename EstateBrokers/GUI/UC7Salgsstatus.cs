@@ -14,5 +14,11 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void btn_ChooseCustomer_Click(object sender, EventArgs e)
+        {
+            KundeSøgningsForms ksf = new KundeSøgningsForms();
+            ksf.ShowDialog();
+        }
     }
 }
