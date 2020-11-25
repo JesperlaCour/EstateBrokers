@@ -47,7 +47,7 @@ namespace GUI
             try
             {
                 UpdateAdminCase();
-                UpdateBrokerInfo();
+                //UpdateBrokerInfo();
             }
             catch (Exception)
             {
@@ -61,7 +61,7 @@ namespace GUI
             Customer seller = CustomerControllerSingleton.Instance().GetCustomer(co.SellerId);
 
             
-            if (co.CaseStatus == "Sold")
+            if (co.CaseStatusId == 3)
             {
                 Customer buyer = CustomerControllerSingleton.Instance().GetCustomer(co.BuyerId);
                 tableLayoutPanel_buyerInfo.Visible = true;
@@ -137,7 +137,7 @@ namespace GUI
             {
                 txt_caseOrderID.Text = caseId;
                 UpdateAdminCase();
-                UpdateBrokerInfo();
+                //UpdateBrokerInfo();
             }
             
 

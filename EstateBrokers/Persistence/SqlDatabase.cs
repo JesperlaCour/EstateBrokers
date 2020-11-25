@@ -169,7 +169,7 @@ namespace Persistence
             if (sqld.Read())
             {
                 return new CaseOrder(Convert.ToInt32(sqld["caseID"]),
-                    sqld["caseStatus"].ToString(),
+                    Convert.ToInt32(sqld["caseStatusID"]),
                     Convert.ToInt32(sqld["customerId"]),
                     Convert.ToInt32(sqld["sellerId"]),
                     Convert.ToInt32(sqld["buyerId"]),
@@ -193,7 +193,7 @@ namespace Persistence
                 {
                     allCaseOrders.Add(new CaseOrder(
                         Convert.ToInt32(sqld["caseID"]),
-                        sqld["caseStatus"].ToString(),
+                        Convert.ToInt32(sqld["caseStatusID"]),
                         Convert.ToInt32(sqld["customerId"]),
                         Convert.ToInt32(sqld["SellerId"]),
                         Convert.ToInt32(sqld["brokerId"]),

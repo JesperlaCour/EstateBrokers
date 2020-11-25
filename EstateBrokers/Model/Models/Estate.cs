@@ -58,10 +58,5 @@ namespace Model.Models
         public virtual ZipCode ZipCodeNavigation { get; set; }
         public virtual ICollection<CaseOrder> CaseOrders { get; set; }
         public virtual ICollection<PriceHistory> PriceHistories { get; set; }
-
-        public override string ToString()
-        {
-            return Address + ", " + ZipCode;
-        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using System.Configuration;
 
 #nullable disable
 
@@ -20,21 +20,24 @@ namespace Model.Models
 
         public virtual DbSet<Broker> Brokers { get; set; }
         public virtual DbSet<CaseOrder> CaseOrders { get; set; }
+        public virtual DbSet<CaseStatus> CaseStatuses { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Estate> Estates { get; set; }
         public virtual DbSet<HouseType> HouseTypes { get; set; }
         public virtual DbSet<OpenHouse> OpenHouses { get; set; }
         public virtual DbSet<PriceHistory> PriceHistories { get; set; }
+        public virtual DbSet<PriceType> PriceTypes { get; set; }
         public virtual DbSet<ZipCode> ZipCodes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
 
-                optionsBuilder.UseSqlServer("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString);
+
+                //optionsBuilder.UseSqlServer("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
@@ -68,9 +71,7 @@ namespace Model.Models
 
                 entity.Property(e => e.BuyerId).HasColumnName("BuyerID");
 
-                entity.Property(e => e.CaseStatus)
-                    .HasMaxLength(45)
-                    .IsUnicode(false);
+                entity.Property(e => e.CaseStatusId).HasColumnName("CaseStatusID");
 
                 entity.Property(e => e.EstateId).HasColumnName("EstateID");
 
@@ -86,6 +87,11 @@ namespace Model.Models
                     .HasForeignKey(d => d.BuyerId)
                     .HasConstraintName("FK__CaseOrder__Buyer__09A971A2");
 
+                entity.HasOne(d => d.CaseStatus)
+                    .WithMany(p => p.CaseOrders)
+                    .HasForeignKey(d => d.CaseStatusId)
+                    .HasConstraintName("FK__CaseOrder__CaseS__25518C17");
+
                 entity.HasOne(d => d.Estate)
                     .WithMany(p => p.CaseOrders)
                     .HasForeignKey(d => d.EstateId)
@@ -95,6 +101,17 @@ namespace Model.Models
                     .WithMany(p => p.CaseOrderSellers)
                     .HasForeignKey(d => d.SellerId)
                     .HasConstraintName("FK__CaseOrder__Custo__7B5B524B");
+            });
+
+            modelBuilder.Entity<CaseStatus>(entity =>
+            {
+                entity.ToTable("CaseStatus");
+
+                entity.Property(e => e.CaseStatusId).HasColumnName("CaseStatusID");
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(45)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Customer>(entity =>
@@ -202,14 +219,28 @@ namespace Model.Models
 
                 entity.Property(e => e.Price).HasColumnType("decimal(18, 0)");
 
-                entity.Property(e => e.PriceType)
-                    .HasMaxLength(45)
-                    .IsUnicode(false);
+                entity.Property(e => e.PriceTypeId).HasColumnName("PriceTypeID");
 
                 entity.HasOne(d => d.Estate)
                     .WithMany(p => p.PriceHistories)
                     .HasForeignKey(d => d.EstateId)
                     .HasConstraintName("FK__PriceHist__Estat__04E4BC85");
+
+                entity.HasOne(d => d.PriceType)
+                    .WithMany(p => p.PriceHistories)
+                    .HasForeignKey(d => d.PriceTypeId)
+                    .HasConstraintName("FK__PriceHist__Price__282DF8C2");
+            });
+
+            modelBuilder.Entity<PriceType>(entity =>
+            {
+                entity.ToTable("PriceType");
+
+                entity.Property(e => e.PriceTypeId).HasColumnName("PriceTypeID");
+
+                entity.Property(e => e.Type)
+                    .HasMaxLength(45)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<ZipCode>(entity =>
