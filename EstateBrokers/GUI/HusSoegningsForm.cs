@@ -49,6 +49,9 @@ namespace GUI
 
 
             this.dataGridView1.Columns["ZipCodeNavigation"].Visible = false;
+            this.dataGridView1.Columns["Type"].Visible = false;
+            this.dataGridView1.Columns["CaseOrders"].Visible = false;
+            this.dataGridView1.Columns["PriceHistories"].Visible = false;
 
         }
 

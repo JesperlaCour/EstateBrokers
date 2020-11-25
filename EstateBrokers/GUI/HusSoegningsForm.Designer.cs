@@ -41,29 +41,28 @@ namespace GUI
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 176);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 110);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1656, 760);
+            this.dataGridView1.Size = new System.Drawing.Size(1019, 475);
             this.dataGridView1.TabIndex = 0;
             // 
             // tbt_address
             // 
-            this.tbt_address.Location = new System.Drawing.Point(21, 118);
-            this.tbt_address.Margin = new System.Windows.Forms.Padding(5);
+            this.tbt_address.Location = new System.Drawing.Point(13, 74);
             this.tbt_address.Name = "tbt_address";
-            this.tbt_address.Size = new System.Drawing.Size(201, 39);
+            this.tbt_address.Size = new System.Drawing.Size(125, 27);
             this.tbt_address.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 82);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(13, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 32);
+            this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Adresse:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -72,19 +71,17 @@ namespace GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Courier New", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(696, 14);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(428, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(282, 51);
+            this.label3.Size = new System.Drawing.Size(184, 31);
             this.label3.TabIndex = 5;
             this.label3.Text = "HusSøgning";
             // 
             // btn_soeg
             // 
-            this.btn_soeg.Location = new System.Drawing.Point(236, 115);
-            this.btn_soeg.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_soeg.Location = new System.Drawing.Point(145, 72);
             this.btn_soeg.Name = "btn_soeg";
-            this.btn_soeg.Size = new System.Drawing.Size(153, 46);
+            this.btn_soeg.Size = new System.Drawing.Size(94, 29);
             this.btn_soeg.TabIndex = 6;
             this.btn_soeg.Text = "Søg";
             this.btn_soeg.UseVisualStyleBackColor = true;
@@ -92,10 +89,9 @@ namespace GUI
             // 
             // btn_ChooseHouse
             // 
-            this.btn_ChooseHouse.Location = new System.Drawing.Point(1523, 114);
-            this.btn_ChooseHouse.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_ChooseHouse.Location = new System.Drawing.Point(937, 71);
             this.btn_ChooseHouse.Name = "btn_ChooseHouse";
-            this.btn_ChooseHouse.Size = new System.Drawing.Size(153, 46);
+            this.btn_ChooseHouse.Size = new System.Drawing.Size(94, 29);
             this.btn_ChooseHouse.TabIndex = 7;
             this.btn_ChooseHouse.Text = "Vælg";
             this.btn_ChooseHouse.UseVisualStyleBackColor = true;
@@ -103,10 +99,9 @@ namespace GUI
             // 
             // btn_OpretNytHUs
             // 
-            this.btn_OpretNytHUs.Location = new System.Drawing.Point(414, 115);
-            this.btn_OpretNytHUs.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_OpretNytHUs.Location = new System.Drawing.Point(255, 72);
             this.btn_OpretNytHUs.Name = "btn_OpretNytHUs";
-            this.btn_OpretNytHUs.Size = new System.Drawing.Size(185, 46);
+            this.btn_OpretNytHUs.Size = new System.Drawing.Size(114, 29);
             this.btn_OpretNytHUs.TabIndex = 8;
             this.btn_OpretNytHUs.Text = "Opret nyt hus";
             this.btn_OpretNytHUs.UseVisualStyleBackColor = true;
@@ -114,9 +109,9 @@ namespace GUI
             // 
             // HusSoegningsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1710, 955);
+            this.ClientSize = new System.Drawing.Size(1052, 597);
             this.Controls.Add(this.btn_OpretNytHUs);
             this.Controls.Add(this.btn_ChooseHouse);
             this.Controls.Add(this.btn_soeg);
@@ -124,7 +119,6 @@ namespace GUI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbt_address);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "HusSoegningsForm";
             this.Text = "OpretHusForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

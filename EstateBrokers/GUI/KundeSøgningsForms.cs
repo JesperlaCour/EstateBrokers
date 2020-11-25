@@ -41,6 +41,8 @@ namespace GUI
             dataGridView1.Columns["CaseOrderSellers"].Visible = false;
 
             this.dataGridView1.Columns["ZipCodeNavigation"].Visible = false;
+            this.dataGridView1.Columns["CaseOrderBuyers"].Visible = false;
+            this.dataGridView1.Columns["CaseOrderSellers"].Visible = false;
         }
 
         private void btn_ChooseKunde_Click(object sender, EventArgs e)
