@@ -47,6 +47,7 @@ namespace GUI
             try
             {
                 UpdateAdminCase();
+                UpdateBrokerInfo();
             }
             catch (Exception)
             {
@@ -56,17 +57,24 @@ namespace GUI
         }
         private void UpdateAdminCase()
         {
-            CaseOrder co = CaseOrderControllerSingleton.Instance().GetCaseOrder(Convert.ToInt32(tbt_caseOrderID.Text));
+            CaseOrder co = CaseOrderControllerSingleton.Instance().GetCaseOrder(Convert.ToInt32(txt_caseOrderID.Text));
             Customer seller = CustomerControllerSingleton.Instance().GetCustomer(co.SellerId);
+
+            
             if (co.CaseStatus == "Sold")
             {
                 Customer buyer = CustomerControllerSingleton.Instance().GetCustomer(co.BuyerId);
+                tableLayoutPanel_buyerInfo.Visible = true;
                 lbl_KoeberNavn.Text = buyer.Name;
                 lbl_KoeberKundenummer.Text = buyer.CustomerId.ToString();
                 lbl_KoeberAdresse.Text = buyer.Address;
                 lbl_KoeberTlfNr.Text = buyer.PhoneNr.ToString();
                 lbl_KoeberPostnummer.Text = buyer.ZipCode.ToString();
                 lbl_KoeberBy.Text = CustomerControllerSingleton.Instance().GetCityFromZipCode(buyer.ZipCode).ToString();
+            }
+            else
+            {
+                tableLayoutPanel_buyerInfo.Visible = false;
             }
             lbl_SælgerKundenummer.Text = seller.CustomerId.ToString();
             lbl_SælgerNavn.Text = seller.Name;
@@ -112,22 +120,30 @@ namespace GUI
             this.dataGridView_PriceHistory.Columns["Estate"].Visible = false;
         }
 
+        private void UpdateBrokerInfo()
+        {
+            Broker broker = CaseOrderControllerSingleton.Instance().GetBroker(Convert.ToInt32(txt_caseOrderID.Text));
+            lbl_brokerID.Text = broker.BrokerId.ToString();
+            lbl_BrokerName.Text = broker.Name.ToString();
+            lbl_DepartmentId.Text = broker.DepartmentId.ToString();
+            lbl_department.Text = CaseOrderControllerSingleton.Instance().GetDepartment(broker.DepartmentId).DepartmentName.ToString();
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
 
             SagsSøgningsForm ssf = new SagsSøgningsForm();
             if (ssf.ShowDialog() == DialogResult.OK)
             {
-                tbt_caseOrderID.Text = caseId;
+                txt_caseOrderID.Text = caseId;
+                UpdateAdminCase();
+                UpdateBrokerInfo();
             }
             
 
 
         }
 
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

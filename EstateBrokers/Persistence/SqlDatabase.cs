@@ -253,5 +253,15 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public Broker GetBroker(int caseOrderId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Department GetDeparment(int? departmentId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

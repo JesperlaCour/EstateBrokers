@@ -273,5 +273,34 @@ namespace Persistence
                 throw;
             }
         }
+
+        public Broker GetBroker(int caseOrderId)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetBroker(caseOrderId);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public Department GetDeparment(int? departmentId)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetDeparment(departmentId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

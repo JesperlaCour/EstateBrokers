@@ -49,5 +49,17 @@ namespace Controller
             IDatabase db = new DatabaseProxy();
             return db.GetPriceHistory(estateId);
         }
+
+        public Broker GetBroker(int caseOrderId)
+        {
+            IDatabase db = new DatabaseProxy();
+            return db.GetBroker(caseOrderId);
+        }
+
+        public Department GetDepartment(int? departmentId)
+        {
+            IDatabase db = new DatabaseProxy();
+            return db.GetDeparment(departmentId);
+        }
     }
 }

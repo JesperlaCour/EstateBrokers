@@ -42,5 +42,7 @@ namespace Persistence
         ZipCode GetCityFromZipCode(int? zipCode);
         List<CaseOrder> GetAllCaseOrdrsForSearchByAddress(string address);
         List<HouseType> GetHouseTypes();
+        Broker GetBroker(int caseOrderId);
+        Department GetDeparment(int? departmentId);
     }
 }
