@@ -49,5 +49,10 @@ namespace GUI
         {
             uC0AdministrereMægler1.BringToFront();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            uC7Salgsstatus1.BringToFront();
+        }
     }
 }
