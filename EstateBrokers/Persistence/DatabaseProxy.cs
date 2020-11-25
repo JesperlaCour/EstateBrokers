@@ -259,5 +259,48 @@ namespace Persistence
                 throw;
             }
         }
+
+        public List<CaseOrder> GetAllCaseOrdrsForSearchByAddress(string address)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetAllCaseOrdrsForSearchByAddress(address);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public Broker GetBroker(int caseOrderId)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetBroker(caseOrderId);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public Department GetDeparment(int? departmentId)
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetDeparment(departmentId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

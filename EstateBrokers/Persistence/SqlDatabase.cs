@@ -248,5 +248,20 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public List<CaseOrder> GetAllCaseOrdrsForSearchByAddress(string address)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Broker GetBroker(int caseOrderId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Department GetDeparment(int? departmentId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
