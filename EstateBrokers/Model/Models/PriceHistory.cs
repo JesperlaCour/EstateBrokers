@@ -7,19 +7,20 @@ namespace Model.Models
 {
     public partial class PriceHistory
     {
-        public PriceHistory(decimal? price, string priceType, int? estateId)
+        public PriceHistory(decimal? price, int? estateId, int? priceTypeId)
         {
             Price = price;
-            PriceType = priceType;
             EstateId = estateId;
+            PriceTypeId = priceTypeId;
         }
 
         public int PriceHistoryId { get; set; }
         public decimal? Price { get; set; }
         public DateTime? Date { get; set; }
-        public string PriceType { get; set; }
         public int? EstateId { get; set; }
+        public int? PriceTypeId { get; set; }
 
         public virtual Estate Estate { get; set; }
+        public virtual PriceType PriceType { get; set; }
     }
 }

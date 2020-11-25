@@ -43,6 +43,7 @@
             this.forside1 = new GUI.Forside();
             this.administrereKunde1 = new GUI.UC1AdministrereKunde();
             this.administrereHus1 = new GUI.UC2AdministrereHus();
+            this.udbudsprisBeregner1 = new GUI.UC4UdbudsprisBeregner();
             this.aabentHus1 = new GUI.UC5AabentHus();
             this.uC0AdministrereMægler1 = new GUI.UC0AdministrereMægler();
             this.uC7Salgsstatus1 = new GUI.UC7Salgsstatus();
@@ -250,6 +251,14 @@
             this.administrereHus1.Size = new System.Drawing.Size(2400, 1350);
             this.administrereHus1.TabIndex = 4;
             // 
+            // udbudsprisBeregner1	
+            // 	
+            this.udbudsprisBeregner1.Location = new System.Drawing.Point(0, 75);
+            this.udbudsprisBeregner1.MinimumSize = new System.Drawing.Size(1920, 1080);
+            this.udbudsprisBeregner1.Name = "udbudsprisBeregner1";
+            this.udbudsprisBeregner1.Size = new System.Drawing.Size(2400, 1350);
+            this.udbudsprisBeregner1.TabIndex = 5;
+            // 
             // aabentHus1
             // 
             this.aabentHus1.Location = new System.Drawing.Point(0, 75);
@@ -284,6 +293,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.administrereKunde1);
             this.Controls.Add(this.administrereHus1);
+            this.Controls.Add(this.udbudsprisBeregner1);
             this.Controls.Add(this.aabentHus1);
             this.Controls.Add(this.uC0AdministrereMægler1);
             this.Controls.Add(this.uC7Salgsstatus1);

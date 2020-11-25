@@ -24,11 +24,11 @@ namespace Controller
             return _instance;
         }
 
-        public void CreateCaseOrder(CaseOrder caseOrder, decimal price)
+        public void CreateCaseOrder(CaseOrder caseOrder,int priceHistoryID, decimal price)
         {
             IDatabase db = new DatabaseProxy();
             db.CreateCaseOrder(caseOrder);
-            db.InsertPrice(new PriceHistory(price,"ListingPrice",caseOrder.EstateId));
+            db.InsertPrice(new PriceHistory(price,priceHistoryID,caseOrder.EstateId));
 
         }
 

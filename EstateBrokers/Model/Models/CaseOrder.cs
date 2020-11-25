@@ -12,50 +12,34 @@ namespace Model.Models
             OpenHouses = new HashSet<OpenHouse>();
         }
 
-        public CaseOrder(string caseStatus, int? sellerId, int? brokerId, int? estateId)
+        public CaseOrder(int? caseStatusId,int? sellerId, int? brokerId, int? estateId)
         {
-            CaseStatus = caseStatus;
+            CaseStatusId = caseStatusId;
             SellerId = sellerId;
             BrokerId = brokerId;
             EstateId = estateId;
         }
 
-        public CaseOrder(int caseOrderId, string caseStatus, int? sellerId, int? brokerId, int? estateId, int? buyerId)
+        public CaseOrder(int caseOrderId, int? sellerId, int? brokerId, int? estateId, int? buyerId, int? caseStatusId)
         {
             CaseOrderId = caseOrderId;
-            CaseStatus = caseStatus;
             SellerId = sellerId;
             BrokerId = brokerId;
             EstateId = estateId;
             BuyerId = buyerId;
+            CaseStatusId = caseStatusId;
         }
 
-        //For search
-        //public CaseOrder(int caseOrderId, string caseStatus, int? sellerId, int? brokerId, int? estateId, int? buyerId, string address, int zipCode, string city)
-        //{
-        //    CaseOrderId = caseOrderId;
-        //    CaseStatus = caseStatus;
-        //    EstateId = estateId;
-        //    Address = address;
-        //    ZipCode = zipCode;
-        //    City = city;
-        //}
-
         public int CaseOrderId { get; set; }
-        public string CaseStatus { get; set; }
         public int? SellerId { get; set; }
         public int? BrokerId { get; set; }
         public int? EstateId { get; set; }
         public int? BuyerId { get; set; }
-
-
-        //Properties for search use
-        //public string Address { get; set; }
-        //public int ZipCode { get; set; }
-        //public string City { get; set; }
+        public int? CaseStatusId { get; set; }
 
         public virtual Broker Broker { get; set; }
         public virtual Customer Buyer { get; set; }
+        public virtual CaseStatus CaseStatus { get; set; }
         public virtual Estate Estate { get; set; }
         public virtual Customer Seller { get; set; }
         public virtual ICollection<OpenHouse> OpenHouses { get; set; }
