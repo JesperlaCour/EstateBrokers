@@ -27,8 +27,8 @@ namespace GUI
         {
             dataGridView_caseOrder.DataSource = CaseOrderControllerSingleton.Instance().GetAllCaseOrdrsForSearchByAddress(txt_address.Text);
             dataGridView_caseOrder.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_caseOrder.Columns["CaseOrderID"].HeaderText = "Kundenummer";
-            dataGridView_caseOrder.Columns["CaseStatus"].HeaderText = "Status";
+            dataGridView_caseOrder.Columns["CaseOrderID"].HeaderText = "Sagsnummer";
+            dataGridView_caseOrder.Columns["CaseStatusID"].HeaderText = "Status";
 
             dataGridView_caseOrder.Columns["Broker"].Visible = false;
             dataGridView_caseOrder.Columns["Buyer"].Visible = false;
@@ -41,12 +41,18 @@ namespace GUI
             if (dataGridView_caseOrder.SelectedRows.Count > 0)
             {
                 UC3AdministrereSag.caseId = dataGridView_caseOrder.SelectedCells[0].Value.ToString();
+                UC7Salgsstatus.CaseId = dataGridView_caseOrder.SelectedCells[0].Value.ToString();
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
                 MessageBox.Show("Ingen sag valgt");
             
+        }
+
+        private void dataGridView_caseOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

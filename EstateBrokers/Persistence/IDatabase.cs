@@ -44,5 +44,7 @@ namespace Persistence
         List<HouseType> GetHouseTypes();
         Broker GetBroker(int caseOrderId);
         Department GetDeparment(int? departmentId);
+        List<CaseStatus> GetCaseStatuses();
+        void UpdateCaseOrderStatus(CaseOrder co);
     }
 }

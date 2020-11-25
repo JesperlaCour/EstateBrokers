@@ -49,6 +49,7 @@ namespace GUI
         {
           
             OpretSagForm.sellerID = dataGridView1.SelectedCells[0].Value.ToString();
+            UC7Salgsstatus.buyerID = dataGridView1.SelectedCells[0].Value.ToString();
             DialogResult = DialogResult.OK;
             this.Close();
         }

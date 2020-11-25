@@ -18,5 +18,10 @@ namespace Model.Models
 
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<Estate> Estates { get; set; }
+
+        public override string ToString()
+        {
+            return City;
+        }
     }
 }

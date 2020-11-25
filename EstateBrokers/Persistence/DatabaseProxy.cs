@@ -301,6 +301,34 @@ namespace Persistence
 
                 throw;
             }
+
+        }
+
+        public List<CaseStatus> GetCaseStatuses()
+        {
+            try
+            {
+                db = new EFDatabase();
+                return db.GetCaseStatuses();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void UpdateCaseOrderStatus(CaseOrder co)
+        {
+            try
+            {
+                db = new EFDatabase();
+                db.UpdateCaseOrderStatus(co);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }
