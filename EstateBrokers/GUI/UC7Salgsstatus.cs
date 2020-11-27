@@ -27,6 +27,7 @@ namespace GUI
             if (opkf.ShowDialog() == DialogResult.OK)
             {
                 lbl_BuyerId.Text = buyerID;
+                btn_Save.Visible = true;
             }
         }
 
@@ -41,6 +42,7 @@ namespace GUI
             Cbo_CaseStatus.DataSource = CaseOrderControllerSingleton.Instance().GetCaseStatuses();
             Cbo_CaseStatus.DisplayMember = "Status";
             Cbo_CaseStatus.ValueMember = "CaseStatusId";
+
         }
 
 
@@ -50,6 +52,8 @@ namespace GUI
             if (Convert.ToInt32(Cbo_CaseStatus.SelectedValue) == 3)
             {
                 co.BuyerId = Convert.ToInt32(lbl_BuyerId.Text);
+                TilpasSlagsprisForm tsf = new TilpasSlagsprisForm(co.EstateId,2);
+                tsf.ShowDialog();
             }
 
             CaseOrderControllerSingleton.Instance().UpdateCaseOrderStatus(co);
@@ -90,5 +94,21 @@ namespace GUI
 
 
         }
+
+        private void Cbo_CaseStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Cbo_CaseStatus.Text == "")
+            {
+                btn_Save.Visible = true;
+            }
+            else if (Cbo_CaseStatus.SelectedIndex == 2)
+            {
+                btn_Save.Visible = false;
+            }
+            else
+            {
+                btn_Save.Visible = true;
+            }
+        }
     }
-}
+} 

@@ -154,8 +154,12 @@ namespace GUI
 
         private void btn_ChangeSalesPrice_Click(object sender, EventArgs e)
         {
-            TilpasSlagsprisForm tsf = new TilpasSlagsprisForm();
-            tsf.ShowDialog();
+            TilpasSlagsprisForm tsf = new TilpasSlagsprisForm(co.EstateId, 1);
+            if (tsf.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView_PriceHistory.DataSource = CaseOrderControllerSingleton.Instance().GetPriceHistory(co.EstateId);
+            }
+            
         }
 
     }
