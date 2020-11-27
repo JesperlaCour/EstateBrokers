@@ -42,7 +42,7 @@ namespace Persistence
         ZipCode GetCityFromZipCode(int? zipCode);
         List<CaseOrder> GetAllCaseOrdrsForSearchByAddress(string address);
         List<HouseType> GetHouseTypes();
-        Broker GetBroker(int caseOrderId);
+        Broker GetBroker(int brokerId);
         Department GetDeparment(int? departmentId);
         List<CaseStatus> GetCaseStatuses();
         void UpdateCaseOrderStatus(CaseOrder co);

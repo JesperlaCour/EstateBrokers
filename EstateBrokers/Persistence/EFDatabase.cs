@@ -55,7 +55,7 @@ namespace Persistence
         public CaseOrder GetCaseOrder(int caseOrderID)
         {
             EstateBrokersContext dbcontext = new EstateBrokersContext();
-            return dbcontext.CaseOrders.Where(co => co.CaseOrderId == caseOrderID).FirstOrDefault();
+            return dbcontext.CaseOrders.Where(co => co.CaseOrderId == caseOrderID).Single();
         }
 
         public Customer GetCustomer(int? customerID)
@@ -148,10 +148,10 @@ namespace Persistence
             
         }
 
-        public Broker GetBroker(int caseOrderId)
+        public Broker GetBroker(int brokerId)
         {
             context = new EstateBrokersContext();
-            return context.Brokers.Where(b => b.BrokerId == caseOrderId).FirstOrDefault();
+            return context.Brokers.Where(b => b.BrokerId == brokerId).Single();
         }
 
         public Department GetDeparment(int? departmentId)
