@@ -61,5 +61,18 @@ namespace Controller
             IDatabase db = new DatabaseProxy();
             return db.GetDeparment(departmentId);
         }
+
+
+        public List<CaseStatus> GetCaseStatuses()
+        {
+            IDatabase db = new DatabaseProxy();
+            return db.GetCaseStatuses();
+        }
+
+        public void UpdateCaseOrderStatus(CaseOrder co)
+        {
+            IDatabase db = new DatabaseProxy();
+            db.UpdateCaseOrderStatus(co);
+        }
     }
 }

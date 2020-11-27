@@ -159,5 +159,19 @@ namespace Persistence
             context = new EstateBrokersContext();
             return context.Departments.Where(d => d.DepartmentId == departmentId).FirstOrDefault();
         }
+
+        public List<CaseStatus> GetCaseStatuses()
+        {
+            context = new EstateBrokersContext();
+            return context.CaseStatuses.ToList();
+        }
+
+        public void UpdateCaseOrderStatus(CaseOrder co)
+        {
+            context = new EstateBrokersContext();
+            context.Update(co);
+            //context.Add(co);
+            context.SaveChanges();
+        }
     }
 }

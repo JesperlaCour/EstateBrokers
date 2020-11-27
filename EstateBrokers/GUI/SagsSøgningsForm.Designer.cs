@@ -45,20 +45,21 @@ namespace GUI
             this.dataGridView_caseOrder.AllowUserToDeleteRows = false;
             this.dataGridView_caseOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_caseOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_caseOrder.Location = new System.Drawing.Point(20, 176);
-            this.dataGridView_caseOrder.Margin = new System.Windows.Forms.Padding(5);
+            this.dataGridView_caseOrder.Location = new System.Drawing.Point(11, 82);
+            this.dataGridView_caseOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView_caseOrder.Name = "dataGridView_caseOrder";
             this.dataGridView_caseOrder.ReadOnly = true;
             this.dataGridView_caseOrder.RowHeadersWidth = 51;
-            this.dataGridView_caseOrder.Size = new System.Drawing.Size(1633, 760);
+            this.dataGridView_caseOrder.Size = new System.Drawing.Size(879, 356);
             this.dataGridView_caseOrder.TabIndex = 0;
+            this.dataGridView_caseOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_caseOrder_CellContentClick);
             // 
             // btn_Search
             // 
-            this.btn_Search.Location = new System.Drawing.Point(234, 115);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Search.Location = new System.Drawing.Point(126, 54);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(153, 46);
+            this.btn_Search.Size = new System.Drawing.Size(82, 22);
             this.btn_Search.TabIndex = 1;
             this.btn_Search.Text = "Søg";
             this.btn_Search.UseVisualStyleBackColor = true;
@@ -66,10 +67,10 @@ namespace GUI
             // 
             // btn_CreateNewCase
             // 
-            this.btn_CreateNewCase.Location = new System.Drawing.Point(418, 115);
-            this.btn_CreateNewCase.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_CreateNewCase.Location = new System.Drawing.Point(225, 54);
+            this.btn_CreateNewCase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_CreateNewCase.Name = "btn_CreateNewCase";
-            this.btn_CreateNewCase.Size = new System.Drawing.Size(153, 46);
+            this.btn_CreateNewCase.Size = new System.Drawing.Size(82, 22);
             this.btn_CreateNewCase.TabIndex = 2;
             this.btn_CreateNewCase.Text = "Opret ny sag";
             this.btn_CreateNewCase.UseVisualStyleBackColor = true;
@@ -77,10 +78,10 @@ namespace GUI
             // 
             // btn_choose
             // 
-            this.btn_choose.Location = new System.Drawing.Point(1500, 118);
-            this.btn_choose.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_choose.Location = new System.Drawing.Point(808, 55);
+            this.btn_choose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_choose.Name = "btn_choose";
-            this.btn_choose.Size = new System.Drawing.Size(153, 46);
+            this.btn_choose.Size = new System.Drawing.Size(82, 22);
             this.btn_choose.TabIndex = 3;
             this.btn_choose.Text = "Vælg";
             this.btn_choose.UseVisualStyleBackColor = true;
@@ -88,19 +89,18 @@ namespace GUI
             // 
             // txt_address
             // 
-            this.txt_address.Location = new System.Drawing.Point(21, 118);
-            this.txt_address.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_address.Location = new System.Drawing.Point(11, 55);
+            this.txt_address.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(201, 39);
+            this.txt_address.Size = new System.Drawing.Size(110, 23);
             this.txt_address.TabIndex = 4;
             // 
             // lbl_address
             // 
             this.lbl_address.AutoSize = true;
-            this.lbl_address.Location = new System.Drawing.Point(21, 82);
-            this.lbl_address.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbl_address.Location = new System.Drawing.Point(11, 38);
             this.lbl_address.Name = "lbl_address";
-            this.lbl_address.Size = new System.Drawing.Size(97, 32);
+            this.lbl_address.Size = new System.Drawing.Size(48, 15);
             this.lbl_address.TabIndex = 5;
             this.lbl_address.Text = "Adresse";
             // 
@@ -108,18 +108,17 @@ namespace GUI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Courier New", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(696, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(375, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(334, 51);
+            this.label2.Size = new System.Drawing.Size(168, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Sags søgning";
             // 
             // SagsSøgningsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1710, 955);
+            this.ClientSize = new System.Drawing.Size(921, 448);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_address);
             this.Controls.Add(this.txt_address);
@@ -127,7 +126,7 @@ namespace GUI
             this.Controls.Add(this.btn_CreateNewCase);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.dataGridView_caseOrder);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SagsSøgningsForm";
             this.Text = "SagsSøgningsForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_caseOrder)).EndInit();

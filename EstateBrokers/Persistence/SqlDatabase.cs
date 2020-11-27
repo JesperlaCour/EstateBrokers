@@ -263,5 +263,15 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public List<CaseStatus> GetCaseStatuses()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateCaseOrderStatus(CaseOrder co)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
