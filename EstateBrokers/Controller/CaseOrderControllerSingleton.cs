@@ -73,5 +73,11 @@ namespace Controller
             IDatabase db = new DatabaseProxy();
             db.UpdateCaseOrderStatus(co);
         }
+
+        public void CreateNewPriceHistory(PriceHistory priceHistory)
+        {
+            IDatabase db = new DatabaseProxy();
+            db.InsertPrice(priceHistory);
+        }
     }
 }

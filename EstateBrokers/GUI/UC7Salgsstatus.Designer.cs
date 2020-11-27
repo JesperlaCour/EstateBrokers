@@ -209,6 +209,7 @@ namespace GUI
             this.Cbo_CaseStatus.Name = "Cbo_CaseStatus";
             this.Cbo_CaseStatus.Size = new System.Drawing.Size(96, 23);
             this.Cbo_CaseStatus.TabIndex = 19;
+            this.Cbo_CaseStatus.SelectedIndexChanged += new System.EventHandler(this.Cbo_CaseStatus_SelectedIndexChanged);
             // 
             // btn_Save
             // 
