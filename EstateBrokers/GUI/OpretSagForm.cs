@@ -67,7 +67,9 @@ namespace GUI
                 1,
                 Convert.ToInt32(tbt_sellerID.Text),
                 Convert.ToInt32(cbo_ChooseBroker.SelectedValue),
-                Convert.ToInt32(tbt_estateID.Text)),1,Convert.ToInt32(tbt_ListingPrice.Text));
+                Convert.ToInt32(tbt_estateID.Text)),
+                    1,
+                    Convert.ToDecimal(tbt_ListingPrice.Text));
                 MessageBox.Show("Ny sag oprettet");
                 this.Close();
             }
