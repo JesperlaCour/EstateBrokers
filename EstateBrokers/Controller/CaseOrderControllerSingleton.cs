@@ -49,10 +49,10 @@ namespace Controller
             return db.GetPriceHistory(estateId);
         }
 
-        public Broker GetBroker(int caseOrderId)
+        public Broker GetBroker(int brokerId)
         {
             IDatabase db = new DatabaseProxy();
-            return db.GetBroker(caseOrderId);
+            return db.GetBroker(brokerId);
         }
 
         public Department GetDepartment(int? departmentId)

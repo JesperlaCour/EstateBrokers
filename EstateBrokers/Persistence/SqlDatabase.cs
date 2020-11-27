@@ -254,7 +254,7 @@ namespace Persistence
             throw new NotImplementedException();
         }
 
-        public Broker GetBroker(int caseOrderId)
+        public Broker GetBroker(int brokerId)
         {
             throw new NotImplementedException();
         }

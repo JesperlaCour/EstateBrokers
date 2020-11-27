@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_NewHouse = new System.Windows.Forms.Button();
+            this.btn_NewCustomer = new System.Windows.Forms.Button();
+            this.btn_newCase = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_showCaseOrder = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_SearchCase = new System.Windows.Forms.Button();
             this.txt_caseOrderID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -88,59 +88,61 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_NewHouse);
+            this.panel1.Controls.Add(this.btn_NewCustomer);
+            this.panel1.Controls.Add(this.btn_newCase);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(161, 1080);
             this.panel1.TabIndex = 0;
             // 
-            // button3
+            // btn_NewHouse
             // 
-            this.button3.BackColor = System.Drawing.Color.Green;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.Blue;
-            this.button3.Location = new System.Drawing.Point(0, 210);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 53);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Opret hus";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_NewHouse.BackColor = System.Drawing.Color.Green;
+            this.btn_NewHouse.FlatAppearance.BorderSize = 0;
+            this.btn_NewHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.btn_NewHouse.ForeColor = System.Drawing.Color.Blue;
+            this.btn_NewHouse.Location = new System.Drawing.Point(0, 336);
+            this.btn_NewHouse.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_NewHouse.Name = "btn_NewHouse";
+            this.btn_NewHouse.Size = new System.Drawing.Size(262, 85);
+            this.btn_NewHouse.TabIndex = 0;
+            this.btn_NewHouse.Text = "Opret hus";
+            this.btn_NewHouse.UseVisualStyleBackColor = false;
+            this.btn_NewHouse.Click += new System.EventHandler(this.btn_NewHouse_Click);
             // 
-            // button2
+            // btn_NewCustomer
             // 
-            this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(0, 146);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 56);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Opret kunde";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_NewCustomer.BackColor = System.Drawing.Color.Yellow;
+            this.btn_NewCustomer.FlatAppearance.BorderSize = 0;
+            this.btn_NewCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.btn_NewCustomer.ForeColor = System.Drawing.Color.Blue;
+            this.btn_NewCustomer.Location = new System.Drawing.Point(0, 234);
+            this.btn_NewCustomer.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_NewCustomer.Name = "btn_NewCustomer";
+            this.btn_NewCustomer.Size = new System.Drawing.Size(262, 90);
+            this.btn_NewCustomer.TabIndex = 0;
+            this.btn_NewCustomer.Text = "Opret kunde";
+            this.btn_NewCustomer.UseVisualStyleBackColor = false;
+            this.btn_NewCustomer.Click += new System.EventHandler(this.btn_NewCustomer_Click);
             // 
-            // button1
+            // btn_newCase
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(0, 84);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 56);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Opret sag";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_newCase.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_newCase.FlatAppearance.BorderSize = 0;
+            this.btn_newCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.btn_newCase.ForeColor = System.Drawing.Color.Blue;
+            this.btn_newCase.Location = new System.Drawing.Point(0, 134);
+            this.btn_newCase.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_newCase.Name = "btn_newCase";
+            this.btn_newCase.Size = new System.Drawing.Size(262, 90);
+            this.btn_newCase.TabIndex = 0;
+            this.btn_newCase.Text = "Opret sag";
+            this.btn_newCase.UseVisualStyleBackColor = false;
+            this.btn_newCase.Click += new System.EventHandler(this.btn_newCase_Click);
+
+
             // 
             // label1
             // 
@@ -172,21 +174,24 @@
             this.btn_showCaseOrder.UseVisualStyleBackColor = true;
             this.btn_showCaseOrder.Click += new System.EventHandler(this.btn_showCaseOrder_Click);
             // 
-            // button5
+            // btn_SearchCase
             // 
-            this.button5.Location = new System.Drawing.Point(432, 57);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 29);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Find sag";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btn_SearchCase.Location = new System.Drawing.Point(702, 91);
+            this.btn_SearchCase.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_SearchCase.Name = "btn_SearchCase";
+            this.btn_SearchCase.Size = new System.Drawing.Size(153, 46);
+            this.btn_SearchCase.TabIndex = 4;
+            this.btn_SearchCase.Text = "Find sag";
+            this.btn_SearchCase.UseVisualStyleBackColor = true;
+            this.btn_SearchCase.Click += new System.EventHandler(this.btn_SearchCase_Click);
             // 
             // txt_caseOrderID
             // 
-            this.txt_caseOrderID.Location = new System.Drawing.Point(201, 57);
+            this.txt_caseOrderID.Location = new System.Drawing.Point(327, 91);
+            this.txt_caseOrderID.Margin = new System.Windows.Forms.Padding(5);
             this.txt_caseOrderID.Name = "txt_caseOrderID";
-            this.txt_caseOrderID.Size = new System.Drawing.Size(125, 27);
+            this.txt_caseOrderID.Size = new System.Drawing.Size(201, 39);
+
             this.txt_caseOrderID.TabIndex = 5;
             // 
             // label3
@@ -654,7 +659,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_caseOrderID);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btn_SearchCase);
             this.Controls.Add(this.btn_showCaseOrder);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -676,13 +681,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_NewHouse;
+        private System.Windows.Forms.Button btn_NewCustomer;
+        private System.Windows.Forms.Button btn_newCase;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_showCaseOrder;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_SearchCase;
         private System.Windows.Forms.TextBox txt_caseOrderID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

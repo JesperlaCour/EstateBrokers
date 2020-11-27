@@ -274,12 +274,12 @@ namespace Persistence
             }
         }
 
-        public Broker GetBroker(int caseOrderId)
+        public Broker GetBroker(int brokerId)
         {
             try
             {
                 db = new EFDatabase();
-                return db.GetBroker(caseOrderId);
+                return db.GetBroker(brokerId);
 
             }
             catch (Exception)
