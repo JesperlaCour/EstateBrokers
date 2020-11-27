@@ -32,7 +32,8 @@ namespace GUI
 
         private void btn_Show_Click(object sender, EventArgs e)
         {
-            UpdateCaseStatus();
+
+                UpdateCaseStatus();
         }
 
         private void UpdateDropdown_CaseStatus()
@@ -52,6 +53,8 @@ namespace GUI
             }
 
             CaseOrderControllerSingleton.Instance().UpdateCaseOrderStatus(co);
+
+            MessageBox.Show("Ændringer gemt");
         }
 
         private void btn_FindCaseOrder_Click(object sender, EventArgs e)
@@ -68,14 +71,24 @@ namespace GUI
 
         private void UpdateCaseStatus()
         {
-            co = CaseOrderControllerSingleton.Instance().GetCaseOrder(Convert.ToInt32(txt_CaseOrderId.Text));
 
-            lbl_CaseOrderId.Text = co.CaseOrderId.ToString();
-            Cbo_CaseStatus.SelectedValue = co.CaseStatusId;
-            lbl_SellerId.Text = co.SellerId.ToString();
-            lbl_BrokerId.Text = co.BrokerId.ToString();
-            lbl_EstateId.Text = co.EstateId.ToString();
-            lbl_BuyerId.Text = co.BuyerId.ToString();
+                co = CaseOrderControllerSingleton.Instance().GetCaseOrder(Convert.ToInt32(txt_CaseOrderId.Text));
+                if (co != null)
+                { 
+                    lbl_CaseOrderId.Text = co.CaseOrderId.ToString();
+                Cbo_CaseStatus.SelectedValue = co.CaseStatusId;
+                lbl_SellerId.Text = co.SellerId.ToString();
+                lbl_BrokerId.Text = co.BrokerId.ToString();
+                lbl_EstateId.Text = co.EstateId.ToString();
+                lbl_BuyerId.Text = co.BuyerId.ToString();  
+                }
+
+                else
+                {
+                    MessageBox.Show("Der findes ingen gyldige sager med det søgte id");
+                }
+
+
         }
     }
 }

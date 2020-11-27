@@ -150,5 +150,13 @@ namespace GUI
                 UpdateBrokerInfo();
             }
         }
+
+
+        private void btn_ChangeSalesPrice_Click(object sender, EventArgs e)
+        {
+            TilpasSlagsprisForm tsf = new TilpasSlagsprisForm();
+            tsf.ShowDialog();
+        }
+
     }
 }
