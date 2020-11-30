@@ -130,11 +130,11 @@ namespace GUI
         {
             if (co != null)
             {
-                Broker broker = CaseOrderControllerSingleton.Instance().GetBroker(Convert.ToInt32(co.BrokerId));
+                Broker broker = Broker_TypeControllerSingleton.Instance().GetBroker(Convert.ToInt32(co.BrokerId));
                 lbl_brokerID.Text = broker.BrokerId.ToString();
                 lbl_BrokerName.Text = broker.Name.ToString();
                 lbl_DepartmentId.Text = broker.DepartmentId.ToString();
-                lbl_department.Text = CaseOrderControllerSingleton.Instance().GetDepartment(broker.DepartmentId).DepartmentName.ToString();
+                lbl_department.Text = Broker_TypeControllerSingleton.Instance().GetDepartment(broker.DepartmentId).DepartmentName.ToString();
 
             }
         }

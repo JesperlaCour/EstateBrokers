@@ -24,6 +24,18 @@ namespace Controller
             return _instance;
         }
         EFDatabase db;
+
+        public Broker GetBroker(int brokerId)
+        {
+            IDatabase db = new DatabaseProxy();
+            return db.GetBroker(brokerId);
+        }
+
+        public Department GetDepartment(int? departmentId)
+        {
+            IDatabase db = new DatabaseProxy();
+            return db.GetDeparment(departmentId);
+        }
         public List<Broker> GetListBrokers()
         {
             db = new EFDatabase();
