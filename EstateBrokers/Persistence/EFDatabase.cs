@@ -55,7 +55,7 @@ namespace Persistence
         public CaseOrder GetCaseOrder(int caseOrderID)
         {
             EstateBrokersContext dbcontext = new EstateBrokersContext();
-            return dbcontext.CaseOrders.Where(co => co.CaseOrderId == caseOrderID).Single();
+            return dbcontext.CaseOrders.Include(s => s.Estate).Where(co => co.CaseOrderId == caseOrderID).Single();
         }
 
         public Customer GetCustomer(int? customerID)
