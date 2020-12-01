@@ -33,7 +33,7 @@ namespace GUI
                 for (int j = 0; j < dataGridView_Salesstatistics.Columns.Count; j++)
                 {
 
-                    writer.Write("\t" + dataGridView_Salesstatistics.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                    writer.Write("\t" + dataGridView_Salesstatistics.Rows[i].Cells[j].Value?.ToString() + "\t" + "|");
 
                 }
                 writer.WriteLine("");

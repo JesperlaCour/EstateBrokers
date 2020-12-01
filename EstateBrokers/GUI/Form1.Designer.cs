@@ -46,6 +46,7 @@
             this.aabentHus1 = new GUI.UC5AabentHus();
             this.uC0AdministrereMægler1 = new GUI.UC0AdministrereMægler();
             this.uC7Salgsstatus1 = new GUI.UC7Salgsstatus();
+            this.uC6Salgsstatistik1 = new GUI.UC6Salgsstatistik();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +115,7 @@
             this.button6.Text = "Salgsstatistik";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -257,8 +259,16 @@
             this.uC0AdministrereMægler1.Size = new System.Drawing.Size(2400, 1350);
             this.uC0AdministrereMægler1.TabIndex = 7;
             // 
-            // uC7Salgsstatus1
+            // uC6Salgsstatistik1
             // 
+            this.uC6Salgsstatistik1.Location = new System.Drawing.Point(0, 75);
+            this.uC6Salgsstatistik1.MinimumSize = new System.Drawing.Size(1920, 1080);
+            this.uC6Salgsstatistik1.Name = "uC6Salgsstatistik1";
+            this.uC6Salgsstatistik1.Size = new System.Drawing.Size(2400, 1350);
+            this.uC6Salgsstatistik1.TabIndex = 8;
+            //
+            // uC7Salgsstatus1
+            //
             this.uC7Salgsstatus1.Location = new System.Drawing.Point(0, 75);
             this.uC7Salgsstatus1.MinimumSize = new System.Drawing.Size(1920, 1080);
             this.uC7Salgsstatus1.Name = "uC7Salgsstatus1";
@@ -268,6 +278,7 @@
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.Controls.Add(this.uC7Salgsstatus1);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.forside1);
@@ -278,7 +289,7 @@
             this.Controls.Add(this.udbudsprisBeregner1);
             this.Controls.Add(this.aabentHus1);
             this.Controls.Add(this.uC0AdministrereMægler1);
-            this.Controls.Add(this.uC7Salgsstatus1);
+            this.Controls.Add(this.uC6Salgsstatistik1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1918, 1028);
             this.Name = "Form1";
@@ -308,6 +319,7 @@
         private System.Windows.Forms.Button button9;
         private UC0AdministrereMægler uC0AdministrereMægler1;
         private UC7Salgsstatus uC7Salgsstatus1;
+        private UC6Salgsstatistik uC6Salgsstatistik1;
     }
 }
 
