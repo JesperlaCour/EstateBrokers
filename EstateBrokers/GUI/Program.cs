@@ -14,10 +14,13 @@ namespace GUI
         [STAThread]
         static void Main()
         {
+            Control.CheckForIllegalCrossThreadCalls = false;
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            
         }
     }
 }

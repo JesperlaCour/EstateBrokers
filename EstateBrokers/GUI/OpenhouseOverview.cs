@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using Controller;
 using Model.Models;
@@ -17,7 +18,13 @@ namespace GUI
         public OpenhouseOverview()
         {
             InitializeComponent();
-            UpdateDateBox();
+            //UpdateDateBox();
+
+            Thread thread = new Thread(new ThreadStart(UpdateDateBox));
+            thread.IsBackground = true;
+            thread.Priority = ThreadPriority.Lowest;
+            thread.Start();
+
         }
         public OpenhouseOverview(DateTime date)
         {

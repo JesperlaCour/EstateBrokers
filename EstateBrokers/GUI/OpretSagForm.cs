@@ -19,10 +19,11 @@ namespace GUI
         public OpretSagForm()
         {
             InitializeComponent();
-            Update_ChooseBrokerDropdown();
-            //Thread BrokerDropdown = new Thread(new ThreadStart(Update_ChooseBrokerDropdown));
-            //BrokerDropdown.IsBackground = true;
-            //BrokerDropdown.Start();
+            //Update_ChooseBrokerDropdown();
+            Thread BrokerDropdown = new Thread(new ThreadStart(Update_ChooseBrokerDropdown));
+            BrokerDropdown.IsBackground = true;
+            BrokerDropdown.Priority = ThreadPriority.Lowest;
+            BrokerDropdown.Start();
         }
 
         public OpretSagForm(decimal v)
