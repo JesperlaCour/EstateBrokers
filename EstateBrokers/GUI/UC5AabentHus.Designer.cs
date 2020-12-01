@@ -1,4 +1,7 @@
 ﻿
+using System.Linq;
+using System.Windows.Forms;
+
 namespace GUI
 {
     partial class UC5AabentHus
@@ -43,13 +46,13 @@ namespace GUI
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_Assigned = new System.Windows.Forms.Button();
-            this.dataGridView_AllCaseOrders = new System.Windows.Forms.DataGridView();
             this.dataGridView_selectedCaseOrders = new System.Windows.Forms.DataGridView();
-            this.dataGridView_selectedBrokers = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AllCaseOrders)).BeginInit();
+            this.listBox_selectedBrokers = new System.Windows.Forms.ListBox();
+            this.btn_clearBrokerList = new System.Windows.Forms.Button();
+            this.dataGridView_AllCaseOrders = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_selectedCaseOrders)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_selectedBrokers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AllCaseOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,7 +83,7 @@ namespace GUI
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(546, 55);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Arrengere åbenthus";
+            this.label1.Text = "Arrangere åbenthus";
             // 
             // label2
             // 
@@ -113,6 +116,7 @@ namespace GUI
             this.btn_ShowExisting.TabIndex = 10;
             this.btn_ShowExisting.Text = "Se eksisterende";
             this.btn_ShowExisting.UseVisualStyleBackColor = true;
+            this.btn_ShowExisting.Click += new System.EventHandler(this.btn_ShowExisting_Click);
             // 
             // txt_address
             // 
@@ -135,7 +139,7 @@ namespace GUI
             // 
             // btn_ChooseHouse
             // 
-            this.btn_ChooseHouse.Location = new System.Drawing.Point(1220, 645);
+            this.btn_ChooseHouse.Location = new System.Drawing.Point(1291, 650);
             this.btn_ChooseHouse.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ChooseHouse.Name = "btn_ChooseHouse";
             this.btn_ChooseHouse.Size = new System.Drawing.Size(147, 46);
@@ -146,7 +150,7 @@ namespace GUI
             // 
             // btn_RemoveHouse
             // 
-            this.btn_RemoveHouse.Location = new System.Drawing.Point(1220, 740);
+            this.btn_RemoveHouse.Location = new System.Drawing.Point(1291, 745);
             this.btn_RemoveHouse.Margin = new System.Windows.Forms.Padding(5);
             this.btn_RemoveHouse.Name = "btn_RemoveHouse";
             this.btn_RemoveHouse.Size = new System.Drawing.Size(147, 46);
@@ -196,35 +200,16 @@ namespace GUI
             this.btn_Assigned.UseVisualStyleBackColor = true;
             this.btn_Assigned.Click += new System.EventHandler(this.btn_Assigned_Click);
             // 
-            // dataGridView_AllCaseOrders
-            // 
-            this.dataGridView_AllCaseOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_AllCaseOrders.Location = new System.Drawing.Point(405, 258);
-            this.dataGridView_AllCaseOrders.Name = "dataGridView_AllCaseOrders";
-            this.dataGridView_AllCaseOrders.RowHeadersWidth = 82;
-            this.dataGridView_AllCaseOrders.Size = new System.Drawing.Size(760, 1008);
-            this.dataGridView_AllCaseOrders.TabIndex = 22;
-            this.dataGridView_AllCaseOrders.Text = "dataGridView1";
-            // 
             // dataGridView_selectedCaseOrders
             // 
+            this.dataGridView_selectedCaseOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_selectedCaseOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_selectedCaseOrders.Location = new System.Drawing.Point(1401, 258);
+            this.dataGridView_selectedCaseOrders.Location = new System.Drawing.Point(1472, 258);
             this.dataGridView_selectedCaseOrders.Name = "dataGridView_selectedCaseOrders";
             this.dataGridView_selectedCaseOrders.RowHeadersWidth = 82;
-            this.dataGridView_selectedCaseOrders.Size = new System.Drawing.Size(896, 1013);
+            this.dataGridView_selectedCaseOrders.Size = new System.Drawing.Size(850, 1013);
             this.dataGridView_selectedCaseOrders.TabIndex = 23;
             this.dataGridView_selectedCaseOrders.Text = "dataGridView2";
-            // 
-            // dataGridView_selectedBrokers
-            // 
-            this.dataGridView_selectedBrokers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_selectedBrokers.Location = new System.Drawing.Point(2408, 323);
-            this.dataGridView_selectedBrokers.Name = "dataGridView_selectedBrokers";
-            this.dataGridView_selectedBrokers.RowHeadersWidth = 82;
-            this.dataGridView_selectedBrokers.Size = new System.Drawing.Size(404, 343);
-            this.dataGridView_selectedBrokers.TabIndex = 24;
-            this.dataGridView_selectedBrokers.Text = "dataGridView1";
             // 
             // button1
             // 
@@ -236,12 +221,46 @@ namespace GUI
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // listBox_selectedBrokers
+            // 
+            this.listBox_selectedBrokers.FormattingEnabled = true;
+            this.listBox_selectedBrokers.ItemHeight = 32;
+            this.listBox_selectedBrokers.Location = new System.Drawing.Point(2408, 339);
+            this.listBox_selectedBrokers.Name = "listBox_selectedBrokers";
+            this.listBox_selectedBrokers.Size = new System.Drawing.Size(410, 196);
+            this.listBox_selectedBrokers.TabIndex = 26;
+            // 
+            // btn_clearBrokerList
+            // 
+            this.btn_clearBrokerList.Location = new System.Drawing.Point(2662, 552);
+            this.btn_clearBrokerList.Name = "btn_clearBrokerList";
+            this.btn_clearBrokerList.Size = new System.Drawing.Size(150, 46);
+            this.btn_clearBrokerList.TabIndex = 27;
+            this.btn_clearBrokerList.Text = "Ryd liste";
+            this.btn_clearBrokerList.UseVisualStyleBackColor = true;
+            this.btn_clearBrokerList.Click += new System.EventHandler(this.btn_clearBrokerList_Click);
+            // 
+            // dataGridView_AllCaseOrders
+            // 
+            this.dataGridView_AllCaseOrders.AllowUserToAddRows = false;
+            this.dataGridView_AllCaseOrders.AllowUserToDeleteRows = false;
+            this.dataGridView_AllCaseOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_AllCaseOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_AllCaseOrders.Location = new System.Drawing.Point(405, 258);
+            this.dataGridView_AllCaseOrders.Name = "dataGridView_AllCaseOrders";
+            this.dataGridView_AllCaseOrders.ReadOnly = true;
+            this.dataGridView_AllCaseOrders.RowHeadersWidth = 82;
+            this.dataGridView_AllCaseOrders.Size = new System.Drawing.Size(850, 1013);
+            this.dataGridView_AllCaseOrders.TabIndex = 22;
+            this.dataGridView_AllCaseOrders.Text = "dataGridView1";
+            // 
             // UC5AabentHus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_clearBrokerList);
+            this.Controls.Add(this.listBox_selectedBrokers);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView_selectedBrokers);
             this.Controls.Add(this.dataGridView_selectedCaseOrders);
             this.Controls.Add(this.dataGridView_AllCaseOrders);
             this.Controls.Add(this.btn_Assigned);
@@ -262,9 +281,8 @@ namespace GUI
             this.MinimumSize = new System.Drawing.Size(3120, 1728);
             this.Name = "UC5AabentHus";
             this.Size = new System.Drawing.Size(3214, 1728);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AllCaseOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_selectedCaseOrders)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_selectedBrokers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AllCaseOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,7 +306,8 @@ namespace GUI
         private System.Windows.Forms.Button btn_Assigned;
         private System.Windows.Forms.DataGridView dataGridView_AllCaseOrders;
         private System.Windows.Forms.DataGridView dataGridView_selectedCaseOrders;
-        private System.Windows.Forms.DataGridView dataGridView_selectedBrokers;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox_selectedBrokers;
+        private System.Windows.Forms.Button btn_clearBrokerList;
     }
 }

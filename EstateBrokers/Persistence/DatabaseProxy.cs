@@ -344,5 +344,18 @@ namespace Persistence
                 throw;
             }
         }
+
+        public List<DateTime?> GetDatesForOpenHouses()
+        {
+            db = new EFDatabase();
+            return db.GetDatesForOpenHouses();
+
+        }
+
+        public List<OpenHouse> GetOpenHouses(DateTime date)
+        {
+            db = new EFDatabase();
+            return db.GetOpenHouses(date);
+        }
     }
 }

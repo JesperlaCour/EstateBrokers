@@ -19,6 +19,8 @@ namespace Model.Models
         public int? BrokerId { get; set; }
         public int? CaseId { get; set; }
 
+        public decimal? lastPrice;
+
         public virtual Broker Broker { get; set; }
         public virtual CaseOrder Case { get; set; }
     }

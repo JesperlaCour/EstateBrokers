@@ -32,10 +32,10 @@ namespace Persistence
         //DataGridView
 
         public EstateBrokersContext GetGridCustomerData(string name);
-      
-        
+        List<OpenHouse> GetOpenHouses(DateTime date);
+
         public EstateBrokersContext GetGridEstateData(string address);
-     
+        List<DateTime?> GetDatesForOpenHouses();
         public void SaveDBContext();
 
         public List<PriceHistory> GetPriceHistory(int? estateId);

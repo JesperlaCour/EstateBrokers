@@ -15,14 +15,17 @@ namespace BusinessLogicLayer
             IDatabase db = new DatabaseProxy();
             decimal? averageSqm = 0;
             estates = GetEstatesBasedOn_ZipCodeAndHousetype(houseInfo.ZipCode, houseInfo.TypeID, houseInfo.RemodelYear);
+            int estatesINcalculation=0;
             foreach (var item in estates)
             {
                 if (db.GetPriceHistory(item.EstateId).Count != 0)
                 {
                     averageSqm += db.GetPriceHistory(item.EstateId).Last().Price / item.Areal;
-                }
+                    estatesINcalculation++;
 
+                }
             }
+            averageSqm /= estatesINcalculation;
             
             decimal? ListingPrice = averageSqm * houseInfo.SquareMeters;
             
