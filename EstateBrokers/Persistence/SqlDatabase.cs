@@ -278,5 +278,15 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public List<DateTime?> GetDatesForOpenHouses()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<OpenHouse> GetOpenHouses(DateTime date)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

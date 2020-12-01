@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Model.Models;
 using BusinessLogicLayer;
+using Persistence;
 
 namespace Controller
 {
@@ -27,15 +28,21 @@ namespace Controller
             OpenHouseLogic houseLogic = new OpenHouseLogic();
             houseLogic.AssignOpenHouses(cases, brokers, date);
         }
-
-        public void GetOpenHouses(DateTime date)
+        IDatabase db;
+        public List<OpenHouse> GetOpenHouses(DateTime date)
         {
-
+            db = new DatabaseProxy();
+            return db.GetOpenHouses(date);
         }
 
-        public List<DateTime> GetDatesForOpenHouses()
+        public List<DateTime?> GetDatesForOpenHouses()
         {
-            throw new NotImplementedException();
+            db = new DatabaseProxy();
+            return db.GetDatesForOpenHouses();
+        }
+        public void SaveDBContext()
+        {
+            db.SaveDBContext();
         }
     }
 }

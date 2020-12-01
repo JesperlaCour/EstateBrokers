@@ -180,5 +180,17 @@ namespace Persistence
             dbcontext.OpenHouses.Add(openHouse);
             dbcontext.SaveChanges();
         }
+
+        public List<DateTime?> GetDatesForOpenHouses()
+        {
+            context = new EstateBrokersContext();
+            return context.OpenHouses.Select(o => o.Date).Distinct().ToList();
+        }
+
+        public List<OpenHouse> GetOpenHouses(DateTime date)
+        {
+            context = new EstateBrokersContext();
+            return context.OpenHouses.Include(b => b.Broker).Where(o => o.Date == date).ToList();
+        }
     }
 }
