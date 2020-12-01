@@ -95,36 +95,39 @@ namespace GUI
 
         private void btn_Assigned_Click(object sender, EventArgs e)
         {
-            List<OpenHouse> openHouseArrangements = new List<OpenHouse>();
 
-            foreach (var item in SelectedCaseOrders)
-            {
-                item.lastPrice = Convert.ToDecimal(CaseOrderControllerSingleton.Instance().GetPriceHistory(item.EstateId).Last().Price);
-            }
+            OpenHouseControllerSingleton.Instance().AssignOpenHouses(SelectedCaseOrders, brokers, dateTimePicker1.Value);
 
-            SelectedCaseOrders = SelectedCaseOrders.OrderByDescending(c => c.lastPrice).ToList();
+            MessageBox.Show("done");
+            //List<OpenHouse> openHouseArrangements = new List<OpenHouse>();
+
+            //foreach (var item in SelectedCaseOrders)
+            //{
+            //    item.lastPrice = Convert.ToDecimal(CaseOrderControllerSingleton.Instance().GetPriceHistory(item.EstateId).Last().Price);
+            //}
+
+            //SelectedCaseOrders = SelectedCaseOrders.OrderByDescending(c => c.lastPrice).ToList();
+            ////dataGridView_selectedCaseOrders.DataSource = null;
+            ////dataGridView_selectedCaseOrders.DataSource = SelectedCaseOrders;
+            //int j = 0;
+            //for (int i = 0; i <= brokers.Count; i++)
+            //{
+            //    if (i < brokers.Count)
+            //    {
+            //        openHouseArrangements.Add(new OpenHouse(Convert.ToDateTime(dateTimePicker1.Value), brokers[i].BrokerId, SelectedCaseOrders[j].CaseOrderId));
+            //        j++;
+            //    }
+            //    else
+            //        i = -1;
+            //    if (j >= SelectedCaseOrders.Count())
+            //    {
+            //        break;
+            //    }
+            //}
+
+
             //dataGridView_selectedCaseOrders.DataSource = null;
-            //dataGridView_selectedCaseOrders.DataSource = SelectedCaseOrders;
-            int j = 0;
-
-            for (int i = 0; i <= brokers.Count; i++)
-            {
-                if (i < brokers.Count)
-                {
-                    openHouseArrangements.Add(new OpenHouse(Convert.ToDateTime(dateTimePicker1.Value), brokers[i].BrokerId, SelectedCaseOrders[j].CaseOrderId));
-                    j++;
-                }
-                else
-                    i = -1;
-                if (j >= SelectedCaseOrders.Count())
-                {
-                    break;
-                }
-            }
-
-
-            dataGridView_selectedCaseOrders.DataSource = null;
-            dataGridView_selectedCaseOrders.DataSource = openHouseArrangements;
+            //dataGridView_selectedCaseOrders.DataSource = openHouseArrangements;
 
         }
     }

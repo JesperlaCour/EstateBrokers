@@ -173,5 +173,12 @@ namespace Persistence
             //context.Add(co);
             context.SaveChanges();
         }
+
+        public void CreateOpenHouse(OpenHouse openHouse)
+        {
+            EstateBrokersContext dbcontext = new EstateBrokersContext();
+            dbcontext.OpenHouses.Add(openHouse);
+            dbcontext.SaveChanges();
+        }
     }
 }
