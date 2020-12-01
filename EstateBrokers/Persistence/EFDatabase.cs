@@ -55,7 +55,7 @@ namespace Persistence
         public CaseOrder GetCaseOrder(int caseOrderID)
         {
             EstateBrokersContext dbcontext = new EstateBrokersContext();
-            return dbcontext.CaseOrders.Where(co => co.CaseOrderId == caseOrderID).Single();
+            return dbcontext.CaseOrders.Include(s => s.Estate).Where(co => co.CaseOrderId == caseOrderID).Single();
         }
 
         public Customer GetCustomer(int? customerID)
@@ -172,6 +172,13 @@ namespace Persistence
             context.Update(co);
             //context.Add(co);
             context.SaveChanges();
+        }
+
+        public void CreateOpenHouse(OpenHouse openHouse)
+        {
+            EstateBrokersContext dbcontext = new EstateBrokersContext();
+            dbcontext.OpenHouses.Add(openHouse);
+            dbcontext.SaveChanges();
         }
     }
 }

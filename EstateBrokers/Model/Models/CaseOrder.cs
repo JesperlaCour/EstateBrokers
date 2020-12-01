@@ -37,6 +37,9 @@ namespace Model.Models
         public int? BuyerId { get; set; }
         public int? CaseStatusId { get; set; }
 
+        public decimal lastPrice;
+
+
         public virtual Broker Broker { get; set; }
         public virtual Customer Buyer { get; set; }
         public virtual CaseStatus CaseStatus { get; set; }

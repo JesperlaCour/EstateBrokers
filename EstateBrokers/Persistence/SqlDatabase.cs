@@ -273,5 +273,10 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public void CreateOpenHouse(OpenHouse item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

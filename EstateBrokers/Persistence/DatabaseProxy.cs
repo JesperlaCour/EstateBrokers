@@ -330,5 +330,19 @@ namespace Persistence
                 throw;
             }
         }
+
+        public void CreateOpenHouse(OpenHouse openHouse)
+        {
+            try
+            {
+                EFDatabase ef = new EFDatabase();
+                ef.CreateOpenHouse(openHouse);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
