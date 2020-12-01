@@ -9,11 +9,11 @@ using System.Windows.Forms;
 using Controller;
 using Model.Models;
 
+
 namespace GUI
 {
     public partial class OpenhouseOverview : Form
-    {
-        
+    {   
         public OpenhouseOverview()
         {
             InitializeComponent();
@@ -71,6 +71,7 @@ namespace GUI
 
             this.InitializeComponent();
             UpdateDateBox();
+
         }
     }
 }

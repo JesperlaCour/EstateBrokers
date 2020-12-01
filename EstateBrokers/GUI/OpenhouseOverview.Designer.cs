@@ -34,6 +34,7 @@ namespace GUI
             this.dataGridView_ShowDistribution = new System.Windows.Forms.DataGridView();
             this.btn_Save = new System.Windows.Forms.Button();
             this.lbl_Heading = new System.Windows.Forms.Label();
+
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,10 +42,12 @@ namespace GUI
             this.lbl_price = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowDistribution)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // cbo_PickDate
             // 
+
             this.cbo_PickDate.FormatString = "d";
             this.cbo_PickDate.FormattingEnabled = true;
             this.cbo_PickDate.Location = new System.Drawing.Point(42, 120);
@@ -53,15 +56,18 @@ namespace GUI
             this.cbo_PickDate.Size = new System.Drawing.Size(243, 40);
             this.cbo_PickDate.TabIndex = 0;
             this.cbo_PickDate.SelectedIndexChanged += new System.EventHandler(this.cbo_PickDate_SelectedIndexChanged);
+
             // 
             // lbl_Date
             // 
             this.lbl_Date.AutoSize = true;
             this.lbl_Date.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+
             this.lbl_Date.Location = new System.Drawing.Point(42, 74);
             this.lbl_Date.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_Date.Name = "lbl_Date";
             this.lbl_Date.Size = new System.Drawing.Size(75, 23);
+
             this.lbl_Date.TabIndex = 1;
             this.lbl_Date.Text = "Dato:";
             // 
@@ -86,6 +92,7 @@ namespace GUI
             this.btn_Save.Text = "Gem ændringer";
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+
             // 
             // lbl_Heading
             // 
@@ -160,6 +167,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1677, 986);
             this.Controls.Add(this.tableLayoutPanel1);
+
             this.Controls.Add(this.lbl_Heading);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.dataGridView_ShowDistribution);
@@ -171,6 +179,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowDistribution)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +197,6 @@ namespace GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_address;
         private System.Windows.Forms.Label lbl_price;
+
     }
 }
