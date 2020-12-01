@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GUI
@@ -18,7 +19,11 @@ namespace GUI
         public UC7Salgsstatus()
         {
             InitializeComponent();
-            UpdateDropdown_CaseStatus();
+            Thread thread = new Thread(new ThreadStart(UpdateDropdown_CaseStatus));
+            thread.IsBackground = true;
+            thread.Priority = ThreadPriority.Lowest;
+            thread.Start();
+            //UpdateDropdown_CaseStatus();
         }
 
         private void btn_ChooseCustomer_Click(object sender, EventArgs e)

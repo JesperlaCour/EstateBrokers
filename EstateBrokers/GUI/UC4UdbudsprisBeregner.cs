@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using Controller;
 using Model.Models;
@@ -16,7 +17,11 @@ namespace GUI
         public UC4UdbudsprisBeregner()
         {
             InitializeComponent();
-            UpdateDropdown_HouseTypes();
+            Thread thread = new Thread(new ThreadStart(UpdateDropdown_HouseTypes));
+            thread.IsBackground = true;
+            thread.Priority = ThreadPriority.Lowest;
+            thread.Start();
+            //UpdateDropdown_HouseTypes();
             //UpdateDropDown_Style();
         }
 

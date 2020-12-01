@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Controller;
 using Model.Models;
 using System.Linq;
+using System.Threading;
 
 namespace GUI
 {
@@ -16,7 +17,11 @@ namespace GUI
         public UC5AabentHus()
         {
             InitializeComponent();
-            UpdateBrokerCombobox();
+            Thread thread = new Thread(new ThreadStart(UpdateBrokerCombobox));
+            thread.IsBackground = true;
+            thread.Priority = ThreadPriority.Lowest;
+            thread.Start();
+            //UpdateBrokerCombobox();
         }
 
         void UpdateBrokerCombobox()
