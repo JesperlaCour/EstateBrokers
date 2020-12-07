@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Txt_sqm = new System.Windows.Forms.TextBox();
             this.btn_calculate = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@ namespace GUI
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView_priceHistory = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Trackbar_condition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_priceHistory)).BeginInit();
@@ -61,19 +63,15 @@ namespace GUI
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(171, 810);
             this.panel1.TabIndex = 0;
             // 
             // Txt_sqm
             // 
-
             this.Txt_sqm.Location = new System.Drawing.Point(669, 154);
             this.Txt_sqm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.Txt_sqm.Name = "Txt_sqm";
             this.Txt_sqm.Size = new System.Drawing.Size(69, 23);
             this.Txt_sqm.TabIndex = 1;
@@ -251,6 +249,7 @@ namespace GUI
             this.Txt_zipCode.Name = "Txt_zipCode";
             this.Txt_zipCode.Size = new System.Drawing.Size(77, 23);
             this.Txt_zipCode.TabIndex = 27;
+            this.toolTip1.SetToolTip(this.Txt_zipCode, "Indtast postnummer for huset \r\nder skal beregnes udbudspris på");
             // 
             // Txt_AntalBade
             // 
@@ -360,5 +359,6 @@ namespace GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView_priceHistory;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
