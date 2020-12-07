@@ -37,9 +37,7 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Cbo_houseType = new System.Windows.Forms.ComboBox();
-            this.Cbo_Indretning = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Trackbar_condition = new System.Windows.Forms.TrackBar();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,7 +61,7 @@ namespace GUI
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 1728);
             this.panel1.TabIndex = 0;
@@ -71,7 +69,7 @@ namespace GUI
             // Txt_sqm
             // 
             this.Txt_sqm.Location = new System.Drawing.Point(1242, 328);
-            this.Txt_sqm.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Txt_sqm.Margin = new System.Windows.Forms.Padding(5);
             this.Txt_sqm.Name = "Txt_sqm";
             this.Txt_sqm.Size = new System.Drawing.Size(124, 39);
             this.Txt_sqm.TabIndex = 1;
@@ -80,7 +78,7 @@ namespace GUI
             // 
             this.btn_calculate.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_calculate.Location = new System.Drawing.Point(2472, 322);
-            this.btn_calculate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_calculate.Margin = new System.Windows.Forms.Padding(5);
             this.btn_calculate.Name = "btn_calculate";
             this.btn_calculate.Size = new System.Drawing.Size(153, 46);
             this.btn_calculate.TabIndex = 2;
@@ -94,7 +92,7 @@ namespace GUI
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(328, 904);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -139,19 +137,10 @@ namespace GUI
             // 
             this.Cbo_houseType.FormattingEnabled = true;
             this.Cbo_houseType.Location = new System.Drawing.Point(884, 326);
-            this.Cbo_houseType.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Cbo_houseType.Margin = new System.Windows.Forms.Padding(5);
             this.Cbo_houseType.Name = "Cbo_houseType";
             this.Cbo_houseType.Size = new System.Drawing.Size(194, 40);
             this.Cbo_houseType.TabIndex = 11;
-            // 
-            // Cbo_Indretning
-            // 
-            this.Cbo_Indretning.FormattingEnabled = true;
-            this.Cbo_Indretning.Location = new System.Drawing.Point(1799, 326);
-            this.Cbo_Indretning.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Cbo_Indretning.Name = "Cbo_Indretning";
-            this.Cbo_Indretning.Size = new System.Drawing.Size(147, 40);
-            this.Cbo_Indretning.TabIndex = 12;
             // 
             // label5
             // 
@@ -163,17 +152,6 @@ namespace GUI
             this.label5.Size = new System.Drawing.Size(110, 27);
             this.label5.TabIndex = 14;
             this.label5.Text = "HusType";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(1789, 290);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 27);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Indretning";
             // 
             // label7
             // 
@@ -189,19 +167,19 @@ namespace GUI
             // Trackbar_condition
             // 
             this.Trackbar_condition.LargeChange = 1;
-            this.Trackbar_condition.Location = new System.Drawing.Point(1378, 328);
-            this.Trackbar_condition.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Trackbar_condition.Location = new System.Drawing.Point(1386, 328);
+            this.Trackbar_condition.Margin = new System.Windows.Forms.Padding(5);
             this.Trackbar_condition.Maximum = 5;
             this.Trackbar_condition.Minimum = -5;
             this.Trackbar_condition.Name = "Trackbar_condition";
-            this.Trackbar_condition.Size = new System.Drawing.Size(388, 90);
+            this.Trackbar_condition.Size = new System.Drawing.Size(541, 90);
             this.Trackbar_condition.TabIndex = 17;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(1531, 290);
+            this.label8.Location = new System.Drawing.Point(1612, 290);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 27);
@@ -223,7 +201,7 @@ namespace GUI
             // 
             this.Btn_CreateNewCase.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Btn_CreateNewCase.Location = new System.Drawing.Point(1531, 656);
-            this.Btn_CreateNewCase.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Btn_CreateNewCase.Margin = new System.Windows.Forms.Padding(5);
             this.Btn_CreateNewCase.Name = "Btn_CreateNewCase";
             this.Btn_CreateNewCase.Size = new System.Drawing.Size(320, 54);
             this.Btn_CreateNewCase.TabIndex = 22;
@@ -245,7 +223,7 @@ namespace GUI
             // txt_remodelYear
             // 
             this.txt_remodelYear.Location = new System.Drawing.Point(1958, 325);
-            this.txt_remodelYear.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_remodelYear.Margin = new System.Windows.Forms.Padding(5);
             this.txt_remodelYear.Name = "txt_remodelYear";
             this.txt_remodelYear.Size = new System.Drawing.Size(215, 39);
             this.txt_remodelYear.TabIndex = 24;
@@ -275,7 +253,7 @@ namespace GUI
             // Txt_zipCode
             // 
             this.Txt_zipCode.Location = new System.Drawing.Point(1090, 328);
-            this.Txt_zipCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Txt_zipCode.Margin = new System.Windows.Forms.Padding(5);
             this.Txt_zipCode.Name = "Txt_zipCode";
             this.Txt_zipCode.Size = new System.Drawing.Size(139, 39);
             this.Txt_zipCode.TabIndex = 27;
@@ -283,7 +261,7 @@ namespace GUI
             // Txt_AntalBade
             // 
             this.Txt_AntalBade.Location = new System.Drawing.Point(2186, 325);
-            this.Txt_AntalBade.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Txt_AntalBade.Margin = new System.Windows.Forms.Padding(5);
             this.Txt_AntalBade.Name = "Txt_AntalBade";
             this.Txt_AntalBade.Size = new System.Drawing.Size(274, 39);
             this.Txt_AntalBade.TabIndex = 28;
@@ -339,9 +317,7 @@ namespace GUI
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Trackbar_condition);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Cbo_Indretning);
             this.Controls.Add(this.Cbo_houseType);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -350,7 +326,7 @@ namespace GUI
             this.Controls.Add(this.btn_calculate);
             this.Controls.Add(this.Txt_sqm);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(3120, 1728);
             this.Name = "UC4UdbudsprisBeregner";
             this.Size = new System.Drawing.Size(3120, 1728);
@@ -372,9 +348,7 @@ namespace GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox Cbo_houseType;
-        private System.Windows.Forms.ComboBox Cbo_Indretning;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TrackBar Trackbar_condition;
         private System.Windows.Forms.Label label8;
