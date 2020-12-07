@@ -1,5 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
+using Controller;
 using Persistence;
 using Model.Models;
 
@@ -48,6 +50,40 @@ namespace UnitTest
             //Assert
             Assert.AreEqual(expected, actual);
 
+        }
+
+        [TestMethod]
+        public void GetOpenHousesByDate()
+        {
+            //Arrange
+            IDatabase testDB = new EFDatabase();
+            DateTime expectedDay = new DateTime(2020, 12, 17);
+
+            //Act
+            var actual = testDB.GetOpenHouses(expectedDay).Count();
+            var expected = 4;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void GetSoldHousesByZipCodeAndDates()
+        {
+
+            //Arrange 
+            SalesStatisticControllerSingleton
+            testScs = SalesStatisticControllerSingleton.Instance();
+            DateTime expectedDateFrom = new DateTime(2020, 11, 12);
+            DateTime expectedDateTo = new DateTime(2020, 12, 7);
+
+
+
+            //Act
+            var actual = testScs.GetSoldHouses(7100, expectedDateFrom, expectedDateTo).Count();
+            var expected = 4;
+
+            //Assert
+            Assert.AreEqual(actual, expected);
         }
     }
 }
