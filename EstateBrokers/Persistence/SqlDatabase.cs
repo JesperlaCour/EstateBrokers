@@ -259,7 +259,7 @@ namespace Persistence
             throw new NotImplementedException();
         }
 
-        public Department GetDeparment(int? departmentId)
+        public Department GetDepartment(int? departmentId)
         {
             throw new NotImplementedException();
         }

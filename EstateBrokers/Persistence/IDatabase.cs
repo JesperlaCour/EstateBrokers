@@ -44,7 +44,7 @@ namespace Persistence
         void CreateOpenHouse(OpenHouse item);
         List<HouseType> GetHouseTypes();
         Broker GetBroker(int brokerId);
-        Department GetDeparment(int? departmentId);
+        Department GetDepartment(int? departmentId);
         List<CaseStatus> GetCaseStatuses();
         void UpdateCaseOrderStatus(CaseOrder co);
     }

@@ -289,12 +289,12 @@ namespace Persistence
             }
         }
 
-        public Department GetDeparment(int? departmentId)
+        public Department GetDepartment(int? departmentId)
         {
             try
             {
                 db = new EFDatabase();
-                return db.GetDeparment(departmentId);
+                return db.GetDepartment(departmentId);
             }
             catch (Exception)
             {

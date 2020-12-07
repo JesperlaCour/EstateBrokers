@@ -34,7 +34,7 @@ namespace Controller
         public Department GetDepartment(int? departmentId)
         {
             IDatabase db = new DatabaseProxy();
-            return db.GetDeparment(departmentId);
+            return db.GetDepartment(departmentId);
         }
         public List<Broker> GetListBrokers()
         {
