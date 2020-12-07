@@ -32,7 +32,6 @@ namespace GUI
             Cbo_houseType.ValueMember = "TypeId";
         }
 
-
         private void btn_calculate_Click(object sender, EventArgs e)
         {
             List<Estate> estates = new List<Estate>();

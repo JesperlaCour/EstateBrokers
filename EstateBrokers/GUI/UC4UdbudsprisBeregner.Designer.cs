@@ -61,15 +61,19 @@ namespace GUI
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(171, 810);
             this.panel1.TabIndex = 0;
             // 
             // Txt_sqm
             // 
+
             this.Txt_sqm.Location = new System.Drawing.Point(669, 154);
             this.Txt_sqm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.Txt_sqm.Name = "Txt_sqm";
             this.Txt_sqm.Size = new System.Drawing.Size(69, 23);
             this.Txt_sqm.TabIndex = 1;
