@@ -27,5 +27,10 @@ namespace Controller
         {
             return sales.GetSoldHouses(zipCode, from, to);
         }
+
+        public void PrintSalesStatistic(string fileName)
+        {
+            sales.PrintSalesStatistic(fileName);
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Controller;
-using System.IO;
+
 
 namespace GUI
 {
@@ -49,34 +49,16 @@ namespace GUI
             saveDialog.OverwritePrompt = true;
             saveDialog.RestoreDirectory = true;
             saveDialog.DefaultExt = "txt";
-            //saveDialog.Filter = "Text Files (*.txt)";
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                TextWriter writer = new StreamWriter(saveDialog.FileName);
-
-                for (int k = 0; k < dataGridView_Salesstatistics.Columns.Count; k++)
-                {
-                    writer.Write("\t" + dataGridView_Salesstatistics.Columns[k].HeaderText);
-                }
-                writer.WriteLine("------------------------------------------");
-
-                for (int i = 0; i < dataGridView_Salesstatistics.Rows.Count; i++)
-                {
-
-                    for (int j = 0; j < dataGridView_Salesstatistics.Columns.Count; j++)
-                    {
-
-                        writer.Write("\t" + dataGridView_Salesstatistics.Rows[i].Cells[j].Value?.ToString() + "\t" + "|");
-
-                    }
-                    writer.WriteLine("");
-                    writer.WriteLine("------------------------------------------");
-
-                }
-                writer.Close();
+                SalesStatisticControllerSingleton.Instance().PrintSalesStatistic(saveDialog.FileName);
                 MessageBox.Show("Salgsstatistik gemt");
             }
+            else
+            {
+                MessageBox.Show("Annulleret - ikke gemt");
+            
             
             
 

@@ -6,7 +6,9 @@ namespace Model.Models
 {
     public class SoldHouse
     {
-        
+        public SoldHouse()
+        {
+        }
 
         public SoldHouse(int? caseOrderId, int? estateId,string brokerName)
         {
