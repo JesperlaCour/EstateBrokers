@@ -29,7 +29,12 @@ namespace GUI
             dataGridView_caseOrder.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView_caseOrder.Columns["CaseOrderID"].HeaderText = "Sagsnummer";
             dataGridView_caseOrder.Columns["CaseStatusID"].HeaderText = "Status";
-
+            dataGridView_caseOrder.Columns["SellerId"].HeaderText = "SælgerId";
+            dataGridView_caseOrder.Columns["BrokerId"].HeaderText = "MæglerId";
+            dataGridView_caseOrder.Columns["EstateId"].HeaderText = "EjendomsId";
+            dataGridView_caseOrder.Columns["BuyerId"].HeaderText = "KøberId";
+            dataGridView_caseOrder.Columns["Estate"].HeaderText = "Addresse";
+            dataGridView_caseOrder.Columns["CaseStatus"].Visible = false;
             dataGridView_caseOrder.Columns["Broker"].Visible = false;
             dataGridView_caseOrder.Columns["Buyer"].Visible = false;
             dataGridView_caseOrder.Columns["Seller"].Visible = false;

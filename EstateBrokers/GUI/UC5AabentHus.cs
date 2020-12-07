@@ -69,6 +69,11 @@ namespace GUI
         {
             dataGridView_AllCaseOrders.Columns.OfType<DataGridViewColumn>().ToList().ForEach(col => col.Visible = false);
             dataGridView_AllCaseOrders.Columns["CaseOrderID"].HeaderText = "Sagsnummer";
+            dataGridView_AllCaseOrders.Columns["SellerId"].HeaderText = "SælgerId";
+            dataGridView_AllCaseOrders.Columns["Estate"].HeaderText = "Addresse";
+            dataGridView_AllCaseOrders.Columns["BrokerId"].HeaderText = "MæglerId";
+            dataGridView_AllCaseOrders.Columns["EstateId"].HeaderText = "EjendomsId";
+
             dataGridView_AllCaseOrders.Columns["CaseOrderID"].Visible = true;
             dataGridView_AllCaseOrders.Columns["Estate"].Visible = true;
             dataGridView_AllCaseOrders.Columns["BrokerId"].Visible = true;
@@ -79,6 +84,11 @@ namespace GUI
             SetAllCaseColumns();
             dataGridView_selectedCaseOrders.Columns.OfType<DataGridViewColumn>().ToList().ForEach(col => col.Visible = false);
             dataGridView_selectedCaseOrders.Columns["CaseOrderID"].HeaderText = "Sagsnummer";
+            dataGridView_selectedCaseOrders.Columns["SellerId"].HeaderText = "SælgerId";
+            dataGridView_selectedCaseOrders.Columns["Estate"].HeaderText = "Addresse";
+            dataGridView_selectedCaseOrders.Columns["BrokerId"].HeaderText = "MæglerId";
+            dataGridView_selectedCaseOrders.Columns["EstateId"].HeaderText = "EjendomsId";
+
             dataGridView_selectedCaseOrders.Columns["CaseOrderID"].Visible = true;
             dataGridView_selectedCaseOrders.Columns["Estate"].Visible = true;
             dataGridView_selectedCaseOrders.Columns["BrokerId"].Visible = true;
