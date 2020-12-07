@@ -154,7 +154,7 @@ namespace Persistence
             return context.Brokers.Where(b => b.BrokerId == brokerId).Single();
         }
 
-        public Department GetDeparment(int? departmentId)
+        public Department GetDepartment(int? departmentId)
         {
             context = new EstateBrokersContext();
             return context.Departments.Where(d => d.DepartmentId == departmentId).FirstOrDefault();
