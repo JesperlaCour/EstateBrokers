@@ -47,7 +47,6 @@ namespace GUI
             Cbo_CaseStatus.DataSource = CaseOrderControllerSingleton.Instance().GetCaseStatuses();
             Cbo_CaseStatus.DisplayMember = "Status";
             Cbo_CaseStatus.ValueMember = "CaseStatusId";
-
         }
 
 

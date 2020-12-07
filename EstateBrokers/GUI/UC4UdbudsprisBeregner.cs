@@ -32,18 +32,6 @@ namespace GUI
             Cbo_houseType.ValueMember = "TypeId";
         }
 
-        private void UpdateDropDown_Style()
-        {
-            List<Style> styles = new List<Style>();
-            foreach (Style style in Enum.GetValues(typeof(Style)))
-            {
-                styles.Add(style);
-            }
-            Cbo_Indretning.DataSource = styles;
-            Cbo_Indretning.DisplayMember = "Key";
-            Cbo_Indretning.ValueMember = "Value";
-        }
-
 
         private void btn_calculate_Click(object sender, EventArgs e)
         {

@@ -55,6 +55,14 @@ namespace GUI
             dataGridView_ShowDistribution.DataSource = OpenHouseControllerSingleton.Instance().GetOpenHouses((DateTime)cbo_PickDate.SelectedItem);
             dataGridView_ShowDistribution.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+            dataGridView_ShowDistribution.Columns["OpenHouseId"].HeaderText = "ÅbenthusId";
+            dataGridView_ShowDistribution.Columns["Date"].HeaderText = "Dato";
+            dataGridView_ShowDistribution.Columns["BrokerId"].HeaderText = "MæglerId";
+            dataGridView_ShowDistribution.Columns["CaseId"].HeaderText = "Sagsnummer";
+            dataGridView_ShowDistribution.Columns["Broker"].HeaderText = "Mægler navn";
+            dataGridView_ShowDistribution.Columns["Case"].Visible = false;
+
+
         }
 
         private void dataGridView_ShowDistribution_CellContentClick(object sender, DataGridViewCellEventArgs e)
