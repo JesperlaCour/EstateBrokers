@@ -58,12 +58,12 @@ namespace GUI
             else
             {
                 MessageBox.Show("Annulleret - ikke gemt");
-            
-            
-            
 
 
 
+
+
+            }
 
         }
     }

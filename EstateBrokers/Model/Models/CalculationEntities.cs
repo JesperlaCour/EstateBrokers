@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-public enum Style
-{
-    Modern,
-    Original,
-}
+
 namespace Model.Models
 {
     public class CalculationEntities
@@ -25,7 +21,6 @@ namespace Model.Models
         public int ZipCode { get; set; }
         public int SquareMeters { get; set; }
         public decimal Condition { get; set; }
-        public Style Style { get; set; }
         public int RemodelYear { get; set; }
         public int BathAmount { get; set; }
 
