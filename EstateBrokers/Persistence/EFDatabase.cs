@@ -192,5 +192,11 @@ namespace Persistence
             context = new EstateBrokersContext();
             return context.OpenHouses.Include(b => b.Broker).Where(o => o.Date == date).ToList();
         }
+
+        public OpenHouse GetOpenHousesFromCaseOrderId(int caseOrderId)
+        {
+            context = new EstateBrokersContext();
+            return context.OpenHouses.Where(o => o.CaseId == caseOrderId).Where(o => o.Date > DateTime.Now).FirstOrDefault();
+        }
     }
 }

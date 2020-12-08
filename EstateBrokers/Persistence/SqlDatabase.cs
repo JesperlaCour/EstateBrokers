@@ -288,5 +288,10 @@ namespace Persistence
         {
             throw new NotImplementedException();
         }
+
+        public OpenHouse GetOpenHousesFromCaseOrderId(int caseOrderId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
