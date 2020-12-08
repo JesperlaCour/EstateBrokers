@@ -34,40 +34,48 @@ namespace GUI
 
         private void btn_calculate_Click(object sender, EventArgs e)
         {
-            List<Estate> estates = new List<Estate>();
-            lbl_listingPrice.Text = ListingCalculatorSingleton.Instance().CalculatedPrice(new CalculationEntities(
-                Convert.ToInt32(Cbo_houseType.SelectedValue),
-                Convert.ToInt32(Txt_zipCode.Text),
-                Convert.ToInt32(Txt_sqm.Text),
-                Trackbar_condition.Value,
-                //Cbo_Indretning.SelectedValue.,
-                Convert.ToInt32(txt_remodelYear.Text),
-                Convert.ToInt32(Txt_AntalBade.Text)),ref estates).ToString();
-            dataGridView1.DataSource = estates;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                List<Estate> estates = new List<Estate>();
+                lbl_listingPrice.Text = ListingCalculatorSingleton.Instance().CalculatedPrice(new CalculationEntities(
+                    Convert.ToInt32(Cbo_houseType.SelectedValue),
+                    Convert.ToInt32(Txt_zipCode.Text),
+                    Convert.ToInt32(Txt_sqm.Text),
+                    Trackbar_condition.Value,
+                    //Cbo_Indretning.SelectedValue.,
+                    Convert.ToInt32(txt_remodelYear.Text),
+                    Convert.ToInt32(Txt_AntalBade.Text)), ref estates).ToString();
+                dataGridView1.DataSource = estates;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
 
-            dataGridView1.Columns["EstateId"].HeaderText = "EjendomsId";
-            dataGridView1.Columns["Address"].HeaderText = "Adresse";
-            dataGridView1.Columns["BuildYear"].HeaderText = "HusetsByggelsesår";
-            dataGridView1.Columns["RemodelYear"].HeaderText = "RenoveringsÅr";
-            dataGridView1.Columns["Condition"].HeaderText = "Stand";
-            dataGridView1.Columns["Areal"].HeaderText = "Areal";
-            dataGridView1.Columns["Rooms"].HeaderText = "Rum";
-            dataGridView1.Columns["Floors"].HeaderText = "Etager";
-            dataGridView1.Columns["Garden"].HeaderText = "Have";
-            dataGridView1.Columns["ZipCode"].HeaderText = "Postnummer";
-            dataGridView1.Columns["TypeId"].HeaderText = "TypeId";
-            dataGridView1.Columns["Type"].HeaderText = "Type";
-            dataGridView1.Columns["ZipCodeNavigation"].HeaderText = "PostnummerNavigation";
-            dataGridView1.Columns["CaseOrders"].HeaderText = "SagsOrdre";
-            dataGridView1.Columns["PriceHistories"].HeaderText = "PrisHistorik";
+                dataGridView1.Columns["EstateId"].HeaderText = "EjendomsId";
+                dataGridView1.Columns["Address"].HeaderText = "Adresse";
+                dataGridView1.Columns["BuildYear"].HeaderText = "HusetsByggelsesår";
+                dataGridView1.Columns["RemodelYear"].HeaderText = "RenoveringsÅr";
+                dataGridView1.Columns["Condition"].HeaderText = "Stand";
+                dataGridView1.Columns["Areal"].HeaderText = "Areal";
+                dataGridView1.Columns["Rooms"].HeaderText = "Rum";
+                dataGridView1.Columns["Floors"].HeaderText = "Etager";
+                dataGridView1.Columns["Garden"].HeaderText = "Have";
+                dataGridView1.Columns["ZipCode"].HeaderText = "Postnummer";
+                dataGridView1.Columns["TypeId"].HeaderText = "TypeId";
+                dataGridView1.Columns["Type"].HeaderText = "Type";
+                dataGridView1.Columns["ZipCodeNavigation"].HeaderText = "PostnummerNavigation";
+                dataGridView1.Columns["CaseOrders"].HeaderText = "SagsOrdre";
+                dataGridView1.Columns["PriceHistories"].HeaderText = "PrisHistorik";
 
 
-            this.dataGridView1.Columns["ZipCodeNavigation"].Visible = false;
-            this.dataGridView1.Columns["Type"].Visible = false;
-            this.dataGridView1.Columns["CaseOrders"].Visible = false;
-            this.dataGridView1.Columns["PriceHistories"].Visible = false;
+                this.dataGridView1.Columns["ZipCodeNavigation"].Visible = false;
+                this.dataGridView1.Columns["Type"].Visible = false;
+                this.dataGridView1.Columns["CaseOrders"].Visible = false;
+                this.dataGridView1.Columns["PriceHistories"].Visible = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Fejl: Udfyldt venligst alle felter");
+            }
+
 
         }
 
@@ -88,9 +96,16 @@ namespace GUI
 
         private void Btn_CreateNewCase_Click(object sender, EventArgs e)
         {
+            try
+            {
+                OpretSagForm osf = new OpretSagForm(Convert.ToDecimal(lbl_listingPrice.Text));
+                osf.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Fejl: Vælg hus der skal oprettes sag på");
+            }
 
-            OpretSagForm osf = new OpretSagForm(Convert.ToDecimal(lbl_listingPrice.Text));
-            osf.ShowDialog();
 
          
         }

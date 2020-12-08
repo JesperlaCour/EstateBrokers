@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Text;
 using System.Threading;
@@ -52,17 +53,25 @@ namespace GUI
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            co.CaseStatusId = Convert.ToInt32(Cbo_CaseStatus.SelectedValue);
-            if (Convert.ToInt32(Cbo_CaseStatus.SelectedValue) == 3)
+            if (co != null)
             {
-                co.BuyerId = Convert.ToInt32(lbl_BuyerId.Text);
-                TilpasSlagsprisForm tsf = new TilpasSlagsprisForm(co.EstateId,2);
-                tsf.ShowDialog();
+                co.CaseStatusId = Convert.ToInt32(Cbo_CaseStatus.SelectedValue);
+                if (Convert.ToInt32(Cbo_CaseStatus.SelectedValue) == 3)
+                {
+                    co.BuyerId = Convert.ToInt32(lbl_BuyerId.Text);
+                    TilpasSlagsprisForm tsf = new TilpasSlagsprisForm(co.EstateId, 2);
+                    tsf.ShowDialog();
+                }
+
+                CaseOrderControllerSingleton.Instance().UpdateCaseOrderStatus(co);
+
+                MessageBox.Show("Ændringer gemt");
+
             }
-
-            CaseOrderControllerSingleton.Instance().UpdateCaseOrderStatus(co);
-
-            MessageBox.Show("Ændringer gemt");
+            else
+            {
+                MessageBox.Show("Fejl: Der er ikke valgt en sag");
+            }
         }
 
         private void btn_FindCaseOrder_Click(object sender, EventArgs e)
@@ -79,22 +88,29 @@ namespace GUI
 
         private void UpdateCaseStatus()
         {
-
+            try
+            {
                 co = CaseOrderControllerSingleton.Instance().GetCaseOrder(Convert.ToInt32(txt_CaseOrderId.Text));
                 if (co != null)
-                { 
+                {
                     lbl_CaseOrderId.Text = co.CaseOrderId.ToString();
-                Cbo_CaseStatus.SelectedValue = co.CaseStatusId;
-                lbl_SellerId.Text = co.SellerId.ToString();
-                lbl_BrokerId.Text = co.BrokerId.ToString();
-                lbl_EstateId.Text = co.EstateId.ToString();
-                lbl_BuyerId.Text = co.BuyerId.ToString();  
+                    Cbo_CaseStatus.SelectedValue = co.CaseStatusId;
+                    lbl_SellerId.Text = co.SellerId.ToString();
+                    lbl_BrokerId.Text = co.BrokerId.ToString();
+                    lbl_EstateId.Text = co.EstateId.ToString();
+                    lbl_BuyerId.Text = co.BuyerId.ToString();
                 }
 
                 else
                 {
                     MessageBox.Show("Der findes ingen gyldige sager med det søgte id");
                 }
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("Fejl: Indtast et sagsnummer");
+            }
+
 
 
         }
