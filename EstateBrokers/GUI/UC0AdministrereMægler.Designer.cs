@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC0AdministrereMægler));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_HentAlle = new System.Windows.Forms.Button();
             this.btn_Gem = new System.Windows.Forms.Button();
@@ -38,13 +39,17 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.btn_TypeHentAlle = new System.Windows.Forms.Button();
             this.btn_TypeGem = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(196, 1080);
@@ -134,6 +139,16 @@ namespace GUI
             this.btn_TypeGem.UseVisualStyleBackColor = true;
             this.btn_TypeGem.Click += new System.EventHandler(this.btn_TypeGem_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(195, 119);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // UC0AdministrereMægler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -150,8 +165,10 @@ namespace GUI
             this.MinimumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "UC0AdministrereMægler";
             this.Size = new System.Drawing.Size(1920, 1080);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +185,6 @@ namespace GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_TypeHentAlle;
         private System.Windows.Forms.Button btn_TypeGem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
