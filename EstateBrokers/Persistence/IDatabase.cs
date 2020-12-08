@@ -41,6 +41,7 @@ namespace Persistence
         public List<PriceHistory> GetPriceHistory(int? estateId);
         ZipCode GetCityFromZipCode(int? zipCode);
         List<CaseOrder> GetAllCaseOrdrsForSearchByAddress(string address);
+        OpenHouse GetOpenHousesFromCaseOrderId(int caseOrderId);
         void CreateOpenHouse(OpenHouse item);
         List<HouseType> GetHouseTypes();
         Broker GetBroker(int brokerId);
