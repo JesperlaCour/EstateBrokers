@@ -580,12 +580,12 @@
             // 
             // lbl_nextOpenHouse
             // 
-            this.lbl_ÅbenthusDage.AutoSize = true;
-            this.lbl_ÅbenthusDage.Location = new System.Drawing.Point(952, 325);
-            this.lbl_ÅbenthusDage.Name = "lbl_ÅbenthusDage";
-            this.lbl_ÅbenthusDage.Size = new System.Drawing.Size(58, 20);
-            this.lbl_ÅbenthusDage.TabIndex = 59;
-            this.lbl_ÅbenthusDage.Text = "label30";
+            this.lbl_nextOpenHouse.AutoSize = true;
+            this.lbl_nextOpenHouse.Location = new System.Drawing.Point(952, 325);
+            this.lbl_nextOpenHouse.Name = "lbl_ÅbenthusDage";
+            this.lbl_nextOpenHouse.Size = new System.Drawing.Size(58, 20);
+            this.lbl_nextOpenHouse.TabIndex = 59;
+            this.lbl_nextOpenHouse.Text = "label30";
             // 
             // tableLayoutPanel_buyerInfo
             // 
