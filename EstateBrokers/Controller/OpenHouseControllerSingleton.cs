@@ -44,5 +44,11 @@ namespace Controller
         {
             db.SaveDBContext();
         }
+
+        public OpenHouse GetNextOpenHouse(int caseOrderId)
+        {
+            db = new DatabaseProxy();
+            return db.GetOpenHousesFromCaseOrderId(caseOrderId);
+        }
     }
 }

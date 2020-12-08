@@ -357,5 +357,11 @@ namespace Persistence
             db = new EFDatabase();
             return db.GetOpenHouses(date);
         }
+
+        public OpenHouse GetOpenHousesFromCaseOrderId(int caseOrderId)
+        {
+            db = new EFDatabase();
+            return db.GetOpenHousesFromCaseOrderId(caseOrderId);
+        }
     }
 }

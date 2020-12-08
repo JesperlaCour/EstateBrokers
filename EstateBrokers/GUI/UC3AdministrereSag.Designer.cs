@@ -77,7 +77,7 @@
             this.lbl_BrokerName = new System.Windows.Forms.Label();
             this.lbl_DepartmentId = new System.Windows.Forms.Label();
             this.lbl_department = new System.Windows.Forms.Label();
-            this.lbl_ÅbenthusDage = new System.Windows.Forms.Label();
+            this.lbl_nextOpenHouse = new System.Windows.Forms.Label();
             this.tableLayoutPanel_buyerInfo = new System.Windows.Forms.TableLayoutPanel();
             this.btn_ChangeSalesPrice = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -430,7 +430,8 @@
             // lbl_KoeberKundenummer
             // 
             this.lbl_KoeberKundenummer.AutoSize = true;
-            this.lbl_KoeberKundenummer.Location = new System.Drawing.Point(3, 0);
+            this.lbl_KoeberKundenummer.Location = new System.Drawing.Point(6, 0);
+            this.lbl_KoeberKundenummer.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbl_KoeberKundenummer.Name = "lbl_KoeberKundenummer";
             this.lbl_KoeberKundenummer.Size = new System.Drawing.Size(58, 20);
             this.lbl_KoeberKundenummer.TabIndex = 41;
@@ -539,7 +540,7 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(149, 20);
             this.label24.TabIndex = 53;
-            this.label24.Text = "Åbenthus dage:";
+            this.label24.Text = "Næste åbent hus: ";
             // 
             // lbl_brokerID
             // 
@@ -577,7 +578,7 @@
             this.lbl_department.TabIndex = 57;
             this.lbl_department.Text = "label28";
             // 
-            // lbl_ÅbenthusDage
+            // lbl_nextOpenHouse
             // 
             this.lbl_ÅbenthusDage.AutoSize = true;
             this.lbl_ÅbenthusDage.Location = new System.Drawing.Point(952, 325);
@@ -635,7 +636,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_ChangeSalesPrice);
             this.Controls.Add(this.tableLayoutPanel_buyerInfo);
-            this.Controls.Add(this.lbl_ÅbenthusDage);
+            this.Controls.Add(this.lbl_nextOpenHouse);
             this.Controls.Add(this.lbl_department);
             this.Controls.Add(this.lbl_DepartmentId);
             this.Controls.Add(this.lbl_BrokerName);
@@ -740,7 +741,7 @@
         private System.Windows.Forms.Label lbl_BrokerName;
         private System.Windows.Forms.Label lbl_DepartmentId;
         private System.Windows.Forms.Label lbl_department;
-        private System.Windows.Forms.Label lbl_ÅbenthusDage;
+        private System.Windows.Forms.Label lbl_nextOpenHouse;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_buyerInfo;
         private System.Windows.Forms.Button btn_ChangeSalesPrice;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -48,6 +48,7 @@ namespace GUI
             {
                 UpdateAdminCase();
                 UpdateBrokerInfo();
+                updateNextOpenHouseDate();
             }
             catch (Exception)
             {
@@ -138,6 +139,19 @@ namespace GUI
 
             }
         }
+        private void updateNextOpenHouseDate()
+        {
+            if (co != null)
+            {
+                OpenHouse oh = OpenHouseControllerSingleton.Instance().GetNextOpenHouse(co.CaseOrderId);
+                if (oh != null)
+                {
+                    lbl_nextOpenHouse.Text = Convert.ToDateTime(oh.Date).ToShortDateString();
+                }
+                else
+                    lbl_nextOpenHouse.Text = "Ingen planlagte";
+            }
+        }
 
         private void btn_SearchCase_Click(object sender, EventArgs e)
         {
@@ -148,6 +162,7 @@ namespace GUI
                 txt_caseOrderID.Text = caseId;
                 UpdateAdminCase();
                 UpdateBrokerInfo();
+                updateNextOpenHouseDate();
             }
         }
 
