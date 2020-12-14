@@ -37,9 +37,6 @@ namespace Persistence
             EstateBrokersContext dbcontext = new EstateBrokersContext();
             return dbcontext.CaseOrders.ToList();
         }
-
-        
-
         public List<Customer> GetAllCustomer(string name)
         {
             EstateBrokersContext dbcontext = new EstateBrokersContext();
