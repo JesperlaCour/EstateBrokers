@@ -15,8 +15,9 @@ namespace Persistence
         private static SqlConnection conn;
         private static SqlConnection GetConnection()
         {
-            //var connectionString = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
-            conn = new SqlConnection("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            var connectionString = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
+            //conn = new SqlConnection("Server=tcp:lacour.database.windows.net,1433;Initial Catalog=EstateBrokers;Persist Security Info=False;User ID=Jesper_laCour;Password=Azure1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            conn = new SqlConnection(connectionString);
             return conn;
         }
 
