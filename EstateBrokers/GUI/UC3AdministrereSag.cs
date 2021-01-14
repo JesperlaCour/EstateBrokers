@@ -169,11 +169,15 @@ namespace GUI
 
         private void btn_ChangeSalesPrice_Click(object sender, EventArgs e)
         {
-            TilpasSlagsprisForm tsf = new TilpasSlagsprisForm(co.EstateId, 1);
-            if (tsf.ShowDialog() == DialogResult.OK)
+            if (co != null)
             {
-                dataGridView_PriceHistory.DataSource = CaseOrderControllerSingleton.Instance().GetPriceHistory(co.EstateId);
+                TilpasSlagsprisForm tsf = new TilpasSlagsprisForm(co.EstateId, 1);
+                if (tsf.ShowDialog() == DialogResult.OK)
+                {
+                    dataGridView_PriceHistory.DataSource = CaseOrderControllerSingleton.Instance().GetPriceHistory(co.EstateId);
+                }
             }
+            
             
         }
 
